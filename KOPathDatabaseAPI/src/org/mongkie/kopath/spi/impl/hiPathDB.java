@@ -22,9 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.xml.bind.JAXBException;
 import org.mongkie.kopath.Pathway;
 import org.mongkie.kopath.rest.PathwayService;
 import org.mongkie.kopath.spi.PathwayDatabase;
+import org.openide.util.Exceptions;
 
 /**
  *
@@ -48,6 +50,8 @@ public abstract class hiPathDB implements PathwayDatabase {
             return PathwayService.searchPathway(getCode());
         } catch (IOException ex) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        } catch (JAXBException ex) {
+            Exceptions.printStackTrace(ex);
         }
         return new ArrayList<Pathway>();
     }
@@ -67,6 +71,8 @@ public abstract class hiPathDB implements PathwayDatabase {
         try {
             return PathwayService.searchPathway(getCode(), genes);
         } catch (IOException ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        } catch (JAXBException ex) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
         }
         return new ArrayList<Pathway>();
@@ -88,6 +94,8 @@ public abstract class hiPathDB implements PathwayDatabase {
             return PathwayService.searchPathway(getCode(), pathway, like);
         } catch (IOException ex) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        } catch (JAXBException ex) {
+            Exceptions.printStackTrace(ex);
         }
         return new ArrayList<Pathway>();
     }

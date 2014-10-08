@@ -17,11 +17,6 @@
  */
 package org.mongkie.gobean.rest;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.UniformInterfaceException;
-import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
-import com.sun.jersey.core.util.MultivaluedMapImpl;
 import gobean.calculation.EnrichmentMethod;
 import gobean.statistics.MultipleTestCorrectionMethod;
 import java.io.IOException;
@@ -29,7 +24,12 @@ import java.util.Arrays;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedHashMap;
 import javax.ws.rs.core.MultivaluedMap;
 import org.mongkie.gobean.EnrichedResult;
 import static org.mongkie.gobean.rest.QueryParam.*;
@@ -48,45 +48,56 @@ import static org.mongkie.gobean.rest.QueryParam.*;
  */
 public class GoBeanService {
 
-    private final WebResource resource;
+    private final WebTarget target;
     private final Client client;
 
     public GoBeanService(String baseUri, String path) {
-        client = Client.create(new DefaultClientConfig());
-        resource = client.resource(baseUri).path(path);
+        client = ClientBuilder.newClient();
+        target = client.target(baseUri).path(path);
     }
 
-    public EnrichedResult getEnrichedResult(EnrichmentMethod strategy, MultipleTestCorrectionMethod correction, String... genes) {
+    public EnrichedResult getEnrichedResult(EnrichmentMethod strategy,
+            MultipleTestCorrectionMethod correction,
+            String... genes) {
         return getEnrichedResult(strategy, correction, 1.0D, genes);
     }
 
-    public EnrichedResult getEnrichedResult(EnrichmentMethod strategy, MultipleTestCorrectionMethod correction, double pCutoff, String... genes) {
+    public EnrichedResult getEnrichedResult(EnrichmentMethod strategy,
+            MultipleTestCorrectionMethod correction,
+            double pCutoff,
+            String... genes) {
         Logger.getLogger(GoBeanService.class.getName()).log(Level.INFO,
-                "GO enrichment testing... [{0}, {1}, Max-p:{2}]", new Object[]{strategy, correction, pCutoff});
+                "GO enrichment testing... [{0}, {1}, Max-p:{2}]",
+                new Object[]{strategy, correction, pCutoff});
         long start = System.currentTimeMillis();
 
         String geness = Arrays.toString(genes);
-        EnrichedResult result = getXml(EnrichedResult.class, strategy.toString(), correction.getName(), pCutoff, geness.substring(1, geness.length() - 1).replaceAll(", ", ","));
+        EnrichedResult result = getXml(EnrichedResult.class,
+                strategy.toString(),
+                correction.getName(),
+                pCutoff,
+                geness.substring(1, geness.length() - 1).replaceAll(", ", ","));
 
         long elapsed = System.currentTimeMillis() - start;
         Logger.getLogger(GoBeanService.class.getName()).log(Level.INFO,
-                "GO enrichment completed: {0}.{1} seconds. Number of selected GO terms: {2}", new Object[]{elapsed / 1000, elapsed % 1000, result.getSelectedGoIds().size()});
+                "GO enrichment completed: {0}.{1} seconds. Number of selected GO terms: {2}",
+                new Object[]{elapsed / 1000, elapsed % 1000, result.getSelectedGoIds().size()});
 
         return result;
     }
 
     private <T> T getXml(Class<T> responseType,
-            String strategy, String correction, double pCutoff, String genes) throws UniformInterfaceException {
-        MultivaluedMap params = new MultivaluedMapImpl();
+            String strategy, String correction, double pCutoff, String genes) {
+        MultivaluedMap params = new MultivaluedHashMap();
         params.add(ENRICHMENT_STRATEGY, strategy);
         params.add(MULTIPLE_TESTING_CORRECTION, correction);
         params.add(PVALUE_MAX, String.valueOf(pCutoff));
         params.add(GENES, genes);
-        return resource.type(MediaType.APPLICATION_FORM_URLENCODED).accept(MediaType.APPLICATION_XML).post(responseType, params);
+        return target.request(MediaType.APPLICATION_XML).post(Entity.form(params), responseType);
     }
 
     public void close() {
-        client.destroy();
+        client.close();
     }
 
     public static GoBeanService getDefault() {

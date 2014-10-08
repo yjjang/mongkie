@@ -24,6 +24,7 @@ import prefuse.visual.VisualItem;
 /**
  *
  * @author Yeongjun Jang <yjjang@kribb.re.kr>
+ * @param <T>
  */
 public interface VisualEdit<T> {
 

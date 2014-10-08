@@ -40,7 +40,7 @@ import prefuse.data.Graph;
 @ServiceProvider(service = FilterController.class)
 public class FilterControllerImpl implements FilterController, DisplayListener<MongkieDisplay> {
 
-    private List<FilterModelChangeListener> listeners;
+    private final List<FilterModelChangeListener> listeners;
     private FilterModelImpl model;
 
     public FilterControllerImpl() {

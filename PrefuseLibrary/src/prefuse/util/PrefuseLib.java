@@ -376,6 +376,8 @@ public class PrefuseLib {
 
         Integer defTextColor = new Integer(ColorLib.rgba(0, 0, 0, 0));
         s.addInterpolatedColumn(VisualItem.TEXTCOLOR, int.class, defTextColor);
+        
+        s.addInterpolatedColumn(VisualItem.COLORALPHA, int.class, -1);
 
         // size
         s.addInterpolatedColumn(VisualItem.SIZE, double.class, new Double(1));

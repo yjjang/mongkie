@@ -31,7 +31,7 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
 
 /**
- * 
+ *
  * @author Yeongjun Jang <yjjang@kribb.re.kr>
  */
 public class RestResponse {
@@ -126,6 +126,17 @@ public class RestResponse {
         Unmarshaller u = jc.createUnmarshaller();
         Object obj = u.unmarshal(new StreamSource(new StringReader(getDataAsString())));
 
+        if (obj instanceof JAXBElement) {
+            return (T) ((JAXBElement) obj).getValue();
+        } else {
+            return (T) obj;
+        }
+    }
+
+    public <T> T unmarshallAs(Class<T> jaxbClass) throws JAXBException {
+        JAXBContext jc = JAXBContext.newInstance(jaxbClass);
+        Unmarshaller u = jc.createUnmarshaller();
+        Object obj = u.unmarshal(new StreamSource(new StringReader(getDataAsString())));
         if (obj instanceof JAXBElement) {
             return (T) ((JAXBElement) obj).getValue();
         } else {

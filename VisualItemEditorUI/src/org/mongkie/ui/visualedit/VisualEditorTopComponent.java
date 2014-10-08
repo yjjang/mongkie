@@ -41,7 +41,7 @@ autostore = false)
 @TopComponent.Description(preferredID = VisualEditorTopComponent.PREFERRED_ID,
 iconBase = "org/mongkie/ui/visualedit/resources/edit.png",
 persistenceType = TopComponent.PERSISTENCE_ALWAYS)
-@TopComponent.Registration(mode = MODE_ACTION, openAtStartup = true, roles = ROLE_NETWORK, position = 100)
+@TopComponent.Registration(mode = MODE_ACTION, openAtStartup = true, roles = {ROLE_NETWORK, "PathwayRole"}, position = 100)
 public final class VisualEditorTopComponent extends TopComponent {
 
     private static VisualEditorTopComponent instance;

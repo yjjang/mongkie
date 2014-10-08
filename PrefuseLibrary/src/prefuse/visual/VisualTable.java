@@ -736,6 +736,29 @@ public class VisualTable extends CascadedTable implements VisualTupleSet {
         setInt(row, VisualItem.ENDFILLCOLOR, color);
     }
     
+    public int getColorAlpha(int row) {
+        return getInt(row, VisualItem.COLORALPHA);
+    }
+    
+    public void setColorAlpha(int row, int color) {
+        setInt(row, VisualItem.COLORALPHA, color);
+    }
+    
+    public int getStartColorAlpha(int row) {
+        return getInt(row, VisualItem.STARTCOLORALPHA);
+    }
+    
+    public void setStartColorAlpha(int row, int color) {
+        setInt(row, VisualItem.STARTCOLORALPHA, color);
+    }
+    
+    public int getEndColorAlpha(int row) {
+        return getInt(row, VisualItem.ENDCOLORALPHA);
+    }
+    
+    public void setEndColorAlpha(int row, int color) {
+        setInt(row, VisualItem.ENDCOLORALPHA, color);
+    }
     /**
      * Get the current text color of the row. The text color is used to
      * draw text strings for the item. Color values as represented as an

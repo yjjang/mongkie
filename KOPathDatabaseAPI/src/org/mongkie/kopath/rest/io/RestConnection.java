@@ -144,7 +144,7 @@ public class RestConnection {
      */
     public RestResponse post(String[][] headers, String[][] params) throws IOException {
         conn.setRequestMethod("POST");
-        conn.setRequestProperty("ContentType", "application/x-www-form-urlencoded");
+        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
         String data = encodeParams(params);
         return connect(headers, new ByteArrayInputStream(data.getBytes("UTF-8")));
     }
@@ -196,7 +196,7 @@ public class RestConnection {
             response.setLastModified(conn.getLastModified());
 
             return response;
-        } catch (Exception e) {
+        } catch (IOException e) {
             String errMsg = "Cannot connect to :" + conn.getURL();
             try {
                 BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
@@ -208,6 +208,7 @@ public class RestConnection {
                 }
                 errMsg = buf.toString();
             } finally {
+                System.err.println(e.getMessage());
                 throw new IOException(errMsg);
             }
         }

@@ -801,6 +801,12 @@ public interface VisualItem extends Tuple {
     public static final String STARTTEXTCOLOR = PrefuseLib.getStartField(TEXTCOLOR);
     /** The end text color data field */
     public static final String ENDTEXTCOLOR = PrefuseLib.getEndField(TEXTCOLOR);
+    /** The color alpha data field */
+    public static final String COLORALPHA = PrefuseLib.FIELD_PREFIX + "colorAlpha";
+    /** The start color alpha data field */
+    public static final String STARTCOLORALPHA = PrefuseLib.getStartField(COLORALPHA);
+    /** The end color alpha data field */
+    public static final String ENDCOLORALPHA = PrefuseLib.getEndField(COLORALPHA);
     /** The size data field */
     public static final String SIZE = PrefuseLib.FIELD_PREFIX + "size";
     /** The start size data field */

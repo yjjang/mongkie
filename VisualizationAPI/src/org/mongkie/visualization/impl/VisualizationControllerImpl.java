@@ -33,13 +33,19 @@ import org.openide.util.lookup.ServiceProvider;
 import prefuse.Visualization;
 
 /**
- * 
+ *
  * @author Yeongjun Jang <yjjang@kribb.re.kr>
  */
 @ServiceProvider(service = VisualizationController.class)
 public final class VisualizationControllerImpl implements VisualizationController {
 
     private MongkieDisplay currentDisplay;
+    /*
+    Generally, keep a hard reference on the Lookup.Result
+    Because if you don't -- the garbage collector might kick in quite soon and your
+    listener won't be called
+    http://emilian-bold.blogspot.com/2006/11/netbeans-platform-lookupresult-garbage.html
+    */
     private final Lookup.Result<MongkieDisplay> result;
     private final List<WorkspaceListener> listeners;
     private final SelectionManager selectionManager;
@@ -69,7 +75,8 @@ public final class VisualizationControllerImpl implements VisualizationControlle
 
     @Override
     public void resultChanged(LookupEvent ev) {
-        Iterator<? extends MongkieDisplay> displayIter = result.allInstances().iterator();
+        Lookup.Result<MongkieDisplay> r = (Lookup.Result<MongkieDisplay>) ev.getSource();
+        Iterator<? extends MongkieDisplay> displayIter = r.allInstances().iterator();
         MongkieDisplay d;
         if (!displayIter.hasNext() || (d = displayIter.next()) == currentDisplay) {
             return;
@@ -104,8 +111,7 @@ public final class VisualizationControllerImpl implements VisualizationControlle
 
     private void fireDisplayChange(MongkieDisplay oldDisplay, MongkieDisplay newDisplay) {
         synchronized (listeners) {
-            for (Iterator<WorkspaceListener> listenerIter = listeners.iterator(); listenerIter.hasNext();) {
-                WorkspaceListener l = listenerIter.next();
+            for (WorkspaceListener l : listeners) {
                 if (oldDisplay != null) {
                     l.displayDeselected(oldDisplay);
                 }

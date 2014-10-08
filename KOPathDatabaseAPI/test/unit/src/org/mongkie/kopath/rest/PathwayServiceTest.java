@@ -6,6 +6,7 @@ import prefuse.data.expression.AbstractPredicate;
 import java.util.List;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import javax.xml.bind.JAXBException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -103,7 +104,7 @@ public class PathwayServiceTest {
     }
 
     @Test
-    public void testSearchPathway() throws IOException {
+    public void testSearchPathway() throws IOException, JAXBException {
         List<Pathway> pathways = PathwayService.searchPathway(1, "7124", "672");
         for (Pathway p : pathways) {
             System.out.println("> " + p);

@@ -17,17 +17,15 @@
  */
 package org.mongkie.kopath.rest;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
-import java.util.Arrays;
 import java.util.List;
 import org.mongkie.kopath.Pathway;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ws.rs.core.MediaType;
+import javax.xml.bind.JAXBException;
 import kobic.prefuse.data.io.ReaderFactory;
 import org.mongkie.kopath.rest.io.RestConnection;
 import org.mongkie.kopath.rest.io.RestResponse;
@@ -35,9 +33,10 @@ import org.mongkie.kopath.util.Utilities;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
 import static org.mongkie.kopath.Config.*;
+import org.mongkie.kopath.PathwayList;
 
 /**
- * 
+ *
  * @author Yeongjun Jang <yjjang@kribb.re.kr>
  */
 public class PathwayService {
@@ -68,7 +67,8 @@ public class PathwayService {
     }
 
     public static Graph getGraphFromSuperPathway(String xTableName, String[] geneInput, String[] pathwayInput) throws IOException, DataIOException {
-        String[][] pathParams = new String[][]{{"{serviceUrl}", getServiceUrl()},
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
             {"{xTableName}", xTableName},
             {"{geneInput}", Utilities.getCsvStringFrom(geneInput)},
             {"{pathwayInput}", Utilities.getCsvStringFrom(pathwayInput)}};
@@ -83,7 +83,10 @@ public class PathwayService {
     }
 
     public static String getGraphML(int dbId, String... pathwayIds) throws IOException {
-        String[][] pathParams = new String[][]{{"{serviceUrl}", getServiceUrl()}, {"{dbId}", String.valueOf(dbId)}, {"{pathwayIds}", Utilities.getCsvStringFrom(pathwayIds)}};
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
+            {"{dbId}", String.valueOf(dbId)},
+            {"{pathwayIds}", Utilities.getCsvStringFrom(pathwayIds)}};
         RestConnection conn = new RestConnection("{serviceUrl}/pathway/{dbId}/{pathwayIds}", pathParams, null);
         RestResponse response = conn.get();
         return (response.getResponseCode() == 200) ? response.getDataAsString() : null;
@@ -96,29 +99,41 @@ public class PathwayService {
     }
 
     public static int countPathway(int dbId, String... genes) throws IOException {
-        String[][] pathParams = new String[][]{{"{serviceUrl}", getServiceUrl()}, {"{dbId}", String.valueOf(dbId)}, {"{genes}", Utilities.getCsvStringFrom(genes)}};
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
+            {"{dbId}", String.valueOf(dbId)},
+            {"{genes}", Utilities.getCsvStringFrom(genes)}};
         RestConnection conn = new RestConnection("{serviceUrl}/count?db={dbId}&genes={genes}", pathParams, null);
         RestResponse response = conn.get();
         return (response.getResponseCode() == 200) ? Integer.parseInt(response.getDataAsString()) : 0;
     }
 
-    public static List<Pathway> searchPathway(int dbId, String... genes) throws IOException {
-        return Arrays.asList(getJerseyClient().resource(getServiceUrl()).path("search").
-                queryParam("db", String.valueOf(dbId)).
-                queryParam("genes", Utilities.getCsvStringFrom(genes)).
-                accept(MediaType.APPLICATION_XML).get(Pathway[].class));
+    public static List<Pathway> searchPathway(int dbId, String... genes) throws IOException, JAXBException {
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
+            {"{dbId}", String.valueOf(dbId)},
+            {"{genes}", Utilities.getCsvStringFrom(genes)}};
+        RestConnection conn = new RestConnection("{serviceUrl}/search?db={dbId}&genes={genes}", pathParams, null);
+        RestResponse response = conn.get();
+        return response.unmarshallAs(PathwayList.class).getPathways();
     }
 
     public static int countPathway(int dbId) throws IOException {
-        return Integer.parseInt(getJerseyClient().resource(getServiceUrl()).path("count").
-                queryParam("db", String.valueOf(dbId)).
-                accept(MediaType.TEXT_PLAIN).get(String.class));
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
+            {"{dbId}", String.valueOf(dbId)},};
+        RestConnection conn = new RestConnection("{serviceUrl}/count?db={dbId}", pathParams, null);
+        RestResponse response = conn.get();
+        return (response.getResponseCode() == 200) ? Integer.parseInt(response.getDataAsString()) : 0;
     }
 
-    public static List<Pathway> searchPathway(int dbId) throws IOException {
-        return Arrays.asList(getJerseyClient().resource(getServiceUrl()).path("search").
-                queryParam("db", String.valueOf(dbId)).
-                accept(MediaType.APPLICATION_XML).get(Pathway[].class));
+    public static List<Pathway> searchPathway(int dbId) throws IOException, JAXBException {
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
+            {"{dbId}", String.valueOf(dbId)},};
+        RestConnection conn = new RestConnection("{serviceUrl}/search?db={dbId}", pathParams, null);
+        RestResponse response = conn.get();
+        return response.unmarshallAs(PathwayList.class).getPathways();
     }
 
     public static int countPathway(int dbId, String pathway) throws IOException {
@@ -126,35 +141,40 @@ public class PathwayService {
     }
 
     public static int countPathway(int dbId, String pathway, boolean like) throws IOException {
-        return Integer.parseInt(getJerseyClient().resource(getServiceUrl()).path("count").
-                queryParam("db", String.valueOf(dbId)).
-                queryParam("pathway", pathway).
-                queryParam("like", String.valueOf(like)).
-                accept(MediaType.TEXT_PLAIN).get(String.class));
+        String[][] pathParams = new String[][]{
+            {"{serviceUrl}", getServiceUrl()},
+            {"{dbId}", String.valueOf(dbId)},
+            {"{pathway}", URLEncoder.encode(pathway, "UTF-8")},
+            {"{like}", String.valueOf(like)}};
+        RestConnection conn = new RestConnection("{serviceUrl}/count?db={dbId}&pathway={pathway}&like={like}", pathParams, null);
+        RestResponse response = conn.get();
+        return (response.getResponseCode() == 200) ? Integer.parseInt(response.getDataAsString()) : 0;
     }
 
-    public static List<Pathway> searchPathway(int dbId, String pathway) throws IOException {
+    public static List<Pathway> searchPathway(int dbId, String pathway) throws IOException, JAXBException {
         return searchPathway(dbId, pathway, false);
     }
 
-    public static List<Pathway> searchPathway(int dbId, String pathway, boolean like) throws IOException {
-        return Arrays.asList(getJerseyClient().resource(getServiceUrl()).path("search").
-                queryParam("db", String.valueOf(dbId)).
-                queryParam("pathway", pathway).
-                queryParam("like", String.valueOf(like)).
-                accept(MediaType.APPLICATION_XML).get(Pathway[].class));
+    public static List<Pathway> searchPathway(int dbId, String pathway, boolean like) throws IOException, JAXBException {
+//        String[][] pathParams = new String[][]{
+//            {"{serviceUrl}", getServiceUrl()},
+//            {"{dbId}", String.valueOf(dbId)},
+//            {"{pathway}", URLEncoder.encode(pathway, "UTF-8")},
+//            {"{like}", String.valueOf(like)}};
+//        RestConnection conn = new RestConnection("{serviceUrl}/search?db={dbId}&pathway={pathway}&like={like}", pathParams, null);
+//        RestResponse response = conn.get();
+//        return response.unmarshallAs(PathwayList.class).getPathways();
+        RestConnection conn = new RestConnection(getServiceUrl() + "/search/post", null, null);
+        String[][] params = new String[][]{
+            {"db", String.valueOf(dbId)},
+            {"pathway", pathway},
+            {"like", String.valueOf(like)}};
+        RestResponse response = conn.post(null, params);
+        return response.unmarshallAs(PathwayList.class).getPathways();
     }
 
     public static void close() {
-        getJerseyClient().destroy();
-    }
-
-    public static Client getJerseyClient() {
-        return ClientHolder.client;
-    }
-
-    private static class ClientHolder {
-
-        private static final Client client = Client.create(new DefaultClientConfig());
+//        getJerseyClient().close();
+        // DO NOTHING
     }
 }

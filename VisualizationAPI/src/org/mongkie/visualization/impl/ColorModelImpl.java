@@ -44,8 +44,8 @@ public class ColorModelImpl implements ColorModel {
     private final List<PropertyChangeListener> listeners = new ArrayList<PropertyChangeListener>();
     private final List<ColorProvider<NodeItem>> nodeColorizerChain = new ArrayList<ColorProvider<NodeItem>>();
     private final List<ColorProvider<EdgeItem>> edgeColorizerChain = new ArrayList<ColorProvider<EdgeItem>>();
-    private static final ColorProvider<NodeItem> DEFAULT_NODECOLORPROVIDER =
-            new NodeColorProvider() {
+    private static final ColorProvider<NodeItem> DEFAULT_NODECOLORPROVIDER
+            = new NodeColorProvider() {
 
                 @Override
                 protected Color getItemTextColor(NodeItem item) {
@@ -62,8 +62,8 @@ public class ColorModelImpl implements ColorModel {
                     return ColorLib.getColor(COLOR_DEFAULT_NODE_FILL);
                 }
             };
-    private static final ColorProvider<EdgeItem> DEFAULT_EDGECOLORPROVIDER =
-            new EdgeColorProvider() {
+    private static final ColorProvider<EdgeItem> DEFAULT_EDGECOLORPROVIDER
+            = new EdgeColorProvider() {
 
                 @Override
                 protected Color getItemTextColor(EdgeItem item) {
@@ -83,8 +83,10 @@ public class ColorModelImpl implements ColorModel {
 
     public ColorModelImpl(MongkieDisplay d) {
         this.d = d;
-        nodeColorizerChain.add(DEFAULT_NODECOLORPROVIDER);
-        edgeColorizerChain.add(DEFAULT_EDGECOLORPROVIDER);
+        ColorProvider<NodeItem> ncp = d.getNodeColorProvider();
+        ColorProvider<EdgeItem> ecp = d.getEdgeColorProvider();
+        nodeColorizerChain.add(ncp == null ? DEFAULT_NODECOLORPROVIDER : ncp);
+        edgeColorizerChain.add(ecp == null ? DEFAULT_EDGECOLORPROVIDER : ecp);
     }
 
     @Override

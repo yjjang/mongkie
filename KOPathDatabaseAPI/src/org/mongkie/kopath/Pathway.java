@@ -28,7 +28,7 @@ import org.mongkie.kopath.spi.PathwayDatabase;
  * 
  * @author Yeongjun Jang <yjjang@kribb.re.kr>
  */
-@XmlRootElement
+@XmlRootElement(name = "pathway")
 public class Pathway implements Transferable {
 
     private int db;

@@ -53,6 +53,7 @@ import org.openide.awt.StatusDisplayer;
 import org.openide.util.Exceptions;
 import org.openide.util.ImageUtilities;
 import org.openide.util.Lookup;
+import org.openide.util.LookupEvent;
 import org.openide.util.NbBundle;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
@@ -148,7 +149,7 @@ public final class PathwayDisplayTopComponent extends TopComponent {
                 display.addControlListener(new PopupControl<PathwayDisplay>(display) {
                     @Override
                     protected void addNodePopupMenuItems(JPopupMenu popup) {
-//                        super.addNodePopupMenuItems(popup);
+                        super.addNodePopupMenuItems(popup);
                         final Action deleteAction = new AbstractAction("Delete",
                                 ImageUtilities.loadImageIcon("kobic/prefuse/resources/delete.png", false)) {
                             @Override
@@ -201,7 +202,8 @@ public final class PathwayDisplayTopComponent extends TopComponent {
                     }
                 });
                 content.add(display);
-                Lookup.getDefault().lookup(VisualizationController.class).resultChanged(null);
+                Lookup.getDefault().lookup(VisualizationController.class).resultChanged(
+                        new LookupEvent(getLookup().lookupResult(MongkieDisplay.class)));
                 remove(initializingLabel);
                 add(display, BorderLayout.CENTER);
                 int width = getWidth();

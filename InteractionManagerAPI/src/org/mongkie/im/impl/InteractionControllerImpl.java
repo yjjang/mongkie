@@ -157,7 +157,7 @@ public class InteractionControllerImpl implements InteractionController {
                     }
                 });
         MongkieDisplay d = Lookup.getDefault().lookup(VisualizationController.class).getDisplay();
-        assert d.getLookup().lookupAll(SourceModelImpl.class).isEmpty();
+        assert d != null && d.getLookup().lookupAll(SourceModelImpl.class).isEmpty();
         for (InteractionSource is : Lookup.getDefault().lookupAll(InteractionSource.class)) {
             SourceModelImpl m = new SourceModelImpl(d, is);
             d.add(m);
@@ -319,8 +319,8 @@ public class InteractionControllerImpl implements InteractionController {
 
     private class Expand<K> extends Query<K> {
 
-        private Set<K> keys;
-        private boolean linked;
+        private final Set<K> keys;
+        private final boolean linked;
 
         public Expand(SourceModelImpl m, String keyField, K... keys) {
             super(m, keyField);
@@ -735,8 +735,7 @@ public class InteractionControllerImpl implements InteractionController {
 
         public Map<K, Set<Interaction<K>>> query(Set<K> keys) {
             Map<K, Set<Interaction<K>>> results = new HashMap<K, Set<Interaction<K>>>();
-            for (Iterator<K> keyIter = keys.iterator(); keyIter.hasNext();) {
-                K key = keyIter.next();
+            for (K key : keys) {
                 if (interactionLookup.containsKey(key)) {
                     results.put(key, interactionLookup.get(key));
                 }
@@ -746,8 +745,7 @@ public class InteractionControllerImpl implements InteractionController {
 
         public Map<K, Attribute.Set> annotate(Set<K> keys) {
             Map<K, Attribute.Set> results = new HashMap<K, Attribute.Set>();
-            for (Iterator<K> keyIter = keys.iterator(); keyIter.hasNext();) {
-                K key = keyIter.next();
+            for (K key : keys) {
                 if (attributeLookup.containsKey(key)) {
                     results.put(key, attributeLookup.get(key));
                 }
@@ -1014,10 +1012,7 @@ public class InteractionControllerImpl implements InteractionController {
                 return false;
             }
             final GraphSource other = (GraphSource) obj;
-            if ((this.name == null) ? (other.name != null) : !this.name.equals(other.name)) {
-                return false;
-            }
-            return true;
+            return !((this.name == null) ? (other.name != null) : !this.name.equals(other.name));
         }
 
         class GraphInteraction implements Interaction {
@@ -1082,10 +1077,7 @@ public class InteractionControllerImpl implements InteractionController {
                     return false;
                 }
                 final GraphInteraction other = (GraphInteraction) obj;
-                if (this.e != other.e && (this.e == null || !this.e.equals(other.e))) {
-                    return false;
-                }
-                return true;
+                return this.e == other.e || (this.e != null && this.e.equals(other.e));
             }
 
             @Override

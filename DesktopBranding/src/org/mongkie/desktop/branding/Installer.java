@@ -24,6 +24,7 @@ public class Installer extends ModuleInstall {
                 UIManager.put("Table.columnSelection", ImageUtilities.loadImageIcon("org/mongkie/desktop/branding/resources/column-selection.png", false));
                 if (isGTK()) {
                     UIManager.put("Label.disabledForeground", Color.gray);
+                    setUIFont(new javax.swing.plaf.FontUIResource("Droid Sans", Font.PLAIN, 12));
                 } else if (isWindows()) {
                     UIManager.put("windowTitleFont", new javax.swing.plaf.FontUIResource("Segoe UI", Font.BOLD, 11));
                     UIManager.put("controlFont", new javax.swing.plaf.FontUIResource("Segoe UI", Font.PLAIN, 12));
@@ -102,6 +103,6 @@ public class Installer extends ModuleInstall {
     }
 
     private boolean isWindows() {
-        return System.getProperty("os.name").toLowerCase().indexOf("win") >= 0;
+        return System.getProperty("os.name").toLowerCase().contains("win");
     }
 }

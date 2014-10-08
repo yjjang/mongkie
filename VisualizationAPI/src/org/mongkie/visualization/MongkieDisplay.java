@@ -24,6 +24,7 @@ import static kobic.prefuse.Constants.*;
 import kobic.prefuse.display.NetworkDisplay;
 import kobic.prefuse.render.ExtendedEdgeRenderer;
 import org.mongkie.visualization.color.ColorController;
+import org.mongkie.visualization.color.ColorProvider;
 import org.mongkie.visualization.workspace.Workspace;
 import org.openide.util.Lookup;
 import org.openide.util.lookup.AbstractLookup;
@@ -108,6 +109,14 @@ public class MongkieDisplay extends NetworkDisplay implements Workspace {
     @Override
     protected AggregateShape getInitialAggregateShape() {
         return AggregateShape.CIRCLE;
+    }
+    
+    public ColorProvider<NodeItem> getNodeColorProvider() {
+        return null;
+    }
+    
+    public ColorProvider<EdgeItem> getEdgeColorProvider() {
+        return null;
     }
     
     @Override

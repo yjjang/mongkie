@@ -27,7 +27,6 @@ import javax.swing.ImageIcon;
 import static kobic.prefuse.Constants.*;
 import kobic.prefuse.EdgeStroke;
 import kobic.prefuse.action.assignment.EdgeDataColorAction;
-import kobic.prefuse.action.assignment.NodeDataColorAction;
 import kobic.prefuse.action.layout.DecoratorLayout;
 import kobic.prefuse.controls.AggregateDragControl;
 import kobic.prefuse.display.DataEditSupport;
@@ -41,10 +40,11 @@ import org.mongkie.kopath.spi.PathwayDatabase;
 import org.mongkie.kopath.util.Utilities;
 import static org.mongkie.kopath.viz.Config.*;
 import org.mongkie.visualization.MongkieDisplay;
+import org.mongkie.visualization.color.ColorProvider;
+import org.mongkie.visualization.color.NodeColorProvider;
 import prefuse.Constants;
 import prefuse.Visualization;
 import static prefuse.Visualization.AGGR_ITEMS;
-import static prefuse.Visualization.DRAW;
 import prefuse.action.ActionList;
 import prefuse.action.assignment.*;
 import prefuse.action.layout.Layout;
@@ -171,8 +171,8 @@ public class PathwayDisplay extends MongkieDisplay implements GraphListener {
             protected Image getImage(VisualItem item) {
                 return expandingGif;
             }
-            private final Image expandingGif =
-                    new ImageIcon(PathwayDisplay.class.getResource("resources/expanding.gif")).getImage();
+            private final Image expandingGif
+                    = new ImageIcon(PathwayDisplay.class.getResource("resources/expanding.gif")).getImage();
         };
         expandingIconRenderer.setVerticalAlignment(Constants.CENTER);
         expandingIconRenderer.setHorizontalPadding(0);
@@ -588,13 +588,37 @@ public class PathwayDisplay extends MongkieDisplay implements GraphListener {
         draw.add(nodeFont);
     }
 
+//    @Override
+//    protected void addNodeColorActions(ActionList draw) {
+//        String[] ordinalMaps = NodeType.names();
+//        draw.add(new NodeDataColorAction(FIELD_ITYPE, VisualItem.STROKECOLOR, ordinalMaps, NodeType.paletteOf(VisualItem.STROKECOLOR)));
+//        draw.add(new NodeDataColorAction(FIELD_ITYPE, VisualItem.FILLCOLOR, ordinalMaps, NodeType.paletteOf(VisualItem.FILLCOLOR)));
+//        draw.add(new NodeDataColorAction(FIELD_ITYPE, VisualItem.TEXTCOLOR, ordinalMaps, NodeType.paletteOf(VisualItem.TEXTCOLOR)));
+//    }
     @Override
-    protected void addNodeColorActions(ActionList draw) {
-        String[] ordinalMaps = NodeType.names();
-        draw.add(new NodeDataColorAction(FIELD_ITYPE, VisualItem.STROKECOLOR, ordinalMaps, NodeType.paletteOf(VisualItem.STROKECOLOR)));
-        draw.add(new NodeDataColorAction(FIELD_ITYPE, VisualItem.FILLCOLOR, ordinalMaps, NodeType.paletteOf(VisualItem.FILLCOLOR)));
-        draw.add(new NodeDataColorAction(FIELD_ITYPE, VisualItem.TEXTCOLOR, ordinalMaps, NodeType.paletteOf(VisualItem.TEXTCOLOR)));
+    public ColorProvider<NodeItem> getNodeColorProvider() {
+        if (ncp == null) {
+            ncp = new NodeColorProvider() {
+
+                @Override
+                protected Color getItemTextColor(NodeItem item) {
+                    return ColorLib.getColor(NodeType.valueOf(item.getString(FIELD_ITYPE)).colorOf(VisualItem.TEXTCOLOR));
+                }
+
+                @Override
+                protected Color getItemStrokeColor(NodeItem item) {
+                    return ColorLib.getColor(NodeType.valueOf(item.getString(FIELD_ITYPE)).colorOf(VisualItem.STROKECOLOR));
+                }
+
+                @Override
+                protected Color getItemFillColor(NodeItem item) {
+                    return ColorLib.getColor(NodeType.valueOf(item.getString(FIELD_ITYPE)).colorOf(VisualItem.FILLCOLOR));
+                }
+            };
+        }
+        return ncp;
     }
+    private NodeColorProvider ncp = null;
 
     @Override
     protected void addAggregateColorActions(ActionList draw) {
@@ -1104,34 +1128,34 @@ public class PathwayDisplay extends MongkieDisplay implements GraphListener {
             ((AggregateTable) getVisualization().getVisualGroup(m_group)).addTupleSetListener(
                     aggregatesListener = new TupleSetListener() {
 
-                @Override
-                public void tupleSetChanged(TupleSet tupleSet, Tuple[] added, Tuple[] removed) {
-                    boolean refiltering = false;
-                    for (Tuple aggregate : added) {
-                        if (COMPLEXES_INAGGREGATES.getBoolean(aggregate)) {
-                            complexAggregates.put((NodeItem) aggregate.get(FIELD_CORESPONDING_NODE), (AggregateItem) aggregate);
-                            refiltering = true;
+                        @Override
+                        public void tupleSetChanged(TupleSet tupleSet, Tuple[] added, Tuple[] removed) {
+                            boolean refiltering = false;
+                            for (Tuple aggregate : added) {
+                                if (COMPLEXES_INAGGREGATES.getBoolean(aggregate)) {
+                                    complexAggregates.put((NodeItem) aggregate.get(FIELD_CORESPONDING_NODE), (AggregateItem) aggregate);
+                                    refiltering = true;
+                                }
+                            }
+                            for (Tuple aggregate : removed) {
+                                if (COMPLEXES_INAGGREGATES.getBoolean(aggregate)) {
+                                    complexAggregates.remove((NodeItem) aggregate.get(FIELD_CORESPONDING_NODE));
+                                    refiltering = true;
+                                }
+                            }
+                            if (refiltering) {
+                                for (CascadedTable complexTable : complexTables) {
+                                    complexTable.filterRows();
+                                }
+                            }
                         }
-                    }
-                    for (Tuple aggregate : removed) {
-                        if (COMPLEXES_INAGGREGATES.getBoolean(aggregate)) {
-                            complexAggregates.remove((NodeItem) aggregate.get(FIELD_CORESPONDING_NODE));
-                            refiltering = true;
-                        }
-                    }
-                    if (refiltering) {
-                        for (CascadedTable complexTable : complexTables) {
-                            complexTable.filterRows();
-                        }
-                    }
-                }
-            });
+                    });
         }
 
         private void initComplexAggregates() {
             complexAggregates.clear();
-            for (Iterator<AggregateItem> complexAggregateIter =
-                    ((AggregateTable) getVisualization().getVisualGroup(m_group)).tuples(COMPLEXES_INAGGREGATES);
+            for (Iterator<AggregateItem> complexAggregateIter
+                    = ((AggregateTable) getVisualization().getVisualGroup(m_group)).tuples(COMPLEXES_INAGGREGATES);
                     complexAggregateIter.hasNext();) {
                 AggregateItem complexAggregate = complexAggregateIter.next();
                 complexAggregates.put((NodeItem) complexAggregate.get(FIELD_CORESPONDING_NODE), complexAggregate);
@@ -1254,45 +1278,45 @@ public class PathwayDisplay extends MongkieDisplay implements GraphListener {
             ((VisualTable) getVisualization().getVisualGroup(NODES)).addTupleSetListener(
                     nodesListener = new TupleSetListener() {
 
-                @Override
-                public void tupleSetChanged(TupleSet tupleSet, Tuple[] added, Tuple[] removed) {
-                    boolean refiltering = false;
-                    for (Tuple node : added) {
-                        if (node.getString(FIELD_ITYPE).equals(NodeType.CONTROLLIE.toString())) {
-                            NodeItem controllie = (NodeItem) node;
-                            EdgeItem controllieEdge = (EdgeItem) getVisualGraph().getEdgeTable().getTuple(controllie.getInt(FIELD_CONTROLLIE_EDGEROW));
-                            List<NodeItem> controllies = controlliesByEdge.get(controllieEdge);
-                            if (controllies == null) {
-                                controllies = new ArrayList<NodeItem>();
-                                controlliesByEdge.put(controllieEdge, controllies);
-                                refiltering = true;
-                            }
-                            controllies.add(controllie);
-                        }
-                    }
-                    for (Tuple node : removed) {
-                        if (node.getString(FIELD_ITYPE).equals(NodeType.CONTROLLIE.toString())) {
-                            NodeItem controllie = (NodeItem) node;
-                            Set<EdgeItem> controllieEdges = controlliesByEdge.keySet();
-                            synchronized (controlliesByEdge) {
-                                for (Iterator<EdgeItem> controllieEdgeIter = controllieEdges.iterator(); controllieEdgeIter.hasNext();) {
-                                    EdgeItem controllieEdge = controllieEdgeIter.next();
+                        @Override
+                        public void tupleSetChanged(TupleSet tupleSet, Tuple[] added, Tuple[] removed) {
+                            boolean refiltering = false;
+                            for (Tuple node : added) {
+                                if (node.getString(FIELD_ITYPE).equals(NodeType.CONTROLLIE.toString())) {
+                                    NodeItem controllie = (NodeItem) node;
+                                    EdgeItem controllieEdge = (EdgeItem) getVisualGraph().getEdgeTable().getTuple(controllie.getInt(FIELD_CONTROLLIE_EDGEROW));
                                     List<NodeItem> controllies = controlliesByEdge.get(controllieEdge);
-                                    if (controllies.remove(controllie) && controllies.isEmpty()) {
-                                        controllieEdgeIter.remove();
+                                    if (controllies == null) {
+                                        controllies = new ArrayList<NodeItem>();
+                                        controlliesByEdge.put(controllieEdge, controllies);
                                         refiltering = true;
+                                    }
+                                    controllies.add(controllie);
+                                }
+                            }
+                            for (Tuple node : removed) {
+                                if (node.getString(FIELD_ITYPE).equals(NodeType.CONTROLLIE.toString())) {
+                                    NodeItem controllie = (NodeItem) node;
+                                    Set<EdgeItem> controllieEdges = controlliesByEdge.keySet();
+                                    synchronized (controlliesByEdge) {
+                                        for (Iterator<EdgeItem> controllieEdgeIter = controllieEdges.iterator(); controllieEdgeIter.hasNext();) {
+                                            EdgeItem controllieEdge = controllieEdgeIter.next();
+                                            List<NodeItem> controllies = controlliesByEdge.get(controllieEdge);
+                                            if (controllies.remove(controllie) && controllies.isEmpty()) {
+                                                controllieEdgeIter.remove();
+                                                refiltering = true;
+                                            }
+                                        }
                                     }
                                 }
                             }
+                            if (refiltering) {
+                                for (CascadedTable controllieTable : controllieTables) {
+                                    controllieTable.filterRows();
+                                }
+                            }
                         }
-                    }
-                    if (refiltering) {
-                        for (CascadedTable controllieTable : controllieTables) {
-                            controllieTable.filterRows();
-                        }
-                    }
-                }
-            });
+                    });
         }
 
         private ControllieLayout(Visualization v, String groupExpr) {
@@ -1483,25 +1507,25 @@ public class PathwayDisplay extends MongkieDisplay implements GraphListener {
                     }
                 }) {
 
-            @Override
-            public Schema getOutlineSchema() {
-                return isIntegratedPathway() ? EDGEOUTLINE_FOR_ENTITYLEVEL : EDGEOUTLINE_FOR_PATHWAYLEVEL;
-            }
+                    @Override
+                    public Schema getOutlineSchema() {
+                        return isIntegratedPathway() ? EDGEOUTLINE_FOR_ENTITYLEVEL : EDGEOUTLINE_FOR_PATHWAYLEVEL;
+                    }
 
-            @Override
-            public String getColumnTitle(String field) {
-                return Config.getEdgeOutlineColumnName(field);
-            }
+                    @Override
+                    public String getColumnTitle(String field) {
+                        return Config.getEdgeOutlineColumnName(field);
+                    }
 
-            @Override
-            public String getStringAt(Tuple edge, String field) {
-                ControlType controlType = null;
-                if (field.equals(FIELD_MOLECULAREVENT) && (controlType = ControlType.fromSymbol(edge.getString(field))) != null) {
-                    return controlType.getName();
-                }
-                return super.getStringAt(edge, field);
-            }
-        };
+                    @Override
+                    public String getStringAt(Tuple edge, String field) {
+                        ControlType controlType = null;
+                        if (field.equals(FIELD_MOLECULAREVENT) && (controlType = ControlType.fromSymbol(edge.getString(field))) != null) {
+                            return controlType.getName();
+                        }
+                        return super.getStringAt(edge, field);
+                    }
+                };
     }
 
     @Override
@@ -1515,34 +1539,34 @@ public class PathwayDisplay extends MongkieDisplay implements GraphListener {
                     }
                 }) {
 
-            @Override
-            public Schema getOutlineSchema() {
-                return isIntegratedPathway() ? NODEOUTLINE_FOR_ENTITYLEVEL : NODEOUTLINE_FOR_PATHWAYLEVEL;
-            }
+                    @Override
+                    public Schema getOutlineSchema() {
+                        return isIntegratedPathway() ? NODEOUTLINE_FOR_ENTITYLEVEL : NODEOUTLINE_FOR_PATHWAYLEVEL;
+                    }
 
-            @Override
-            public Schema getPropertySchema() {
-                return isIntegratedPathway() ? NODEPROPERTIES_FOR_ENTITYLEVEL : NODEPROPERTIES_FOR_PATHWAYLEVEL;
-            }
+                    @Override
+                    public Schema getPropertySchema() {
+                        return isIntegratedPathway() ? NODEPROPERTIES_FOR_ENTITYLEVEL : NODEPROPERTIES_FOR_PATHWAYLEVEL;
+                    }
 
-            @Override
-            public Schema getTooltipSchema() {
-                return getPropertySchema();
-            }
+                    @Override
+                    public Schema getTooltipSchema() {
+                        return getPropertySchema();
+                    }
 
-            @Override
-            public String getColumnTitle(String field) {
-                return Config.getNodeOutlineColumnName(field);
-            }
+                    @Override
+                    public String getColumnTitle(String field) {
+                        return Config.getNodeOutlineColumnName(field);
+                    }
 
-            @Override
-            public String getStringAt(Tuple node, String field) {
-                int[] suids;
-                if (field.equals(FIELD_SUBNODES) && (suids = (int[]) node.get(field)) != null) {
-                    return Utilities.getEntitiesAsStringFromUIDs(getGraph(), suids);
-                }
-                return super.getStringAt(node, field);
-            }
-        };
+                    @Override
+                    public String getStringAt(Tuple node, String field) {
+                        int[] suids;
+                        if (field.equals(FIELD_SUBNODES) && (suids = (int[]) node.get(field)) != null) {
+                            return Utilities.getEntitiesAsStringFromUIDs(getGraph(), suids);
+                        }
+                        return super.getStringAt(node, field);
+                    }
+                };
     }
 }
