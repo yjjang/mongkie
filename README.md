@@ -6,15 +6,15 @@ MONGKIE
 Introduction
 ------------
 
-MONGKIE is an integrated network visualization and analysis platform which allows us to explore and analyze inter-connected biological data in an interactive manner with knowledge integration environment. It is designed for both the visualization of biological networks and the analysis of these networks with a seamless integration between the two procedures. MONGKIE incorporates knowledge integration and network analysis modules into the visualization platform, such as Import and Export, Interaction Manager, Gene ID Conversion, Expression Overlay, Network Clustering, Gene Set Enrichment Analysis(GO and Pathway), Pathway Integration and Visualization.
+In systems biology, one of the common but powerful approaches to gain insights into the underlying complexity and dynamics of biological processes in diseases is to analyze multi-omics data derived from high-throughput experiments on the context of various biological networks – e.g. protein-protein interactions, biological pathways (Gehlenborg _et al._ 2010). Especially in tumor biology, integration of mutation, copy number, and gene expression profiles with gene interaction networks has been proposed as an approach to identify functional driver mutations, relying on the assumption that they will cluster on the network (Bertrand _et al._ 2015).
 
-Visit [http://yjjang.github.io/mongkie](http://yjjang.github.io/mongkie) for more details
+MONGKIE is an integrated network analysis and visualization application mainly designed for such analyses, providing not only the `sophisticated visualization model`, but also seamless integration of various analytical processes including `biological network integration`, `extraction and build of context specific sub-network`, `network clustering`, `gene expression overlay`, and `GO or pathway over-representation analysis`. 
 
 
 License
 -------
 
-    Visit <http://yjjang.github.io/mongkie> for details .
+    Visit <http://yjjang.github.io/mongkie> for details.
     Copyright (C) 2015 Ewha Research Center for Systems Biology (ERCSB)
     
     MONGKIE is free software: you can redistribute it and/or modify
