@@ -205,8 +205,9 @@ public class MongkieDisplay extends NetworkDisplay implements Workspace {
             
             @Override
             public void process(VisualItem item, double frac) {
-                Color c = Lookup.getDefault().lookup(ColorController.class).getModel(MongkieDisplay.this).getGroupColorProvider().getFillColor((AggregateItem) item);
-                setDefaultColor(c == null ? COLOR_DEFAULT_AGGR_STROKE : ColorLib.color(c));
+//                Color c = Lookup.getDefault().lookup(ColorController.class).getModel(MongkieDisplay.this).getGroupColorProvider().getFillColor((AggregateItem) item);
+//                setDefaultColor(c == null ? COLOR_DEFAULT_AGGR_STROKE : ColorLib.color(c));
+                setDefaultColor(ColorLib.color(getBackground()));
                 super.process(item, frac);
             }
         });

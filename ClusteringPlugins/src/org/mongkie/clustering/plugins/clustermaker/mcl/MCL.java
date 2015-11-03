@@ -50,7 +50,7 @@ public class MCL implements Clustering<MCLCluster> {
     private int maxThreads = 0;
     // Distance matrix parameters
     private boolean directed = false;
-    private Double edgeCutOff = 1.0D;
+    private Double edgeCutOff = 0.0D;
     private boolean adjustLoops = true;
     private boolean selectedOnly = false;
     private EdgeWeightConverter converter;

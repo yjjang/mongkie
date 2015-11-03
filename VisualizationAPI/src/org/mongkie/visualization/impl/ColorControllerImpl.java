@@ -164,7 +164,7 @@ public class ColorControllerImpl implements ColorController {
         } else if (item instanceof AggregateItem) {
             AggregateItem aggrItem = (AggregateItem) item;
             model.getGroupColorProvider().addFillColor(aggrItem, c);
-            setStrokeColorForNodesIn(aggrItem, c);
+//            setStrokeColorForNodesIn(aggrItem, c);
             c = ColorLib.getColor(c.getRed(), c.getGreen(), c.getBlue(), Config.COLOR_AGGRFILL_ALPHA);
         }
         item.getVisualization().rerun(DRAW);

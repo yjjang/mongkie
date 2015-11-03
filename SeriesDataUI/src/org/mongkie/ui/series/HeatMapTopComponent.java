@@ -80,7 +80,7 @@ public final class HeatMapTopComponent extends TopComponent implements SeriesMod
         heatmapPanel.setTitle("UNTITLED");
         heatmapPanel.setDrawTitle(true);
 
-        heatmapPanel.setXAxisTitle("Samples");
+        heatmapPanel.setXAxisTitle("Conditions");
         heatmapPanel.setDrawXAxisTitle(true);
 
         heatmapPanel.setYAxisTitle("Genes ");

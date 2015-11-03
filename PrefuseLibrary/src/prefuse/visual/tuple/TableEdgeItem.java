@@ -90,7 +90,8 @@ public class TableEdgeItem extends TableVisualItem implements EdgeItem {
 
     @Override
     public double getWeight() {
-        return m_graph.getWeight(this);
+//        return m_graph.getWeight(this);
+        return canGetDouble("i.weight") ? getDouble("i.weight") : 1.0D;
     }
 
 } // end of class TableEdgeItem

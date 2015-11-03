@@ -70,6 +70,7 @@ public class TableEdge extends TableTuple implements Edge {
 
     @Override
     public double getWeight() {
-        return m_graph.getWeight(this);
+//        return m_graph.getWeight(this);
+        return canGetDouble("i.weight") ? getDouble("i.weight") : 1.0D;
     }
 } // end of class TableEdge
