@@ -17,14 +17,10 @@
  */
 package org.mongkie.ui.perspective;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
 import javax.swing.*;
-import org.mongkie.perspective.spi.BottomTopComponent;
 import static org.mongkie.ui.perspective.PerspectiveTopComponent.LAST_PERSPECTIVE;
 import static org.mongkie.visualization.Config.ROLE_NETWORK;
 import org.openide.modules.ModuleInstall;
-import org.openide.util.Lookup;
 import org.openide.util.NbPreferences;
 import org.openide.windows.WindowManager;
 import org.openide.windows.WindowSystemEvent;
@@ -54,32 +50,33 @@ public class Installer extends ModuleInstall implements WindowSystemListener {
                 frame.getRootPane().getLayeredPane().add(toolbar, 0);
             }
         });
-        // Add a pane on the bottom of the main window, if any exits
-        WindowManager.getDefault().invokeWhenUIReady(new Runnable() {
-            @Override
-            public void run() {
-                JFrame frame = (JFrame) WindowManager.getDefault().getMainWindow();
-                //Get the bottom component
-                //TODO: Manage multiple bottom components and then, show only a selected one?
-                BottomTopComponent bcImpl = Lookup.getDefault().lookup(BottomTopComponent.class);
-                JComponent bc = bcImpl != null ? bcImpl.getComponent() : null;
-                //Replace the content pane with our creation
-                JComponent statusLinePanel = null;
-                for (Component c : frame.getContentPane().getComponents()) {
-                    if (c.getName() != null && c.getName().equals("statusLine")) {
-                        statusLinePanel = (JComponent) c;
-                    }
-                }
-                if (bc != null && statusLinePanel != null) {
-                    frame.getContentPane().remove(statusLinePanel);
-                    JPanel southPanel = new JPanel(new BorderLayout());
-                    southPanel.add(statusLinePanel, BorderLayout.SOUTH);
-                    bc.setVisible(false);
-                    southPanel.add(bc, BorderLayout.CENTER);
-                    frame.getContentPane().add(southPanel, BorderLayout.SOUTH);
-                }
-            }
-        });
+// Moved to org.mongkie.ui.series.SliderTopComponent
+//        // Add a pane on the bottom of the main window, if any exits
+//        WindowManager.getDefault().invokeWhenUIReady(new Runnable() {
+//            @Override
+//            public void run() {
+//                JFrame frame = (JFrame) WindowManager.getDefault().getMainWindow();
+//                //Get the bottom component
+//                //TODO: Manage multiple bottom components and then, show only a selected one?
+//                BottomTopComponent bcImpl = Lookup.getDefault().lookup(BottomTopComponent.class);
+//                JComponent bc = bcImpl != null ? bcImpl.getComponent() : null;
+//                //Replace the content pane with our creation
+//                JComponent statusLinePanel = null;
+//                for (Component c : frame.getContentPane().getComponents()) {
+//                    if (c.getName() != null && c.getName().equals("statusLine")) {
+//                        statusLinePanel = (JComponent) c;
+//                    }
+//                }
+//                if (bc != null && statusLinePanel != null) {
+//                    frame.getContentPane().remove(statusLinePanel);
+//                    JPanel southPanel = new JPanel(new BorderLayout());
+//                    southPanel.add(statusLinePanel, BorderLayout.SOUTH);
+//                    bc.setVisible(false);
+//                    southPanel.add(bc, BorderLayout.CENTER);
+//                    frame.getContentPane().add(southPanel, BorderLayout.SOUTH);
+//                }
+//            }
+//        });
 
         WindowManager.getDefault().addWindowSystemListener(this);
     }
