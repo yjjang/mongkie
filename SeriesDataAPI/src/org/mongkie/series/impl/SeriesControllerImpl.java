@@ -173,11 +173,13 @@ public class SeriesControllerImpl implements SeriesController, DisplayListener {
                     final Table nodeTable = display.getGraph().getNodeTable();
                     String seriesKey = seriesTable.getColumnName(0);
                     seriesTable.index(seriesKey);
+                    final String[] seriesCols = new String[seriesTable.getColumnCount() - 1];
                     display.getVisualization().process(new Runnable() {
                         @Override
                         public void run() {
                             for (int i = 1; i < seriesTable.getColumnCount(); i++) {
                                 String colName = seriesTable.getColumnName(i);
+                                seriesCols[i - 1] = colName;
                                 if (nodeTable.getColumn(colName) == null) {
                                     nodeTable.addColumn(colName, double.class);
                                 }
@@ -204,7 +206,7 @@ public class SeriesControllerImpl implements SeriesController, DisplayListener {
                         }
                         j++;
                     }
-                    model.setData(new SeriesData(importer.getTitle(), matrix));
+                    model.setData(new SeriesData(importer.getTitle(), matrix, seriesCols));
                 }
             } catch (DataIOException ex) {
                 Logger.getLogger(SeriesControllerImpl.class.getName()).log(Level.SEVERE, null, ex);

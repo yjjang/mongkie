@@ -18,7 +18,7 @@
 package org.mongkie.series;
 
 /**
- * 
+ *
  * @author Yeongjun Jang <yjjang@kribb.re.kr>
  */
 public class SeriesData {
@@ -31,15 +31,20 @@ public class SeriesData {
     }
     private boolean empty;
     private double[][] matrix;
+    private String[] columns;
 
-    public SeriesData(String title, double[][] matrix) {
+    public SeriesData(String title, double[][] matrix, String[] columns) {
         this.title = title;
+        this.columns = columns;
         set(matrix);
     }
 
-    public SeriesData(double[][] matrix) {
-        this("UNTITLED", matrix);
+    public String[] getColumns() {
+        return columns;
+    }
 
+    public SeriesData(double[][] matrix, String[] columns) {
+        this("UNTITLED", matrix, columns);
     }
 
     public SeriesData() {

@@ -24,9 +24,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Hashtable;
 import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
@@ -110,6 +112,12 @@ public final class SliderTopComponent extends javax.swing.JPanel implements Bott
 
     void heatmapUpdated(SeriesData series) {
         seriesSlider.setMaximum(series.isEmpty() ? 0 : series.getColumnCount() - 1);
+        Hashtable<Integer, JLabel> labels = new Hashtable<Integer, JLabel>();
+        String[] cols = series.getColumns();
+        for (int i = 0; i < series.getColumnCount(); i++) {
+            labels.put(i, new JLabel(cols[i]));
+        }
+        seriesSlider.setLabelTable(labels);
         setEnabled(!series.isEmpty());
     }
 
