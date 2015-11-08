@@ -3,20 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MONGKIE's documentation!
-===================================
+.. image:: images/logoS_48.png
+   :height: 35px
+   :width: 35px
+   :align: left
 
-Contents:
+*******
+MONGKIE
+*******
+
+Contents
+========
 
 .. toctree::
    :maxdepth: 2
 
+   installation
+   tutorial
+   case_study
+   network_visualization
+   network_analysis
+   user_interface
+   import_and_export
+   implementation
+   interaction_sources
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
+.. * :ref:`modindex`
 * :ref:`search`
 
