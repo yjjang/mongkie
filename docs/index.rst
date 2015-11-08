@@ -8,9 +8,8 @@
    :width: 35px
    :align: left
 
-*******
 MONGKIE
-*******
+#######
 
 Contents
 ========
