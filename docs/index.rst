@@ -4,6 +4,8 @@
    contain the root `toctree` directive.
 
 .. image:: images/logoS_48.png
+   :height: 35px
+   :width: 35px
    :align: left
 
 *******
