@@ -16,7 +16,7 @@
 import sys
 import os
 import shlex
-import sphinx_rtd_theme
+#import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -113,7 +113,8 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -137,7 +138,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = 'images/mongkie.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -227,7 +228,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'MONGKIE.tex', 'MONGKIE Documentation',
+  (master_doc, 'MONGKIE.tex', 'MONGKIE Supplementary',
    'Yeongjun Jang', 'manual'),
 ]
 
@@ -271,8 +272,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'MONGKIE', 'MONGKIE Documentation',
-   author, 'MONGKIE', 'One line description of project.',
+  (master_doc, 'MONGKIE', 'MONGKIE Supplementary',
+   author, 'MONGKIE', 'One line supplementary of project.',
    'Miscellaneous'),
 ]
 
