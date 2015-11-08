@@ -2,7 +2,7 @@
 Case Study
 **********
 
-High-throughput studies of tumor biology at multiple levels, including genome, transcriptome, and proteome, have been resulting in a greatly increased volume of cancer omics data. Given the huge amount of cancer omics data, it is a major challenge to distinguish driver mutations from passengers, and to reveal functional relationships between them. One powerful approach to the challenge is to analyze data on the context of the biological network. For example, integration of mutation, copy number, and gene expression profiles with a biological interaction network has been proposed as an approach to identify drivers, relying on the assumption that they will cluster on the network (:ref:`Bertrand *et al*., 2015 <bertrand>`).
+High-throughput studies of tumor biology at multiple levels, including genome, transcriptome, and proteome, have been resulting in a greatly increased volume of cancer omics data. Given the huge amount of cancer omics data, it is a major challenge to distinguish driver mutations from passengers, and to reveal functional relationships between them. One powerful approach to the challenge is to analyze data on the context of the biological network. For example, integration of mutation, copy number, and gene expression profiles with a biological interaction network has been proposed as an approach to identify drivers, relying on the assumption that they will cluster on the network (Bertrand *et al*., 2015 [#]_).
 
 In this section, we demonstrate that how MONGKIE can facilitates the study of structural pattern of altered genes in the study of TCGA GBM data sets () on the `STRING <http://string-db.org/>`_ PPI network to identify candidate driver genes and core gene modules perturbed by them.
 
@@ -27,4 +27,4 @@ Results
 
 .. rubric:: References
 
-.. [#bertrand] Bertrand, Denis, *et al*. **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* (2015): gku1393.
+.. [#] Bertrand, Denis, *et al*. **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* (2015): gku1393.
