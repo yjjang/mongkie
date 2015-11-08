@@ -13,7 +13,7 @@ Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 
 
 An alteration frequency score for each gene was calculated, based on the 273 GBM cases with both somatic mutation and copy number information. Each gene was considered altered if modified by a validated non-synonymous somatic nucleotide substitution, a homozygous deletion, or a multi-copy amplification. These somatic SNVs, indels, and called CNAs are combined to produce the patient-mutation matrix M, where M(i;j) indicates whether the gene i is altered or not in the patient j.
 
-For gene-level expression profiles, we produced the patient-expression matrix G, where G(i;j) represents the expression level, which is a logarithmic scale of upper-quartile normalized RSEM (Li *et al*., 2011) estimats in tumor for the gene i in the patient j.
+For gene-level expression profiles, we produced the patient-expression matrix G, where G(i;j) represents the expression level, which is a logarithmic scale of upper-quartile normalized RSEM (Li *et al*., 2011 [#lee2011]_) estimats in tumor for the gene i in the patient j.
 
 Extract GBM-altered network
 ===========================
@@ -27,5 +27,6 @@ Results
 
 .. rubric:: REFERENCES
 
+.. [#bertrand2015] Bertrand, Denis, *et al*. (2015) **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* gku1393.
 .. [#brennan2013] Brennan, C. W., *et al*. (2013) **The somatic genomic landscape of glioblastoma.** *Cell*, 155(2), 462-477.
-.. [#bertrand2015] Bertrand, Denis, *et al*. **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* (2015): gku1393.
+.. [#lee2011] Li, Bo, and Colin N. Dewey. (2011) **RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.** *BMC bioinformatics* 12.1: 323.
