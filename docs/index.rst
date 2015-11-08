@@ -17,6 +17,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
+   :nembered:
 
    installation
    tutorial
