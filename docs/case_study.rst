@@ -25,4 +25,4 @@ Results
 =======
 
 
-.. [Bertrand et al., 2015] Bertrand, Denis, *et al*. Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles. *Nucleic acids research* (2015): gku1393. 
+.. [Bertrand *et al*., 2015] Bertrand, Denis, *et al*. Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles. *Nucleic acids research* (2015): gku1393.
