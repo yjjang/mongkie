@@ -1,5 +1,6 @@
+********
 Tutorial
-########
+********
 
 Step-by-step tutorial for the :doc:`./case_study`
 

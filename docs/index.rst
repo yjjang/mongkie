@@ -4,35 +4,33 @@
    contain the root `toctree` directive.
 
 .. image:: images/logoS_48.png
-   :height: 35px
-   :width: 35px
    :align: left
 
+*******
 MONGKIE
-#######
-
-Contents
-========
+*******
 
 .. toctree::
    :maxdepth: 2
    :numbered:
+   :caption: Table of Contents
+   :name: matertoc
 
    installation
    tutorial
    case_study
    network_visualization
    network_analysis
+   interaction_sources
    user_interface
    import_and_export
    implementation
-   interaction_sources
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
+.. Indices and tables
+.. ==================
+.. 
+.. * :ref:`genindex`
 .. * :ref:`modindex`
-* :ref:`search`
+.. * :ref:`search`
 
