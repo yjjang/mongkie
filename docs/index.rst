@@ -27,6 +27,7 @@ MONGKIE
    user_interface
    import_and_export
    implementation
+   references
 
 
 .. Indices and tables
