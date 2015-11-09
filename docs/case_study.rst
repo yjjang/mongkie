@@ -11,9 +11,9 @@ Cancer Omics Data
 
 Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
 
-Based on the 273 GBM cases with both somatic mutation and copy number information, each gene was considered altered if modified by a validated non-synonymous somatic nucleotide substitution, a homozygous deletion, or a multi-copy amplification. These somatic SNVs, indels, and called CNAs are combined to produce the gene-by-patient matrix M, where M(*i*;*j*) indicates whether the gene *i* is altered or not in the patient *j*, then an alteration frequency score for each gene was calculated by counting the number of patients in whom the gene is altered.
+Based on the 273 GBM cases with both somatic mutation and copy number information, each gene was considered altered if modified by a validated non-synonymous somatic nucleotide substitution, a homozygous deletion, or a multi-copy amplification. These somatic SNVs, indels, and called CNAs are combined to produce the `gene-by-patient matrix M`, where `M(*i* ; *j*)` indicates whether the `gene *i*` is altered or not in the `patient *j*`, then an alteration frequency score for each gene was calculated by counting the number of patients in whom the gene is altered.
 
-For gene-level expression profiles, we produced the gene-by-patient matrix G, where G(*i*;*j*) represents the expression level, which is a logarithmic scale of upper-quartile normalized RSEM (:ref:`Li et al., 2011 <li2011>`) estimats in tumor, for the gene *i* in the patient *j*.
+For gene-level expression profiles, we produced the `gene-by-patient matrix G`, where `G(*i* ; *j*)` represents the expression level, which is a logarithmic scale of upper-quartile normalized RSEM (:ref:`Li et al., 2011 <li2011>`) estimats in tumor, for the `gene *i*` in the `patient *j*`.
 
 Extract GBM-altered network
 ===========================
