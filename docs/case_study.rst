@@ -70,7 +70,7 @@ Two of the top 5 largest gene modules that are identified by network-based multi
     :width: 600px
     :alt: AKT-PI3K-mTOR signaling
     
-    Figure 3.3 AKT-PI3K-mTOR signaling
+    Figure 3.4 AKT-PI3K-mTOR signaling
 
 .. topic:: Gene list in 2 critical modules and their functional annotations
     
