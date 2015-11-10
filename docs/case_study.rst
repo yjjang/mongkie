@@ -72,9 +72,9 @@ Two of the top 5 largest gene modules that are identified by network-based multi
     
     Figure 3.4 DNA damage response and Cell Cycle
 
-.. topic:: Table 3.2 Enrichment analysis results by Enrichr
+.. topic:: Table 3.2 Gene list in 2 critical modules and their functional annotations in WikiPathways 2015
     
-    .. csv-table:: Gene list in 2 critical modules and their functional annotations in WikiPathways 2015
+    .. csv-table:: 
         :header: "Module", "Gene List", "Functional Annotation"
         :stub-columns: 1
         
