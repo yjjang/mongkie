@@ -9,7 +9,7 @@ In this section, we demonstrate how MONGKIE can facilitate the study of structur
 Cancer Omics Data
 =================
 
-.. sidebar:: TCGA GBM Datasets
+.. topic:: TCGA GBM Datasets
     
     .. csv-table:: Downloaded Files
         :header: "Data Type", "Processed Data File"
