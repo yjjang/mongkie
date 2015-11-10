@@ -40,7 +40,7 @@ We selected recurrently altered genes with somatic mutations in 6 or more patien
 Statistical test for significant linkers
 ========================================
 
-It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is the hyper-geometric distribution test, where ``successes in sample``: number of edges connecting the linker to altered genes in the extracted network (local degree), ``successes in background``: global degree of the linker in the background network, ``population size``: total number of genes in the background network, ``sample size``: number of altered genes in the extracted network.
+It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is the ``hyper-geometric distribution`` test, where ``successes in sample``: number of edges connecting the linker to altered genes in the extracted network (local degree), ``successes in background``: global degree of the linker in the background network, ``population size``: total number of genes in the background network, ``sample size``: number of altered genes in the extracted network.
 
 Network clustering
 ==================
