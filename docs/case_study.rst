@@ -11,13 +11,14 @@ Cancer Omics Data
 
 Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
 
-.. csv-table:: TCGA GBM Datasets downloaded from USCS Cancer Browser
-    :header: "Data Type", "Downloaded Data File"
-    :widths: 30, 70
+.. topic:: TCGA GBM Datasets
     
-    "Somatic Mutation", :file:`TCGA_GBM_mutation_broad_gene-2015-02-24.tgz`
-    "Copy Number", :file:`TCGA_GBM_gistic2thd-2015-02-24.tgz`
-    "RNAseq Expression", :file:`TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz`
+    .. csv-table:: 
+        :header: "Data Type", "Downloaded Data File"
+        
+        "Somatic Mutation", "TCGA_GBM_mutation_broad_gene-2015-02-24.tgz"
+        "Copy Number", "TCGA_GBM_gistic2thd-2015-02-24.tgz"
+        "RNAseq Expression", "TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz"
 
 Based on the 273 GBM cases with both somatic mutation and copy number information, each gene was considered altered if modified by a validated non-synonymous somatic nucleotide substitution, a homozygous deletion, or a multi-copy amplification. These somatic SNVs, indels, and called CNAs are combined to produce the gene-by-patient matrix M, where ``M(i;j)`` indicates whether the gene *i* is altered or not in the patient *j*, then an alteration frequency score for each gene was calculated by counting the number of patients in whom the gene is altered.
 
