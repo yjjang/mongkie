@@ -53,10 +53,12 @@ To give weights to the extracted network, we calculated Pearson Correlation Coef
     
     Figure 3.2 Core gene modules in the GBM-altered network
     
-    Gene alteration frequencies in all GBM cases were mapped to node sizes; mean expression level of each gene over cases of the ``Mesenchymal`` subtype was mapped to color of corresponding node; Pearson Correlation Coefficient of expression levels in tumor cases between a pair of genes that are connected to each other was mapped to thickness of the corresponding edge.
+    Gene alteration frequencies in all GBM cases were mapped to node sizes; mean expression levels of each gene over cases of the *Mesenchymal* subtype were mapped to node colors; expression correlations in tumor cases were mapped to edge thicknesses.
 
 Results
 =======
 
-Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4). Two main modules are illustrated with summarization of over-represented KEGG pathways in Figure 12.
+Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4).
+
+In summary, we performed an integrated network analysis to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
 
