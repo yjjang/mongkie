@@ -27,18 +27,20 @@ For gene-level expression profiles, we produced the gene-by-patient matrix G for
 Extraction of a GBM-altered network
 ===================================
 
-We selected recurrently altered genes with somatic mutations in 6 or more patients, or CNAs in 9 or more patients from the alterations matrix (See above section). A total of 380 genes passed the frequency threshold. For each pair of those genes, we found all shortest paths in the STRING database (Confidence score > 900) with distance threshold 2, resulting in 175 altered genes and 815 linkers. To retain significant linkers only (:ref:`Cerami et al., 2010 <ce2010>`), we applied the hyper-geometric distribution test for local enrichment against the global degree of each linker within the background network (See next section for details). After Benjamini & Hochberg (aka FDR) multiple testing correction (p-value < 0.01), we finally extracted a GBM-altered sub-network with ``119 altered genes``, ``72 linkers``, and ``861 interactions`` between them. The visualization of the extracted network in MONGKIE is shown in Figure S3.1.
+We selected recurrently altered genes with somatic mutations in 6 or more patients, or CNAs in 9 or more patients from the alterations matrix (See above section). A total of 380 genes passed the frequency threshold. For each pair of those genes, we found all shortest paths in the STRING database (Confidence score > 900) with distance threshold 2, resulting in 175 altered genes and 815 linkers. To retain significant linkers only (:ref:`Cerami et al., 2010 <ce2010>`), we applied the hyper-geometric distribution test for local enrichment against the global degree of each linker within the background network (See next section for details). After Benjamini & Hochberg (aka FDR) multiple testing correction (p-value < 0.01), we finally extracted a GBM-altered sub-network with ``119 altered genes``, ``72 linkers``, and ``861 interactions`` between them. The visualization of the extracted network in MONGKIE is shown in Figure 3.1.
 
 .. figure:: images/GBM_altered_network.png
-    :width: 600px
+    :width: 800px
     :alt: GBM-altered network
     
-    Figure S3.1 GBM-altered network
+    Figure 3.1 GBM-altered network
     
     Altered genes represented by ``circles``, and linkers by ``diamonds``; alteration frequencies were mapped to node sizes.
 
 Statistical test for significant linkers
 ========================================
+
+It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is hyper-geometric distribution test, where ```successes in sample```: number of edges connecting the linker to altered genes in the extracted network (local degree), ```successes in background```: global degree of the linker in the background network, ```population size```: total number of genes in the background network, ```sample size```: number of altered genes in the extracted network.
 
 Network clustering
 ==================
