@@ -11,7 +11,7 @@ Cancer Omics Data
 
 Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
 
-.. csv-table::TCGA GBM Datasets downloaded from USCS Cancer Browser
+.. csv-table:: TCGA GBM Datasets downloaded from USCS Cancer Browser
     :header: "Data Type", "Downloaded Data File"
     :widths: 30, 70
     
