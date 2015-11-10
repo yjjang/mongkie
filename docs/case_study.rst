@@ -40,12 +40,12 @@ We selected recurrently altered genes with somatic mutations in 6 or more patien
 Statistical test for significant linkers
 ========================================
 
-It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is hyper-geometric distribution test, where ```successes in sample```: number of edges connecting the linker to altered genes in the extracted network (local degree), ```successes in background```: global degree of the linker in the background network, ```population size```: total number of genes in the background network, ```sample size```: number of altered genes in the extracted network.
+It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is the hyper-geometric distribution test, where ``successes in sample``: number of edges connecting the linker to altered genes in the extracted network (local degree), ``successes in background``: global degree of the linker in the background network, ``population size``: total number of genes in the background network, ``sample size``: number of altered genes in the extracted network.
 
 Network clustering
 ==================
 
-To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:` <va2000>`), to cluster the weighted network into a set of gene modules. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
+To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:`Van Dongen, 2000 <va2000>`), to cluster the weighted network into a set of gene modules. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
 
 Results
 =======
