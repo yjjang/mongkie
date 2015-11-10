@@ -47,7 +47,7 @@ Network clustering
 
 To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:`Van Dongen, 2000 <va2000>`), to cluster the weighted network into a set of gene modules. The visualization of the result is shown in Figure 3.2. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
 
-.. figure:: images/F1A_whome_network.png
+.. figure:: images/F1A_whole_network.png
     :width: 800px
     :alt: Core gene modules in the GBM-altered network
     
