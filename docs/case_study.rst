@@ -60,22 +60,23 @@ Results
 
 Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4).
 
-.. figure:: images/CellCycle.png
-    :width: 600px
-    :alt: DNA damage response and Cell Cycle
-    
-    Figure 3.3 DNA damage response and Cell Cycle
-
 .. figure:: images/EGFR.png
     :width: 600px
     :alt: AKT-PI3K-mTOR signaling
     
-    Figure 3.4 AKT-PI3K-mTOR signaling
+    Figure 3.3 AKT-PI3K-mTOR signaling
 
-.. topic:: Gene list in 2 critical modules and their functional annotations
+.. figure:: images/CellCycle.png
+    :width: 600px
+    :alt: DNA damage response and Cell Cycle
     
-    .. csv-table:: WikiPathways enrichment analysis by `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`
+    Figure 3.4 DNA damage response and Cell Cycle
+
+.. topic:: Enrichment analysis results by `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`
+    
+    .. csv-table:: Gene list in 2 critical modules and their functional annotations in WikiPathways 2015
         :header: "Module", "Gene List", "Functional Annotation"
+        :stub-columns: 1
         
         "DNA damage response and Cell Cyle", "CellCycle.txt", "CellCycle_WikiPathways.txt"
         "AKT-PI3K-mTOR signaling", "EGFR.txt", "EGFR_WikiPathway.txt"
