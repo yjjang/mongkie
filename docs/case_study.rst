@@ -12,11 +12,11 @@ Cancer Omics Data
 .. sidebar:: TCGA GBM Datasets
     
     .. csv-table:: Downloaded Files
-    :header: "Data Type", "Processed Data File"
-    
-    "Somatic Mutation", "TCGA_GBM_mutation_broad_gene-2015-02-24.tgz"
-    "Copy Number", "TCGA_GBM_gistic2thd-2015-02-24.tgz"
-    "RNAseq Expression", "TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz"
+        :header: "Data Type", "Processed Data File"
+        
+        "Somatic Mutation", "TCGA_GBM_mutation_broad_gene-2015-02-24.tgz"
+        "Copy Number", "TCGA_GBM_gistic2thd-2015-02-24.tgz"
+        "RNAseq Expression", "TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz"
 
 Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
 
