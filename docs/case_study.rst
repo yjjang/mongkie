@@ -58,7 +58,7 @@ To give weights to the extracted network, we calculated Pearson Correlation Coef
 Results
 =======
 
-Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4).
+Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4). Enrichment analysis of the two modules was performed using `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`, and the result is shown in Table 3.1.
 
 .. figure:: images/EGFR.png
     :width: 600px
@@ -78,8 +78,8 @@ Two of the top 5 largest gene modules that are identified by network-based multi
         :header: "Module", "Gene List", "Functional Annotation"
         :stub-columns: 1
         
-        "DNA damage response and Cell Cyle", :download:`CellCycle.csv </data/CellCycle.csv>`, "CellCycle_WikiPathways.txt"
-        "AKT-PI3K-mTOR signaling", :file:`EGFR.csv <data/EGFR.csv>`, "EGFR_WikiPathway.txt"
+        "DNA damage response and Cell Cyle", :download:`CellCycle.csv </data/CellCycle.csv>`, :download:`CellCycle_WikiPathways.txt </data/CellCycle_WikiPathways.txt>`
+        "AKT-PI3K-mTOR signaling", :download:`EGFR.csv </data/EGFR.csv>`, :download:`EGFR_WikiPathways.txt <EGFR_WikiPathways.txt>`
 
 In summary, we performed an integrated network analysis to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
 
