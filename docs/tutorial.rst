@@ -4,8 +4,10 @@ Tutorial
 
 Step-by-step tutorial for the :doc:`./case_study`.
 
-Input data sets
+Input data files
 ===============
+
+As described in `Case Study`_
 
 Import a GBM-altered network
 ================

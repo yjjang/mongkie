@@ -8,14 +8,14 @@
    :width: 35px
    :align: left
 
-*********************
-MONGKIE Supplementary
-*********************
+*******
+MONGKIE
+*******
 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Table of Contents
+   :caption: Supplementary
    :name: matertoc
 
    installation
