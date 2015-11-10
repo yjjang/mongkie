@@ -53,7 +53,7 @@ To give weights to the extracted network, we calculated Pearson Correlation Coef
     
     Figure 3.2 Core gene modules in the GBM-altered network
     
-    Gene alteration frequencies in all GBM cases were mapped to node sizes; mean expression levels of each gene over cases of the *Mesenchymal* subtype were mapped to node colors; expression correlations in tumor cases were mapped to edge thicknesses.
+    Gene alteration frequencies in all GBM cases were mapped to node sizes; mean expression levels of each gene over cases of the *Mesenchymal* subtype were mapped to node colors; expression correlations in tumor cases were mapped to edge thicknesses. Two critical modules (See Results) are represented by different colors (one is ``blue``, another is ``red``; the others are ``gray``)
 
 Results
 =======
