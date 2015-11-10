@@ -58,7 +58,7 @@ To give weights to the extracted network, we calculated Pearson Correlation Coef
 Results
 =======
 
-Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4). Enrichment analysis of the two modules was performed using `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`, and the result is shown in Table 3.1.
+Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4). Enrichment analysis of the two modules was performed using `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`, and the result is shown in Table 3.2.
 
 .. figure:: images/EGFR.png
     :width: 600px
