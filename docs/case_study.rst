@@ -11,7 +11,7 @@ Cancer omics data
 
 Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
 
-.. topic:: TCGA GBM Datasets processed by UCSC Cancer Browser
+.. topic:: TCGA GBM datasets processed by UCSC Cancer Browser
     
     .. csv-table:: 
         :header: "Data Type", "Downloaded Data File"
@@ -40,7 +40,7 @@ We selected recurrently altered genes with somatic mutations in 6 or more patien
 Statistical test for significant linkers
 ========================================
 
-It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is the ``hyper-geometric distribution`` test, where ``successes in sample``: number of edges connecting the linker to altered genes in the extracted network (local degree), ``successes in background``: global degree of the linker in the background network, ``population size``: total number of genes in the background network, ``sample size``: number of altered genes in the extracted network.
+It is necessary to assess the probability that linker genes, which are not altered but extracted guilt by association, would connect to the observed number of altered genes by chance alone. The simplest and most widely used statistical test for such purpose is the ``hyper-geometric distribution test, where ``successes in sample``: number of edges connecting the linker to altered genes in the extracted network (local degree), ``successes in background``: global degree of the linker in the background network, ``population size``: total number of genes in the background network, ``sample size``: number of altered genes in the extracted network.
 
 Network clustering
 ==================
@@ -59,6 +59,26 @@ Results
 =======
 
 Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4).
+
+.. figure:: images/CellCycle.png
+    :width: 600px
+    :alt: DNA damage response and Cell Cycle
+    
+    Figure 3.3 DNA damage response and Cell Cycle
+
+.. figure:: images/EGFR.png
+    :width: 600px
+    :alt: AKT-PI3K-mTOR signaling
+    
+    Figure 3.3 AKT-PI3K-mTOR signaling
+
+.. topic:: Gene list in 2 critical modules and their functional annotations
+    
+    .. csv-table:: WikiPathways enrichment analysis by `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`
+        :header: "Module", "Gene List", "Functional Annotation"
+        
+        "DNA damage response and Cell Cyle", "CellCycle.txt", "CellCycle_WikiPathways.txt"
+        "AKT-PI3K-mTOR signaling", "EGFR.txt", "EGFR_WikiPathway.txt"
 
 In summary, we performed an integrated network analysis to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
 
