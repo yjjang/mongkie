@@ -78,8 +78,8 @@ Two of the top 5 largest gene modules that are identified by network-based multi
         :header: "Module", "Gene List", "Functional Annotation"
         :stub-columns: 1
         
-        "DNA damage response and Cell Cyle", :download:`CellCycle.csv </data/CellCycle.csv>`, :download:`CellCycle_WikiPathways.txt </data/CellCycle_WikiPathways.txt>`
-        "AKT-PI3K-mTOR signaling", :download:`EGFR.csv </data/EGFR.csv>`, :download:`EGFR_WikiPathways.txt </data/EGFR_WikiPathways.txt>`
+        "DNA damage response and Cell Cyle", :download:`CellCycle.csv </assets/CellCycle.csv>`, :download:`CellCycle_WikiPathways.txt </assets/CellCycle_WikiPathways.txt>`
+        "AKT-PI3K-mTOR signaling", :download:`EGFR.csv </assets/EGFR.csv>`, :download:`EGFR_WikiPathways.txt </assets/EGFR_WikiPathways.txt>`
 
-In summary, we performed an integrated network analysis to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
+In summary, we performed an integrated network analysis of multi-omics data to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
 

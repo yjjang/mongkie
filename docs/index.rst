@@ -8,9 +8,9 @@
    :width: 35px
    :align: left
 
-*******
-MONGKIE
-*******
+*********************
+MONGKIE Supplementary
+*********************
 
 .. toctree::
    :maxdepth: 2
