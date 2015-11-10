@@ -16,6 +16,7 @@ Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 
     .. csv-table:: 
         :header: "Data Type", "Downloaded Data File"
         :widths: 40, 60
+        
         "Somatic Mutation", "TCGA_GBM_mutation_broad_gene-2015-02-24.tgz"
         "Copy Number", "TCGA_GBM_gistic2thd-2015-02-24.tgz"
         "RNAseq Expression", "TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz"
