@@ -30,7 +30,7 @@ Extraction of a GBM-altered network
 We selected recurrently altered genes with somatic mutations in 6 or more patients, or CNAs in 9 or more patients from the alterations matrix (See above section). A total of 380 genes passed the frequency threshold. For each pair of those genes, we found all shortest paths in the STRING database (Confidence score > 900) with distance threshold 2, resulting in 175 altered genes and 815 linkers. To retain significant linkers only (:ref:`Cerami et al., 2010 <ce2010>`), we applied the hyper-geometric distribution test for local enrichment against the global degree of each linker within the background network (See next section for details). After Benjamini & Hochberg (aka FDR) multiple testing correction (p-value < 0.01), we finally extracted a GBM-altered sub-network with ``119 altered genes``, ``72 linkers``, and ``861 interactions`` between them. The visualization of the extracted network in MONGKIE is shown in Figure 3.1.
 
 .. figure:: images/GBM_altered_network.png
-    :width: 600px
+    :width: 800px
     :alt: GBM-altered network
     
     Figure 3.1 GBM-altered network
@@ -45,10 +45,18 @@ It is necessary to assess the probability that linker genes, which are not alter
 Network clustering
 ==================
 
-To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:`Van Dongen, 2000 <va2000>`), to cluster the weighted network into a set of gene modules. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
+To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:`Van Dongen, 2000 <va2000>`), to cluster the weighted network into a set of gene modules. The visualization of the result is shown in Figure 3.2. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
+
+.. figure:: images/F1A_whome_network.png
+    :width: 800px
+    :alt: Core gene modules in the GBM-altered network
+    
+    Figure 3.2 Core gene modules in the GBM-altered network
+    
+    Gene alteration frequencies in all GBM cases were mapped to node sizes; mean expression level of each gene over cases of the ``Mesenchymal`` subtype was mapped to color of corresponding node; Pearson Correlation Coefficient of expression levels in tumor cases between a pair of genes that are connected to each other was mapped to thickness of the corresponding edge.
 
 Results
 =======
 
-
+Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``AKT/PI3K/mTOR signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Figure 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Figure 3.4). Two main modules are illustrated with summarization of over-represented KEGG pathways in Figure 12.
 
