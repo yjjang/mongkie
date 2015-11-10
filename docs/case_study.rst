@@ -11,7 +11,7 @@ Cancer omics data
 
 Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
 
-.. topic:: TCGA GBM datasets processed by UCSC Cancer Browser
+.. topic:: Table 3.1 TCGA GBM datasets processed by UCSC Cancer Browser
     
     .. csv-table:: 
         :header: "Data Type", "Downloaded Data File"
@@ -72,7 +72,7 @@ Two of the top 5 largest gene modules that are identified by network-based multi
     
     Figure 3.4 DNA damage response and Cell Cycle
 
-.. topic:: Table 3.1 Enrichment analysis results by Enrichr
+.. topic:: Table 3.2 Enrichment analysis results by Enrichr
     
     .. csv-table:: Gene list in 2 critical modules and their functional annotations in WikiPathways 2015
         :header: "Module", "Gene List", "Functional Annotation"
