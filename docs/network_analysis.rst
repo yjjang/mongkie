@@ -8,6 +8,6 @@ Network clustering
 Gene expression overlay
 =======================
 
-Exploring network
-=================
+Over-representation analysis
+============================
 
