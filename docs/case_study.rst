@@ -84,12 +84,3 @@ Two of the top 5 largest gene modules that are identified by network-based multi
 In summary, we performed an integrated network analysis of multi-omics data to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
 
 
-.. rubric:: References
-
-.. [Bert15] Bertrand, D., *et al*. (2015) **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* gku1393.
-.. [Bren13] Brennan, C. W., *et al*. (2013) **The somatic genomic landscape of glioblastoma.** *Cell*, 155(2), 462-477.
-.. [Cera10] Cerami, E., *et al*. (2010) **Automated network analysis identifies core pathways in glioblastoma.** *PloS one*, 5(2), e8918.
-.. [LiDe11] Li, B., and Dewey, C. N. (2011) **RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.** *BMC bioinformatics*, 12(1), 323.
-.. [VanD00] Van Dongen, S. M. (2000) **Graph Clustering by Flow Simulation.** PhD thesis, University of Utrecht.
-
-
