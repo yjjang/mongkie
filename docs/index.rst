@@ -23,7 +23,7 @@ MONGKIE
    case_study
    network_visualization
    network_analysis
-   interaction_sources
+..   interaction_sources
    user_interface
    import_and_export
    implementation
