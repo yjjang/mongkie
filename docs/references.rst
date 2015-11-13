@@ -2,7 +2,7 @@
 References
 **********
 
-See *Bibliography*.
+See the *Bibliography*.
 
 .. [Bert15] Bertrand, D., *et al*. (2015) **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* gku1393.
 .. [Bren13] Brennan, C. W., *et al*. (2013) **The somatic genomic landscape of glioblastoma.** *Cell*, 155(2), 462-477.
