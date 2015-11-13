@@ -5,19 +5,13 @@ MONGKIE
 
 Visit <http://yjjang.github.io/mongkie> for details.
 
-Introduction
-------------
-
-In systems biology, one of the common but powerful approaches to gain insights into the underlying complexity and dynamics of biological processes in diseases is to analyze multi-omics data derived from high-throughput experiments on the context of various biological networks – e.g. protein-protein interactions, biological pathways (Gehlenborg _et al._ 2010). Especially in tumor biology, integration of mutation, copy number, and gene expression profiles with gene interaction networks has been proposed as an approach to identify functional driver mutations, relying on the assumption that they will cluster on the network (Bertrand _et al._ 2015).
-
-MONGKIE is an integrated network analysis and visualization application mainly designed for such analyses, providing not only the `sophisticated visualization model`, but also seamless integration of various analytical processes including `biological network integration`, `construction of context specific sub-network`, `network clustering`, `gene expression overlay`, and `GO or pathway over-representation analysis`. 
-
+<img src="https://raw.githubusercontent.com/yjjang/mongkie/master/docs/images/F1A.png" width="800">
 
 License
 -------
 
     Visit <http://yjjang.github.io/mongkie> for details.
-    Copyright (C) 2015 Ewha Research Center for Systems Biology (ERCSB)
+    Copyright (C) 2015 Jang, YJ. and Ewha Research Center for Systems Biology (ERCSB)
     
     MONGKIE is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
