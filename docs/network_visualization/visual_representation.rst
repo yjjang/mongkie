@@ -4,11 +4,11 @@ Visual representation of biological entities and interactions
 
 Graphical representations of biological networks includes how to intuitively visualize a set of connected nodes (or vertice) corresponding to biological entities, including genes, gene products (protein, transcript factor, miRNA, etc.), small molecules (compound, metabolite etc.), protein family and complex, and their links (or edges), such as physical or genetic interactions, regulatory events (transcriptional and translational activation or inhibition, phosphorylation, etc.), co-expression, shared protein domain, complex formation, trans-location and other biochemical reactions.
 
-.. figure:: images/Glucocorticoid_receptor_regulatory_network.png
+.. figure:: ../images/Glucocorticoid_receptor_regulatory_network.png
     :name: visual-example-network
     :width: 600px
     :align: center
-    :alt: GBM-altered network
+    :alt: An example of network visualization
     
     An example of visualization of biological networks
     
