@@ -9,7 +9,7 @@ In this section, we demonstrate how MONGKIE can facilitate the study of structur
 Cancer omics data
 =================
 
-Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_. :numref:`gbm-data-files` lists downloaded data files for each data type.
+Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_. Downloaded files for each data type are listed in :numref:`gbm-data-files`.
 
 .. csv-table:: TCGA GBM datasets processed by UCSC Cancer Browser
     :name: gbm-data-files
