@@ -9,16 +9,15 @@ In this section, we demonstrate how MONGKIE can facilitate the study of structur
 Cancer omics data
 =================
 
-Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_.
+Somatic mutations, DNA copy number alterations, and RNA-seq expressions level 3 data for TCGA GBM cases were obtained from the `UCSC Cancer Browser <https://genome-cancer.ucsc.edu/proj/site/hgHeatmap/#?bookmark=ce15f29a905207cbf3d0dbcdf9d35c18>`_. :numref:`gbm-data-files` lists downloaded data files for each data type.
 
-.. topic:: Table 3.1 TCGA GBM datasets processed by UCSC Cancer Browser
+.. csv-table:: TCGA GBM datasets processed by UCSC Cancer Browser
+    :name: gbm-data-files
+    :header: "Data Type", "Downloaded Data File"
     
-    .. csv-table:: 
-        :header: "Data Type", "Downloaded Data File"
-        
-        "Somatic Mutation", "TCGA_GBM_mutation_broad_gene-2015-02-24.tgz"
-        "Copy Number", "TCGA_GBM_gistic2thd-2015-02-24.tgz"
-        "RNAseq Expression", "TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz"
+    "Somatic Mutation", "TCGA_GBM_mutation_broad_gene-2015-02-24.tgz"
+    "Copy Number", "TCGA_GBM_gistic2thd-2015-02-24.tgz"
+    "RNAseq Expression", "TCGA_GBM_exp_HiSeqV2-2015-02-24.tgz"
 
 Based on the 273 GBM cases with both somatic mutation and copy number information, each gene was considered altered if modified by a validated non-synonymous somatic nucleotide substitution, a homozygous deletion, or a multi-copy amplification. These somatic SNVs, indels, and called CNAs are combined to produce the gene-by-patient matrix M for gene alterations, where ``M(i;j)`` indicates whether the ``gene i`` is altered or not in the ``patient j``, then an alteration frequency score for each gene was calculated by counting the number of patients in whom the gene is altered.
 
@@ -47,9 +46,11 @@ It is necessary to assess the probability that linker genes, which are not alter
 Network clustering
 ==================
 
-To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:`Van Dongen, 2000 <VanD00>`), to cluster the weighted network into a set of gene modules. The visualization of the result is shown in Fig. 3.2. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
+To give weights to the extracted network, we calculated Pearson Correlation Coefficients of expression levels in the expressions matrix (See above section) among all pair-wise interactions between genes in the extracted network, and then assigned the PCCs to weights of edges in the network. Next, we used a highly efficient network clustering algorithm, MCL (:ref:`Van Dongen, 2000 <VanD00>`), to cluster the weighted network into a set of gene modules. The visualization of the result is shown in :numref:`gbm-gene-modules`. Each module consists of gene set that are both topologically close in the PPI network, and highly correlated by expression abundance change in tumor conditions.
 
 .. figure:: images/F1A_whole_network.png
+    :name: gbm-gene-modules
+    :align: center
     :width: 600px
     :alt: Core gene modules in the GBM-altered network
     
@@ -60,28 +61,31 @@ To give weights to the extracted network, we calculated Pearson Correlation Coef
 Results
 =======
 
-Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``EGFR/PI3K signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see Fig. 3.3), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see Fig. 3.4). Enrichment analysis of the two modules was performed using `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`_, and the result is shown in Table 3.2.
+Two of the top 5 largest gene modules that are identified by network-based multi-omics (somatic mutations, copy number variations, and RNA expressions) analysis of TCGA GBM cases corresponded very closely to critical signaling pathways prior known to GBM biology. First one corresponded to the components of the ``EGFR/PI3K signaling`` pathway, including ``EGFR``, ``PDGFRA``, ``PIK3CA``, and ``PIK3R1`` (see :numref:`egfr-pi3k-module`), and second one to the components of the ``DNA damage response`` and ``Cell Cyle`` including ``TP53``, ``CDKN2A/B``, ``CDK4``, ``MDM2/4`` and ``RB1`` (see :numref:`ddr-cellcycle-module`). Enrichment analysis of the two modules was performed using `Enrichr <http://amp.pharm.mssm.edu/Enrichr/>`_, and the result is shown in :numref:`modules-annotations`.
 
 .. figure:: images/EGFR.png
+    :name: egfr-pi3k-module
+    :align: center
     :width: 600px
     :alt: EGFR/PI3K signaling
     
     EGFR/PI3K signaling
 
 .. figure:: images/CellCycle.png
+    :name: ddr-cellcycle-module
+    :align: center
     :width: 600px
     :alt: DNA damage response and Cell Cycle
     
     DNA damage response and Cell Cycle
 
-.. topic:: Table 3.2 Gene list in 2 critical modules and their functional annotations in WikiPathways 2015
+.. csv-table:: Gene list in 2 critical modules and their functional annotations in WikiPathways 2015
+    :name: modules-annotations
+    :header: "Module", "Gene List", "Functional Annotation"
+    :stub-columns: 1
     
-    .. csv-table:: 
-        :header: "Module", "Gene List", "Functional Annotation"
-        :stub-columns: 1
-        
-        "DNA damage response and Cell Cyle", :download:`DDR_CellCycle.csv </assets/DDR_CellCycle.csv>`, :download:`DDR_CellCycle_WikiPathways.tsv </assets/DDR_CellCycle_WikiPathways.tsv>`
-        "EGFR/PI3K signaling", :download:`EGFR_PI3K.csv </assets/EGFR_PI3K.csv>`, :download:`EGFR_PI3K_WikiPathways.tsv </assets/EGFR_PI3K_WikiPathways.tsv>`
+    "DNA damage response and Cell Cyle", :download:`DDR_CellCycle.csv </assets/DDR_CellCycle.csv>`, :download:`DDR_CellCycle_WikiPathways.tsv </assets/DDR_CellCycle_WikiPathways.tsv>`
+    "EGFR/PI3K signaling", :download:`EGFR_PI3K.csv </assets/EGFR_PI3K.csv>`, :download:`EGFR_PI3K_WikiPathways.tsv </assets/EGFR_PI3K_WikiPathways.tsv>`
 
 In summary, we performed an integrated network analysis of multi-omics data to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
 
