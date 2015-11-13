@@ -229,7 +229,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   (master_doc, 'MONGKIE.tex', 'MONGKIE Supplementary',
-   'Yeongjun Jang', 'manual', True),
+   'Yeongjun Jang', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

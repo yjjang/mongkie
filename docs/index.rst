@@ -12,8 +12,12 @@
 MONGKIE
 *******
 
+.. important::
+    
+    On-line version of supplementary materials are available at `our documentation site <http://mongkie.readthedocs.org>`_.
+
 .. toctree::
-   :titlesonly:
+   :maxdepth: 1
    :numbered:
    :caption: Supplementary
    :name: matertoc
