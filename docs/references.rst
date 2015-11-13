@@ -9,6 +9,7 @@ See the *Bibliography*.
 .. [Cera10] Cerami, E., *et al*. (2010) **Automated network analysis identifies core pathways in glioblastoma.** *PloS one*, 5(2), e8918.
 .. [LiDe11] Li, B., and Dewey, C. N. (2011) **RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.** *BMC bioinformatics*, 12(1), 323.
 .. [Sara05] Saraiya, P., *et al*. (2005) **Visualizing biological pathways: requirements analysis, systems evaluation and research agenda.** *Info. Vis.*, 4(3), 191-205.
+.. [Scha09] Schaefer, C.F., *et al*. (2009) **PID: the Pathway Interaction Database.** *Nucleic Acids Res.*, Jan;37(Database issue):D674-9.
 .. [VanD00] Van Dongen, S. M. (2000) **Graph Clustering by Flow Simulation.** PhD thesis, University of Utrecht.
 
 
