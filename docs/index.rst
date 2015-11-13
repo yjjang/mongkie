@@ -13,9 +13,9 @@ MONGKIE
 *******
 
 .. toctree::
-   :maxdepth: 2
+   :titlesonly:
    :numbered:
-   :caption: Table of Contents
+   :caption: Supplementary
    :name: matertoc
 
    installation
