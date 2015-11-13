@@ -12,6 +12,6 @@ Graphical representations of biological networks includes how to intuitively vis
     
     An example of visualization of biological networks
     
-    This illustrates how MONGKIE visually represents biological entities and relationships between them, by visualizing an example network, Glucocorticoid receptor regulatory network, which is a signaling pathway curated by the NCI-Nature PID (:ref:`Schaefer et al., 2009 <Scha09>`).
+    This illustrates how MONGKIE visually represents biological entities and relationships between them, by visualizing an example network, `Glucocorticoid receptor regulatory network`, which is a signaling pathway curated by the NCI-Nature PID (:ref:`Schaefer et al., 2009 <Scha09>`).
 
 MONGKIE provides the sophisticated data models for visualization of biological networks with advanced graph drawing techniques, and therefore can represent different types of biological entities and interactions between them with out-of-the-box visual styles, shown in :numref:`visual-example-network`. Both nodes and edges differ in their style according to their biological meaning. The style of nodes - e.g. label, font, shape, color, size and icon image - shows the type and state of biological components, and edges linking a relation participant with the information about the role also differ in their style - e.g. shape or thickness or color of lines, shape or color of arrows as well as label and font.
