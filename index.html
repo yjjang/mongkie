@@ -25,9 +25,11 @@
 <h2>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-<p>In systems biology, one of the common but powerful approaches to gain insights into the underlying complexity and dynamics of biological processes in diseases is to analyze multi-omics data derived from high-throughput experiments on the context of various biological networks – e.g. protein-protein interactions, biological pathways (Gehlenborg <em>et al.</em> 2010). Especially in tumor biology, integration of mutation, copy number, and gene expression profiles with gene interaction networks has been proposed as an approach to identify functional driver genes and core gene modules perturbed by them, relying on the assumption that they will cluster on the network (Bertrand <em>et al.</em> 2015).</p>
+<p>In systems biology, one of the common but powerful approaches to gain insights into the underlying complexity and dynamics of biological processes in diseases is to analyze multi-omics data derived from high-throughput experiments on the context of various biological networks – e.g. protein-protein interactions, biological pathways (Gehlenborg <em>et al.</em>, 2010). Especially in tumor biology, integration of mutation, copy number, and gene expression profiles with gene interaction networks has been proposed as an approach to identify functional driver genes and core gene modules perturbed by them, relying on the assumption that they will cluster on the network (Bertrand <em>et al.</em>, 2015).</p>
 
 <p>MONGKIE is an integrated network analysis and visualization application mainly designed for such analyses, providing not only the <code>sophisticated visualization models</code>, but also seamless integration of various analytical processes including <code>network clustering</code>, <code>gene expression overlay</code>, and <code>GO over-representation analysis</code>.</p>
+
+<p>MONGKIE is an open-source software and distributed under the GNU AGPL V3 license with exception of some external libraries that are available under their own licenses.</p>
 
 <h2>
 <a id="video-demo" class="anchor" href="#video-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video Demo</h2>
@@ -38,12 +40,12 @@
 <a id="data-files-used-in-the-demo" class="anchor" href="#data-files-used-in-the-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data files used in the demo</h4>
 
 <ul>
-<li>ESC.graphml</li>
-<li>ESC_total_node.csv</li>
-<li>ESC_total_relation.csv</li>
-<li>exp.csv</li>
-<li>GSE15355.csv</li>
-<li>symbol2uniprot.csv (should be imported as a node attribute before the GO enrichment analysis)</li>
+<li><a href="data/ESC.graphml">ESC.graphml</a></li>
+<li><a href="data/ESC_total_node.csv">ESC_total_node.csv</a></li>
+<li><a href="data/ESC_total_relation.csv">ESC_total_relation.csv</a></li>
+<li><a href="data/exp.csv">exp.csv</a></li>
+<li><a href="data/GSE15355.csv">GSE15355.csv</a></li>
+<li><a href="data/symbol2uniprot.csv">symbol2uniprot.csv</a> (should be imported as a node attribute before the GO enrichment analysis)</li>
 </ul>
 
 <h2>
@@ -52,9 +54,9 @@
 <p>See <a href="http://mongkie.readthedocs.org/en/latest/installation.html">Installation</a> for details.</p>
 
 <ol>
-<li>Download the <a href="https://github.com/yjjang/mongkie/releases/latest">latest release</a> of ZIP distributions for your OS.</li>
+<li>Download the <a href="https://github.com/yjjang/mongkie/releases/latest">latest release</a> of a ZIP distribution for your OS.</li>
 <li>Unzip the downloaded file into any directory.</li>
-<li>Run <code>mongkie/bin/mongkie</code> in <em>Linux</em>, <code>mongkie/bin/mongkie.exe</code> in <em>Windows</em>, and <code>mongkie.app/Contents/MacOS/mongkie</code> in <em>Mac OS</em>.</li>
+<li>Run <code>mongkie/bin/mongkie</code> in <em>Linux</em>, <code>mongkie/bin/mongkie.exe</code> in <em>Windows</em>, and <code>mongkie.app/Contents/MacOS/mongkie</code> in <em>OS X</em>.</li>
 </ol>
 
 <p>What's next? Go to the <a href="http://mongkie.readthedocs.org/en/latest/tutorial.html">Tutorial</a> site.</p>
