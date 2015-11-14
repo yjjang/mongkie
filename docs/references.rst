@@ -14,10 +14,12 @@ See the *Bibliography*.
 .. [Enri02] Enright, A.J., *et al*. (2002) **An efficient algorithm for large-scale detection of protein families.** *Nucleic acids research*, 30.7: 1575-1584.
 .. [Free07] Freeman, T.C., *et al*. (2007) **Construction, visualisation, and clustering of transcription networks from microarray expression data.** *PLoS computational biology*, 3.10: e206.
 .. [Fric99] Frick, A., *et al*. (1999) **Simulating graphs as physical systems: a spring-embedder system for force-directed layout.** *Dr. Dobb’s Journal*.
+.. [Gene04] Gene Ontology Consortium. (2004) **The Gene Ontology (GO) database and informatics resource.** *Nucleic acids research*, 32.suppl 1: D258-D261.
 .. [Gehl10] Gehlenborg, N., *et al*. (2010) **Visualization of omics data for systems biology.** *Nature methods*, 7, S56-S68.
 .. [Hart99] Hartwell, L.H., *et al*. (1999) **From molecular to modular cell biology.** *Nature*, 402(6761 Suppl):C47-52.
 .. [Heer05] Heer, J., *et al*. (2005) **Prefuse: a toolkit for interactive information visualization.** In *Proceedings of the SIGCHI conference on Human factors in computing systems* (pp. 421-430). ACM.
 .. [Herm00] Herman, I., *et al*. (2000) **Graph visualization and navigation in information visualization: A survey.** *Visualization and Computer Graphics, IEEE Transactions on*, 6(1), 24-43.
+.. [HuSL09] Huang, D. W., Sherman, B. T., & Lempicki, R. A. (2009) **Bioinformatics enrichment tools: paths toward the comprehensive functional analysis of large gene lists.** *Nucleic acids research*, 37(1), 1-13.
 .. [HuZC13] Hu, Z., *et al*. (2013) **VisANT 4.0: Integrative network platform to connect genes, drugs, diseases and therapies.** *Nucleic acids research*, 41(W1), W225-W231.
 .. [KiKC08] Kincaid, R., Kuchinsky, A., & Creech, M. (2008) **VistaClara: an expression browser plug-in for Cytoscape.** *Bioinformatics*, 24(18), 2112-2114.
 .. [Krog06] Krogan, N.J., *et al*. (2006) **Global landscape of protein complexes in the yeast Saccharomyces cerevisiae.** *Nature*, 440(7084), 637-643.
