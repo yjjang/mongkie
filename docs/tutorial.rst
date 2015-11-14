@@ -2,7 +2,7 @@
 Tutorial
 ********
 
-This section provides a step-by-step tutorial for the :doc:`./case_study`.
+A step-by-step tutorial for the :doc:`./case_study` is available at `our tutorial site <http://mongkie.readthedocs.org/en/latest/tutorial.html>` online.
 
 .. note::
     
@@ -13,28 +13,3 @@ This section provides a step-by-step tutorial for the :doc:`./case_study`.
     * Calculate expression means of each gene in 4 GBM subtypes.
     * Extract a sub-network of altered (somatic mutation or CNV) genes in `STRING <http://string-db.org/>`_.
     * Write vertices, edges, and expression related data files.
-
-Import a GBM-altered network
-================
-
-Data-to-Visual mapping
-======================
-
-Network clustering
-==================
-
-Cluster annotation
-==================
-
-Import expression profiles for 4 GBM subtypes
-=============================================
-
-New network from a cluster
-==========================
-
-Import log2FC in normal vs. tumor 
-=================================
-
-Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
-======================================================================
-
