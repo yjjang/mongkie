@@ -18,6 +18,8 @@ See the *Bibliography*.
 .. [Hart99] Hartwell, L.H., *et al*. (1999) **From molecular to modular cell biology.** *Nature*, 402(6761 Suppl):C47-52.
 .. [Heer05] Heer, J., *et al*. (2005) **Prefuse: a toolkit for interactive information visualization.** In *Proceedings of the SIGCHI conference on Human factors in computing systems* (pp. 421-430). ACM.
 .. [Herm00] Herman, I., *et al*. (2000) **Graph visualization and navigation in information visualization: A survey.** *Visualization and Computer Graphics, IEEE Transactions on*, 6(1), 24-43.
+.. [HuZC13] Hu, Z., *et al*. (2013) **VisANT 4.0: Integrative network platform to connect genes, drugs, diseases and therapies.** *Nucleic acids research*, 41(W1), W225-W231.
+.. [KiKC08] Kincaid, R., Kuchinsky, A., & Creech, M. (2008) **VistaClara: an expression browser plug-in for Cytoscape.** *Bioinformatics*, 24(18), 2112-2114.
 .. [Krog06] Krogan, N.J., *et al*. (2006) **Global landscape of protein complexes in the yeast Saccharomyces cerevisiae.** *Nature*, 440(7084), 637-643.
 .. [LeeH04] Lee, H.K., *et al*. (2004) **Coexpression analysis of human genes across many microarray data sets.** *Genome research*, 14.6: 1085-1094.
 .. [LiDe11] Li, B., and Dewey, C. N. (2011) **RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.** *BMC bioinformatics*, 12(1), 323.
