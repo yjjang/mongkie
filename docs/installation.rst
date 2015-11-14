@@ -56,16 +56,19 @@ Installable Packages
 
 Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>`_ of an installer for your OS.
 
-**Linux and Windows**
+Linux and Windows
+-----------------
 
 1. After the download completes, run the installer.
 
 	* For Windows, the installer file has the ``.exe`` extension. Double-click the file to run it.
-	* For Linux, the installer file has the ``.sh`` extension. You need to make the installer executable by using the following command: :command:`chmod +x installer-file`. Type :command:`./installer-file` to start the installation wizard. :command:`python setup.py develop`
+	* For Linux, the installer file has the ``.sh`` extension. You need to make the installer executable by using the following command: ``chmod +x <installer-file>``. Type ``./<installer-file>`` to start the installation wizard.
 
 2. Follow steps in the installation wizard.
 
-**OS X**
+OS X
+----
 
-
+1. After the download completes, click on the downloaded ``.dmg`` file.
+2. Drag the mongkie application in your Application folder.
 
