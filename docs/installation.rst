@@ -8,6 +8,7 @@ This section describes how to install and run MONGKIE. Installation instructions
 	If you have an older version on your computer, you should uninstall it and remove the user directory.
 	
 	**User directories**
+	
 	* On Windows 2K/XP, user diretory is located in ``C:\Documents and Settings\username\Application Data\.mongkie``.
 	* On Windows Vista or later, user directory is located in ``C:\Users\username\AppData\Roaming\.mongkie``.
 	* On OS X, user directory is located in ``/Users/username/Library/Application Support/mongkie``
@@ -44,14 +45,14 @@ ZIP Distributions
 Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>`_ of ZIP distribution for your OS, then
 
 1. Unzip it to any directory on your system.
-2. Run the executable file located in the ``mongkie/bin`` directory
-	========= ======================================
-	OS        Executable File
-	========= ======================================
-	Linux     ``mongkie/bin/mongkie``
-	Windows   ``mongkie/bin/mongkie.exe``
-	OS X      ``mongkie.app/Contents/MacOS/mongkie``
-	========= ======================================
+2. Run the executable file located in the ``bin`` directory
+========= ======================================
+OS        Executable File
+========= ======================================
+Linux     ``mongkie/bin/mongkie``
+Windows   ``mongkie/bin/mongkie.exe``
+OS X      ``mongkie.app/Contents/MacOS/mongkie``
+========= ======================================
 
 Installable Packages
 ====================
