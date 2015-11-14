@@ -9,10 +9,10 @@ This section describes how to install and run MONGKIE. Installation instructions
 	
 	**User directories**
 	
-	* On Windows 2K/XP, ``C:\Documents and Settings\username\Application Data\.mongkie``.
-	* On Windows Vista or later, ``C:\Users\username\AppData\Roaming\.mongkie``.
-	* On OS X, ``/Users/username/Library/Application Support/mongkie``
-	* On Linux, ``/home/username/.mongkie``
+	* On Windows 2K/XP, :file:`C:\Documents and Settings\username\Application Data\.mongkie`
+	* On Windows Vista or later, :file:`C:\Users\username\AppData\Roaming\.mongkie`
+	* On OS X, :file:`/Users/username/Library/Application Support/mongkie`
+	* On Linux, :file:`/home/username/.mongkie`
 	
 	Whenever you encounter some troubles in running MONGKIE, you can clean running environments by deleting user directory, then rerun it.
 
@@ -47,9 +47,9 @@ ZIP Distributions
 2. Unzip it to any directory on your system.
 3. Run the executable file located in the ``bin`` directory
 	
-	* On Linux, ``mongkie/bin/mongkie``
-	* On Windows, ``mongkie/bin/mongkie.exe``
-	* On OS X, ``mongkie.app/Contents/MacOS/mongkie``
+	* On Linux, :file:`mongkie/bin/mongkie`
+	* On Windows, :file:`mongkie/bin/mongkie.exe`
+	* On OS X, :file:`mongkie.app/Contents/MacOS/mongkie`
 
 Installable Packages
 ====================
@@ -61,7 +61,7 @@ Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>
 1. After the download completes, run the installer.
 
 	* For Windows, the installer file has the ``.exe`` extension. Double-click the file to run it.
-	* For Linux, the installer file has the ``.sh`` extension. You need to make the installer executable by using the following command: :command:`chmod +x <installer-file>`. Type :command:`./<installer-file>` to start the installation wizard.
+	* For Linux, the installer file has the ``.sh`` extension. You need to make the installer executable by using the following command: :command:`chmod +x installer-file`. Type :command:`./installer-file` to start the installation wizard.
 
 2. Follow steps in the installation wizard.
 
