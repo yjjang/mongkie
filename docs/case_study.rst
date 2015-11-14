@@ -4,7 +4,7 @@ Case Study
 
 High-throughput studies of tumor biology at multiple levels, including genome, transcriptome, and proteome, have been resulting in a greatly increased volume of cancer omics data. Given huge amount of cancer omics data, it is a major challenge to distinguish driver mutations from passengers, and to reveal functional relationships between them. One powerful approach to the challenge is to analyze data on the context of biological networks. For example, integration of mutation, copy number, and gene expression profiles with a biological interaction network has been proposed as an approach to identify functional cancer drivers, relying on the assumption that they will cluster on the network (:ref:`Bertrand et al., 2015 <Bert15>`).
 
-In this section, we demonstrate how MONGKIE can facilitate the study of structural pattern of altered genes in the TCGA study of Glioblastoma Multiforme (:ref:`Brennan et al., 2013 <Bren13>`) on the `STRING <http://string-db.org/>`_ PPI network to identify candidate driver genes and core gene modules perturbed by them.
+In this section, we demonstrate how MONGKIE can facilitate the study of structural pattern of altered genes in the TCGA study of Glioblastoma Multiforme (:ref:`Brennan et al., 2013 <Bren13>`) on the `STRING <http://string-db.org/>`_ network to identify candidate driver genes and core gene modules perturbed by them.
 
 .. important::
     
@@ -96,6 +96,6 @@ Two of the top 5 largest gene modules that are identified by network-based multi
     "DNA damage response and Cell Cyle", :download:`DDR_CellCycle.csv </assets/DDR_CellCycle.csv>`, :download:`DDR_CellCycle_WikiPathways.tsv </assets/DDR_CellCycle_WikiPathways.tsv>`
     "EGFR/PI3K signaling", :download:`EGFR_PI3K.csv </assets/EGFR_PI3K.csv>`, :download:`EGFR_PI3K_WikiPathways.tsv </assets/EGFR_PI3K_WikiPathways.tsv>`
 
-In summary, we performed an integrated network analysis of multi-omics data to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a PPI network, thus to capture critical pathways that play important roles in tumor genesis.
+In summary, we performed an integrated network analysis of multi-omics data to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a STRING network, thus to capture critical pathways that play important roles in tumor genesis.
 
 
