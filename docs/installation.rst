@@ -9,10 +9,14 @@ This section describes how to install and run MONGKIE. Installation instructions
 	
 	**User directories**
 	
-	* On Windows 2K/XP, user diretory is located in ``C:\Documents and Settings\username\Application Data\.mongkie``.
-	* On Windows Vista or later, user directory is located in ``C:\Users\username\AppData\Roaming\.mongkie``.
-	* On OS X, user directory is located in ``/Users/username/Library/Application Support/mongkie``
-	* On Linux, user directory is located in ``/home/username/.mongkie``
+	* On Windows 2K/XP,
+		``C:\Documents and Settings\username\Application Data\.mongkie``.
+	* On Windows Vista or later,
+		``C:\Users\username\AppData\Roaming\.mongkie``.
+	* On OS X,
+		``/Users/username/Library/Application Support/mongkie``
+	* On Linux,
+		``/home/username/.mongkie``
 	
 	Whenever you encounter some troubles in running MONGKIE, you can clean running environments by deleting user directory, then rerun it.
 
@@ -35,7 +39,7 @@ Java
 
 MONGKIE is written in Java, and runs on the Java Runtime Environment. Therefore, the Java runtime (7 or 8) is required to install and run it. You can download the latest version of Java runtime from `here <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ for Windows and Linux, and OS X Lion (10.7), Mountain Lion (10.8), or Mavericks (10.9).
 
-The tested Java versions are ``Java 8`` and ``Java 7u67`` for Windows, Linux, and OS X.
+The tested Java versions are Java ``8`` and ``7u67`` for Windows, Linux, and OS X.
 
 .. caution::
 	MONGKIE cannot be installed or run using Java 6.0, and `OpenJDK <http://openjdk.java.net/>`_ is not supported, be sure to run the official Java version from `Oracle’s website <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_.
@@ -46,13 +50,13 @@ Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>
 
 1. Unzip it to any directory on your system.
 2. Run the executable file located in the ``bin`` directory
-========= ======================================
-OS        Executable File
-========= ======================================
-Linux     ``mongkie/bin/mongkie``
-Windows   ``mongkie/bin/mongkie.exe``
-OS X      ``mongkie.app/Contents/MacOS/mongkie``
-========= ======================================
+	
+	* On Linux,
+		``mongkie/bin/mongkie``
+	* On Windows,
+		``mongkie/bin/mongkie.exe``
+	* On OS X,
+		``mongkie.app/Contents/MacOS/mongkie``
 
 Installable Packages
 ====================
