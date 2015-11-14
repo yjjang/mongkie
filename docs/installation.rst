@@ -8,7 +8,7 @@ System Requirements
 ===================
 
 Recommended hardware requirements
----------------------------------
+"""""""""""""""""""""""""""""""""
 
 ========== ============================= ============================ ========================
 OS         Processor                     Memory                       Disk space              
@@ -21,6 +21,8 @@ Mac OS     Dual-Core Intel               4GB                          1.5GB of f
 Java
 ----
 
+* etc
+dsbd
 
 ZIP Distribution
 ================
