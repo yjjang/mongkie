@@ -8,6 +8,7 @@ This section describes how to install and run MONGKIE. Installation instructions
 	If you have an older version on your computer, you should uninstall it and remove the user directory.
 	
 	**User directories**
+	
 	* On Windows 2K/XP, ``C:\Documents and Settings\username\Application Data\.mongkie``.
 	* On Windows Vista or later, ``C:\Users\username\AppData\Roaming\.mongkie``.
 	* On OS X, ``/Users/username/Library/Application Support/mongkie``
@@ -42,10 +43,9 @@ The tested Java versions are Java ``8`` and ``7u67`` for Windows, Linux, and OS 
 ZIP Distributions
 ================
 
-Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>`_ of a ZIP distribution for your OS, then
-
-1. Unzip it to any directory on your system.
-2. Run the executable file located in the ``bin`` directory
+1. Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>`_ of a ZIP distribution for your OS.
+2. Unzip it to any directory on your system.
+3. Run the executable file located in the ``bin`` directory
 	
 	* On Linux, ``mongkie/bin/mongkie``
 	* On Windows, ``mongkie/bin/mongkie.exe``
@@ -54,5 +54,18 @@ Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>
 Installable Packages
 ====================
 
-Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>`_ of an installer for your OS, then
+Download the `latest release <https://github.com/yjjang/mongkie/releases/latest>`_ of an installer for your OS.
+
+**Linux and Windows**
+
+1. After the download completes, run the installer.
+
+	* For Windows, the installer file has the ``.exe`` extension. Double-click the file to run it.
+	* For Linux, the installer file has the ``.sh`` extension. You need to make the installer executable by using the following command: :command:`chmod +x <installer-file>`. Type :command:`./<installer-file>` to start the installation wizard.
+
+2. Follow steps in the installation wizard.
+
+**OS X**
+
+
 
