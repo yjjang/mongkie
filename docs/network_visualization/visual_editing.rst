@@ -18,7 +18,7 @@ Each component in the network can have associated data attributes possibly descr
 
 .. figure:: ../images/data_to_visual_mapping.png
     :name: data-to-visual-mapping
-    :width: 600px
+    :width: 800px
     :align: center
     :alt: Data-to-Visual mapping
     
