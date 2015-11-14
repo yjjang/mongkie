@@ -6,6 +6,7 @@ See the *Bibliography*.
 
 .. [Albe98] Alberts, B. (1998) **The cell as a collection of protein machines: preparing the next generation of molecular biologists.** *Cell* 92.3: 291-294.
 .. [Bade02] Bader, G.D., *et al*. (2002) **Analyzing yeast protein–protein interaction data obtained from different sources.** *Nature biotechnology*, 20.10: 991-997.
+.. [BaHJ09] Bastian, M., Heymann, S., & Jacomy, M. (2009) **Gephi: an open source software for exploring and manipulating networks.** *ICWSM*, 8, 361-362.
 .. [BaHo03] Bader, G.D. & Hogue, C.W. (2003) **An automated method for finding molecular complexes in large protein interaction networks.** *BMC Bioinformatics* 4(1), 2.
 .. [Bert15] Bertrand, D., *et al*. (2015) **Patient-specific driver gene prediction and risk assessment through integrated network analysis of cancer omics profiles.** *Nucleic acids research* gku1393.
 .. [BoKe01] Book, G., & Keshary, N. (2001) **Radial tree graph drawing algorithm for representing large hierarchies.** *University of Connecticut*.
