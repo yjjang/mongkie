@@ -15,7 +15,7 @@ In this section, we demonstrate how MONGKIE can facilitate the study of structur
     * Expression correlations between each pair of genes.
     * Vertices and edges in a sub-network of altered (somatic mutation or CNV) genes.
     
-    You can download the R script and input data files (:download:`assets.zip </assets/assets.zip>`) from `here <http://mongkie.readthedocs.org/en/latest/_downloads/assets.zip>`_.
+    You can download the R script and generated input files (:download:`assets.zip </assets/assets.zip>`) from `here <http://mongkie.readthedocs.org/en/latest/_downloads/assets.zip>`_.
 
 Cancer omics data
 =================
