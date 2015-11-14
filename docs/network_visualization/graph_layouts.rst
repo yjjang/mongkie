@@ -20,7 +20,6 @@ Like most of other typical network visualization softwares, we try a force-direc
 
 .. figure:: ../images/layout_control.png
     :name: layout-control
-    :width: 600px
     :align: center
     :alt: Layout control UI
     
