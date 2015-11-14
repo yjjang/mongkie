@@ -10,8 +10,8 @@ The multi-tiered system is applied for abstracting remote data sources and separ
     :align: center
     :alt: hiPathDB 3-tiered system
     
-    Overview of the 3-tier system implemented in hiPathDB (ref:`Yu et al., 2012 <YuSe12>`)
+    Overview of the 3-tier system implemented in hiPathDB (:ref:`Yu et al., 2012 <YuSe12>`)
     
     **(1)** A REST client written for pathway visualization (blue colors), **(2)** RESTFul Web service at the middle tier (orange colors), **(3)** Relational database backend.
 
-As an example, the implementation and usage of the hiPathDB (ref:`Yu et al., 2012 <YuSe12>`) RESTful Web Service API is shown in :numref:`multi-tiers`. hiPathDB APIs allow researchers to retrieve data from hiPathDB database by offering methods to get pathways given their names, or get member genes given a list of pathways, and some others.
+As an example, the implementation and usage of the hiPathDB (:ref:`Yu et al., 2012 <YuSe12>`) RESTful Web Service API is shown in :numref:`multi-tiers`. hiPathDB APIs allow researchers to retrieve data from hiPathDB database by offering methods to get pathways given their names, or get member genes given a list of pathways, and some others.
