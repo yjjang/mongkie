@@ -2,13 +2,12 @@
 Installation
 ************
 
-This section describes how to install and run MONGKIE. Installation instructions are provided for Linux , Mac OS, and Windows.
+This section describes how to install and run MONGKIE. Installation instructions are provided for ``Linux`` , ``Mac OS``, and ``Windows``.
 
 System Requirements
 ===================
 
-Recommended hardware requirements
-"""""""""""""""""""""""""""""""""
+**Recommended hardware requirements**
 
 ========== ============================= ============================ ========================
 OS         Processor                     Memory                       Disk space              
@@ -18,11 +17,7 @@ Windows    Intel Core i5 or equivalent   2GB (32-bit), 4GB (64-bit)   1.5GB of f
 Mac OS     Dual-Core Intel               4GB                          1.5GB of free disk space
 ========== ============================= ============================ ========================
 
-Java
-----
-
-* etc
-dsbd
+**Java**
 
 ZIP Distribution
 ================
