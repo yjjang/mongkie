@@ -12,5 +12,3 @@ Like other network visualization tools, MONGKIE also provides basic graph repres
     network_visualization/visual_editing
     network_visualization/exploring_network
     network_visualization/graph_layouts
-
-
