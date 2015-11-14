@@ -9,14 +9,10 @@ This section describes how to install and run MONGKIE. Installation instructions
 	
 	**User directories**
 	
-	* On Windows 2K/XP,
-		``C:\Documents and Settings\username\Application Data\.mongkie``.
-	* On Windows Vista or later,
-		``C:\Users\username\AppData\Roaming\.mongkie``.
-	* On OS X,
-		``/Users/username/Library/Application Support/mongkie``
-	* On Linux,
-		``/home/username/.mongkie``
+	* On Windows 2K/XP, ``C:\Documents and Settings\username\Application Data\.mongkie``.
+	* On Windows Vista or later, ``C:\Users\username\AppData\Roaming\.mongkie``.
+	* On OS X, ``/Users/username/Library/Application Support/mongkie``
+	* On Linux, ``/home/username/.mongkie``
 	
 	Whenever you encounter some troubles in running MONGKIE, you can clean running environments by deleting user directory, then rerun it.
 
