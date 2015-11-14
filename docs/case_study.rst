@@ -98,4 +98,3 @@ Two of the top 5 largest gene modules that are identified by network-based multi
 
 In summary, we performed an integrated network analysis of multi-omics data to identify core network modules in the TCGA study of Glioblastoma Mutiforme, and the result revealed that our tool can be used to automatically identify cancer driver genes and core gene modules sharing structural pattern with those genes in a STRING network, thus to capture critical pathways that play important roles in tumor genesis.
 
-

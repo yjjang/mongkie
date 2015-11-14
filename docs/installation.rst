@@ -71,4 +71,3 @@ OS X
 
 1. After the download completes, click on the downloaded ``.dmg`` file.
 2. Drag the mongkie application in your Application folder.
-
