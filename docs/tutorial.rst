@@ -2,7 +2,7 @@
 Tutorial
 ********
 
-A step-by-step tutorial for the :doc:`./case_study` is available at `our tutorial site <http://mongkie.readthedocs.org/en/latest/tutorial.html>` online.
+A step-by-step tutorial for the :doc:`./case_study` is available at `our tutorial site <http://mongkie.readthedocs.org/en/latest/tutorial.html>`_ online.
 
 .. note::
     
