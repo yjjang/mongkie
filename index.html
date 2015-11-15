@@ -2,9 +2,10 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>MONGKIE</title>
+    <title>MONGKIE by yjjang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -12,27 +13,27 @@
     <section class="page-header">
       <h1 class="project-name">MONGKIE</h1>
       <h2 class="project-tagline">Integrated network analysis and visualization platform for multi-omics data</h2>
-      <a href="https://github.com/yjjang/mongkie/releases/latest" class="btn">Latest Release</a>
-      <a href="http://mongkie.readthedocs.org" class="btn">Documentations</a>
       <a href="https://github.com/yjjang/mongkie" class="btn">View on GitHub</a>
+      <a href="https://github.com/yjjang/mongkie/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/yjjang/mongkie/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <p><strong>Mo</strong>dular <strong>N</strong>etwork <strong>G</strong>eneration and Visualization Platform with <strong>K</strong>nowledge <strong>I</strong>ntegration <strong>E</strong>nvironments</p>
 
-<p><img src="https://raw.githubusercontent.com/yjjang/mongkie/master/docs/images/F1A.png" width="800" alt="MONGKIE"></p>
+<p><img src="images/F1A.png" width="800" alt="MONGKIE"></p>
 
 <h2>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-<p>In systems biology, one of the common but powerful approaches to gain insights into the underlying complexity and dynamics of biological processes in diseases is to analyze multi-omics data derived from high-throughput experiments on the context of various biological networks – e.g. protein-protein interactions, biological pathways (Gehlenborg <em>et al.</em>, 2010). Especially in tumor biology, integration of mutation, copy number, and gene expression profiles with gene interaction networks has been proposed as an approach to identify functional driver genes and core gene modules perturbed by them, relying on the assumption that they will cluster on the network (Bertrand <em>et al.</em>, 2015).</p>
+<p><strong>N</strong>etwork-based integrative analysis is a powerful technique for deducing biological interpretations from multi-layered omics data such as somatic mutations, copy number variations, and gene expression data. However integrated analysis of multi-omics data is quite complicated and can hardly be done in a fully automated way. Thus, <em>a powerful interactive visual mining tool</em> is much needed in analyzing a huge amount of heterogeneous data such as the <a href="http://cancergenome.nih.gov/">TCGA</a> projects.</p>
 
-<p>MONGKIE is an integrated network analysis and visualization application mainly designed for such analyses, providing not only the <code>sophisticated visualization models</code>, but also seamless integration of various analytical processes including <code>network clustering</code>, <code>gene expression overlay</code>, and <code>GO over-representation analysis</code>.</p>
+<p><strong>M</strong>ONGKIE is an application that integrates <em>network visualization</em> with <em>data analysis tools</em> in a single platform. The visualization unit supports sophisticated models for describing biological networks as well as various visualization options (e.g. <code>Data-to-Visual mapping</code> and <code>Gene expression overlay</code>) for displaying multi-omics data. In addition, we implemented in-house tools for network analysis including <code>Network clustering</code> and <code>Over-representation analysis</code>.</p>
 
 <h2>
 <a id="video-demo" class="anchor" href="#video-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video Demo</h2>
 
-<p><iframe width="640" height="360" src="https://www.youtube.com/embed/oHiE0jF_ta8?rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p>HERE</p>
 
 <h4>
 <a id="data-files-used-in-the-demo" class="anchor" href="#data-files-used-in-the-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data files used in the demo</h4>
@@ -43,7 +44,8 @@
 <li><a href="data/ESC_total_relation.csv">ESC_total_relation.csv</a></li>
 <li><a href="data/exp.csv">exp.csv</a></li>
 <li><a href="data/GSE15355.csv">GSE15355.csv</a></li>
-<li><a href="data/symbol2uniprot.csv">symbol2uniprot.csv</a> (should be imported as a node attribute before the GO enrichment analysis)</li>
+<li>
+<a href="data/symbol2uniprot.csv">symbol2uniprot.csv</a> (should be imported as a node attribute before the GO enrichment analysis)</li>
 </ul>
 
 <h2>
@@ -54,12 +56,11 @@
 <ol>
 <li>Download the <a href="https://github.com/yjjang/mongkie/releases/latest">latest release</a> of a ZIP distribution for your OS.</li>
 <li>Unzip the downloaded file into any directory.</li>
-<li>Run <code>mongkie/bin/mongkie</code> in <em>Linux</em>, <code>mongkie\bin\mongkie.exe</code> in <em>Windows</em>, and <code>mongkie.app/Contents/MacOS/mongkie</code> in <em>OS X</em>.</li>
+<li>Run <code>mongkie/bin/mongkie</code> in <em>Linux</em>, <code>mongkie\bin\mongkie.exe</code> in <em>Windows</em>, and <code>mongkie.app/Contents/MacOS/mongkie</code> in <em>Mac OS X</em>.</li>
 </ol>
 
-<p>What's next? Go to the <a href="http://mongkie.readthedocs.org/en/latest/tutorial.html">Tutorial</a> site.</p>
-
-<p>Enjoy!</p>
+<p>What's next? Go to the <a href="http://mongkie.readthedocs.org/en/latest/tutorial.html">Tutorial</a> site.
+Enjoy!</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
@@ -67,7 +68,7 @@
 <p>MONGKIE is distributed under the GNU AGPL V3 license with exception of some external libraries that are available under their own licenses.</p>
 
 <pre><code>Visit &lt;http://yjjang.github.io/mongkie&gt; for details.
-Copyright (C) 2015 Jang, YJ., and Ewha Research Center for Systems Biology
+Copyright (C) 2015 Yeongjun Jang and Ewha Research Center for Systems Biology
 
 MONGKIE is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -84,7 +85,7 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
 </code></pre>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/yjjang/mongkie">MONGKIE</a> is maintained by <a href="https://github.com/yjjang">Yeongjun Jang</a> and <a href="http://ercsb.ewha.ac.kr">Ewha Research Center for Systems Biology</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/yjjang/mongkie">MONGKIE</a> is maintained by <a href="https://github.com/yjjang">yjjang</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
