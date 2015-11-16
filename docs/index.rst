@@ -14,12 +14,11 @@ MONGKIE
 
 `MONGKIE <http://yjjang.github.io/mongkie>`_ is a software platform for interactive visualization and  analysis of complex omics data in the context of biological networks.
 
-* In-house tools for :doc:`network_analysis` were implemented and they are tightly coupled with the :doc:`network_visualization` tools in a single platform.
-* All components for visualization (e.g. :doc:`network_visualization/visual_editing` and :doc:`network_analysis/expression_overlay`), network analysis of :doc:`defining subgroups <network_analysis/network_clustering>`, and :doc:`functional interpretation <network_analysis/enrichment_analysis>` of network modules can be easily threaded into a pipeline that allows user interaction at each step.
+* All components for visualization (e.g. :doc:`Data-to-Visual mapping <network_visualization/visual_editing>` and :doc:`network_analysis/expression_overlay`), network analysis of :doc:`defining subgroups <network_analysis/network_clustering>`, and :doc:`functional interpretation <network_analysis/enrichment_analysis>` of network modules can be easily threaded into a pipeline that allows user interaction at each step.
 * It was built on top of the :doc:`implementation/plugin_architecture` to support application extension by third-party developers.
 
 .. important::
-    In :doc:`case_study`, We demonstrate how MONGKIE can be used to identify driver gene candidates among mutated genes and core regulatory modules with functional interpretation in Glioblastoma Multiforme using multi-omics data sets from the TCGA GBM consortium (:ref:`Brennan et al., 2013 <Bren13>`).
+    In :doc:`case_study`, We demonstrate how MONGKIE can be used to identify driver gene candidates among mutated genes and core regulatory modules in the study of TCGA Glioblastoma Multiforme (:ref:`Brennan et al., 2013 <Bren13>`).
 
 .. toctree::
    :maxdepth: 1

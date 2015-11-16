@@ -64,14 +64,15 @@ OS X
 2. Drag the mongkie application in your Application folder.
 
 .. _user-directories:
+
 User Directories
 ================
 
-`userdir` is the directory where MONGKIE stores user configuration data such as window layouts, and various application options. Sometimes your `userdir` can be corrupted and this results in the MONGKIE behaving weirdly.
+``userdir`` is the directory where MONGKIE stores user configuration data such as window layouts, and various application options. Sometimes your ``userdir`` can be corrupted and this results in the MONGKIE behaving weirdly.
 
-To fix such issues, delete `userdir` entirely, then restart MONGKIE, and allow it to generate a new `userdir` from scratch. In most cases, this should repair the problems.
+To fix such issues, delete ``userdir`` entirely, then restart MONGKIE, and allow it to generate a new ``userdir`` from scratch. In most cases, this should repair the problems.
 
-`userdir` is located in:
+``userdir`` is located in:
 
 * On Windows 2K/XP, :file:`C:\\Documents and Settings\\<username>\\Application Data\\.mongkie`
 * On Windows Vista or later, :file:`C:\\Users\<username>\\AppData\\Roaming\\.mongkie`
