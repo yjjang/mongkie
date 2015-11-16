@@ -18,7 +18,7 @@ MONGKIE
 * It was built on top of the :doc:`implementation/plugin_architecture` to support application extension by third-party developers.
 
 .. important::
-    In the :doc:`case_study`, We demonstrate how MONGKIE can be used to identify driver gene candidates and core regulatory modules in the study of TCGA Glioblastoma Multiforme (:ref:`Brennan et al., 2013 <Bren13>`).
+    In the :doc:`case_study`, we demonstrate how MONGKIE can be used to identify driver gene candidates and core regulatory modules in the study of TCGA Glioblastoma Multiforme (:ref:`Brennan et al., 2013 <Bren13>`).
 
 .. toctree::
    :maxdepth: 1
