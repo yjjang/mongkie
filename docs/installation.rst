@@ -4,7 +4,7 @@ Installation
 
 This section describes how to install and run MONGKIE. Installation instructions are provided for ``Linux`` , ``Mac OS X``, and ``Windows``.
 
-.. important::
+.. caution::
 	If you have an older version on your computer, you should uninstall it and remove the :ref:`user-directories`.
 
 System Requirements
