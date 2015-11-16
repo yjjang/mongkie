@@ -28,14 +28,14 @@ Network clustering
 Make a new network from a cluster
 =================================
 
+Import expression log2FC in normal vs. tumor 
+============================================
+
 Functional annotation of a cluster
 ==================================
 
 Import expression profiles for 4 GBM subtypes
 =============================================
-
-Import expression log2FC in normal vs. tumor 
-============================================
 
 Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
 ======================================================================
