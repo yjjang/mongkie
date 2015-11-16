@@ -2,8 +2,6 @@
 References
 **********
 
-See the *Bibliography*.
-
 .. [Albe98] Alberts, B. (1998) **The cell as a collection of protein machines: preparing the next generation of molecular biologists.** *Cell* 92.3: 291-294.
 .. [Bade02] Bader, G.D., *et al*. (2002) **Analyzing yeast protein–protein interaction data obtained from different sources.** *Nature biotechnology*, 20.10: 991-997.
 .. [BaHJ09] Bastian, M., Heymann, S., & Jacomy, M. (2009) **Gephi: an open source software for exploring and manipulating networks.** *ICWSM*, 8, 361-362.
