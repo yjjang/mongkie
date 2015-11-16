@@ -5,16 +5,7 @@ Installation
 This section describes how to install and run MONGKIE. Installation instructions are provided for ``Linux`` , ``OS X``, and ``Windows``.
 
 .. important::
-	If you have an older version on your computer, you should uninstall it and remove the user directory.
-	
-	**User directories**
-	
-	* On Windows 2K/XP, :file:`C:\\Documents and Settings\\username\\Application Data\\.mongkie`
-	* On Windows Vista or later, :file:`C:\\Users\username\\AppData\\Roaming\\.mongkie`
-	* On OS X, :file:`/Users/username/Library/Application Support/mongkie`
-	* On Linux, :file:`/home/username/.mongkie`
-	
-	Whenever you encounter some troubles in running MONGKIE, you can clean running environments by deleting user directory, then rerun it.
+	If you have an older version on your computer, you should uninstall it and remove the :ref:`user-directories`.
 
 System Requirements
 ===================
@@ -71,3 +62,18 @@ OS X
 
 1. After the download completes, click on the downloaded ``.dmg`` file.
 2. Drag the mongkie application in your Application folder.
+
+.. _user-directories:
+User Directories
+================
+
+`userdir` is the directory where MONGKIE stores user configuration data such as window layouts, and various application options. Sometimes your `userdir` can be corrupted and this results in the MONGKIE behaving weirdly.
+
+To fix such issues, delete `userdir` entirely, then restart MONGKIE, and allow it to generate a new `userdir` from scratch. In most cases, this should repair the problems.
+
+`userdir` is located in:
+
+* On Windows 2K/XP, :file:`C:\\Documents and Settings\\<username>\\Application Data\\.mongkie`
+* On Windows Vista or later, :file:`C:\\Users\<username>\\AppData\\Roaming\\.mongkie`
+* On OS X, :file:`/Users/<username>/Library/Application Support/mongkie`
+* On Linux, :file:`/home/<username>/.mongkie`

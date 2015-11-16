@@ -2,7 +2,7 @@
 Tutorial
 ********
 
-A step-by-step tutorial for the :doc:`./case_study` is available at `our tutorial site <http://mongkie.readthedocs.org/en/latest/tutorial.html>`_ online.
+This section provides a step-by-step tutorial for the :doc:`./case_study`.
 
 .. note::
     
@@ -13,3 +13,30 @@ A step-by-step tutorial for the :doc:`./case_study` is available at `our tutoria
     * Extract a sub-network of altered (somatic mutation or CNV) genes in `STRING <http://string-db.org/>`_.
     * Calculate expression correlations between each pair of genes in the extracted network.
     * Write vertices, edges, and expression related data files.
+
+**Work in progress**
+
+Import a GBM-altered network
+============================
+
+Data-to-Visual mapping
+======================
+
+Network clustering
+==================
+
+Make a new network from a cluster
+=================================
+
+Functional annotation of a cluster
+==================================
+
+Import expression profiles for 4 GBM subtypes
+=============================================
+
+Import expression log2FC in normal vs. tumor 
+============================================
+
+Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
+======================================================================
+

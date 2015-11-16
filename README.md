@@ -11,7 +11,7 @@ License
 -------
 
     Visit <http://yjjang.github.io/mongkie> for details.
-    Copyright (C) 2015 Jang, YJ. and Ewha Research Center for Systems Biology (ERCSB)
+    Copyright (C) 2015 Yeongjun Jang
     
     MONGKIE is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
