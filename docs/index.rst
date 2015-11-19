@@ -21,7 +21,6 @@ MONGKIE
     In the :doc:`case_study`, we demonstrate how MONGKIE can be used to identify driver gene candidates and core regulatory modules in the study of TCGA Glioblastoma Multiforme (:ref:`Brennan et al., 2013 <Bren13>`).
 
 .. toctree::
-   :maxdepth: 1
    :numbered:
    :caption: Table of Contents
    :name: matertoc
