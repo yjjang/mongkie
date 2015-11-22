@@ -337,7 +337,8 @@ public class InteractionControllerImpl implements InteractionController {
         protected Set<Interaction<K>> query(InteractionSource<K> is, Set<K> keys) throws Exception {
             Set<Interaction<K>> interactions = super.query(is, keys);
             Set<K> _expandedKeys = new HashSet<K>();
-            if (is.isDirected()) {
+// Ignore direction TODO: need to digg further
+//            if (is.isDirected()) {
                 for (Interaction<K> i : interactions) {
                     K sourceKey = i.getSourceKey();
                     if (!keys.contains(sourceKey)) {
@@ -348,14 +349,14 @@ public class InteractionControllerImpl implements InteractionController {
                         _expandedKeys.add(targetKey);
                     }
                 }
-            } else {
-                for (Interaction<K> i : interactions) {
-                    K targetKey = i.getTargetKey();
-                    if (!keys.contains(targetKey)) {
-                        _expandedKeys.add(targetKey);
-                    }
-                }
-            }
+//            } else {
+//                for (Interaction<K> i : interactions) {
+//                    K targetKey = i.getTargetKey();
+//                    if (!keys.contains(targetKey)) {
+//                        _expandedKeys.add(targetKey);
+//                    }
+//                }
+//            }
             interactions.addAll(super.query(is, _expandedKeys));
             Set<K> existingKeys = getAllNodeKeys();
             for (Iterator<Interaction<K>> interactionIter = interactions.iterator(); interactionIter.hasNext();) {
