@@ -10,6 +10,7 @@ References
 .. [BoKe01] Book, G., & Keshary, N. (2001) **Radial tree graph drawing algorithm for representing large hierarchies.** *University of Connecticut*.
 .. [Bren13] Brennan, C.W., *et al*. (2013) **The somatic genomic landscape of glioblastoma.** *Cell*, 155(2), 462-477.
 .. [Cera10] Cerami, E., *et al*. (2010) **Automated network analysis identifies core pathways in glioblastoma.** *PloS one*, 5(2), e8918.
+.. [Crof10] Croft, D., *et al*. (2010. **Reactome: a database of reactions, pathways and biological processes.** *Nucleic acids research*, gkq1018.
 .. [Enri02] Enright, A.J., *et al*. (2002) **An efficient algorithm for large-scale detection of protein families.** *Nucleic acids research*, 30.7: 1575-1584.
 .. [Free07] Freeman, T.C., *et al*. (2007) **Construction, visualisation, and clustering of transcription networks from microarray expression data.** *PLoS computational biology*, 3.10: e206.
 .. [Fric99] Frick, A., *et al*. (1999) **Simulating graphs as physical systems: a spring-embedder system for force-directed layout.** *Dr. Dobb’s Journal*.
@@ -20,12 +21,15 @@ References
 .. [Herm00] Herman, I., *et al*. (2000) **Graph visualization and navigation in information visualization: A survey.** *Visualization and Computer Graphics, IEEE Transactions on*, 6(1), 24-43.
 .. [HuSL09] Huang, D. W., Sherman, B. T., & Lempicki, R. A. (2009) **Bioinformatics enrichment tools: paths toward the comprehensive functional analysis of large gene lists.** *Nucleic acids research*, 37(1), 1-13.
 .. [HuZC13] Hu, Z., *et al*. (2013) **VisANT 4.0: Integrative network platform to connect genes, drugs, diseases and therapies.** *Nucleic acids research*, 41(W1), W225-W231.
-.. [Jone08] Jones, S., *et al*. (2008) **Core signaling pathways in human pancreatic cancers revealed by global genomic analyses.** *science*, 321(5897), 1801-1806.
+.. [Jone08] Jones, S., *et al*. (2008) **Core signaling pathways in human pancreatic cancers revealed by global genomic analyses.** *Science*, 321(5897), 1801-1806.
+.. [KaGo00] Kanehisa, M., & Goto, S. (2000) **KEGG: kyoto encyclopedia of genes and genomes.** *Nucleic acids research*, 28(1), 27-30.
 .. [KiKC08] Kincaid, R., Kuchinsky, A., & Creech, M. (2008) **VistaClara: an expression browser plug-in for Cytoscape.** *Bioinformatics*, 24(18), 2112-2114.
 .. [Kita02] Kitano, H. (2002) **Systems biology: a brief overview.** *Science*, 295(5560), 1662-1664.
 .. [Krog06] Krogan, N.J., *et al*. (2006) **Global landscape of protein complexes in the yeast Saccharomyces cerevisiae.** *Nature*, 440(7084), 637-643.
 .. [LeeH04] Lee, H.K., *et al*. (2004) **Coexpression analysis of human genes across many microarray data sets.** *Genome research*, 14.6: 1085-1094.
 .. [LiDe11] Li, B., and Dewey, C. N. (2011) **RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.** *BMC bioinformatics*, 12(1), 323.
+.. [Misu95] Misue, K., *et al*. (1995) **Layout adjustment and the mental map.** *Journal of visual languages and computing*, 6(2), 183-210.
+.. [Nish01] Nishimura, D. (2001) **BioCarta.** *Biotech Software & Internet Report: The Computer Software Journal for Scient*, 2(3), 117-120.
 .. [Sara05] Saraiya, P., *et al*. (2005) **Visualizing biological pathways: requirements analysis, systems evaluation and research agenda.** *Info. Vis.*, 4(3), 191-205.
 .. [Scha09] Schaefer, C.F., *et al*. (2009) **PID: the Pathway Interaction Database.** *Nucleic Acids Res.*, Jan;37(Database issue):D674-9.
 .. [Shan03] Shannon, P., *et al*. (2003) **Cytoscape: a software environment for integrated models of biomolecular interaction networks.** *Genome research*, 13.11: 2498-2504.
