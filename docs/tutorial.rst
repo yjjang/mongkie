@@ -2,7 +2,7 @@
 Tutorial
 ********
 
-A step-by-step tutorial for the :doc:`./case_study` is available at `our tutorial site <http://mongkie.readthedocs.org/en/latest/tutorial.html>`_ online.
+This section provides a step-by-step tutorial for the :doc:`./case_study`.
 
 .. note::
     
@@ -15,3 +15,30 @@ A step-by-step tutorial for the :doc:`./case_study` is available at `our tutoria
     * Write vertices, edges, and expression related data files.
     
     You can download the R script and generated input files in :download:`supplementary_data.zip </assets/supplementary_data.zip>`.
+
+**Work in progress**
+
+Import a GBM-altered network
+============================
+
+Data-to-Visual mapping
+======================
+
+Network clustering
+==================
+
+Make a new network from a cluster
+=================================
+
+Import expression log2FC in normal vs. tumor 
+============================================
+
+Functional annotation of a cluster
+==================================
+
+Import expression profiles for 4 GBM subtypes
+=============================================
+
+Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
+======================================================================
+
