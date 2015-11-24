@@ -20,7 +20,9 @@ References
 .. [Herm00] Herman, I., *et al*. (2000) **Graph visualization and navigation in information visualization: A survey.** *Visualization and Computer Graphics, IEEE Transactions on*, 6(1), 24-43.
 .. [HuSL09] Huang, D. W., Sherman, B. T., & Lempicki, R. A. (2009) **Bioinformatics enrichment tools: paths toward the comprehensive functional analysis of large gene lists.** *Nucleic acids research*, 37(1), 1-13.
 .. [HuZC13] Hu, Z., *et al*. (2013) **VisANT 4.0: Integrative network platform to connect genes, drugs, diseases and therapies.** *Nucleic acids research*, 41(W1), W225-W231.
+.. [Jone08] Jones, S., *et al*. (2008) **Core signaling pathways in human pancreatic cancers revealed by global genomic analyses.** *science*, 321(5897), 1801-1806.
 .. [KiKC08] Kincaid, R., Kuchinsky, A., & Creech, M. (2008) **VistaClara: an expression browser plug-in for Cytoscape.** *Bioinformatics*, 24(18), 2112-2114.
+.. [Kita02] Kitano, H. (2002) **Systems biology: a brief overview.** *Science*, 295(5560), 1662-1664.
 .. [Krog06] Krogan, N.J., *et al*. (2006) **Global landscape of protein complexes in the yeast Saccharomyces cerevisiae.** *Nature*, 440(7084), 637-643.
 .. [LeeH04] Lee, H.K., *et al*. (2004) **Coexpression analysis of human genes across many microarray data sets.** *Genome research*, 14.6: 1085-1094.
 .. [LiDe11] Li, B., and Dewey, C. N. (2011) **RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.** *BMC bioinformatics*, 12(1), 323.
