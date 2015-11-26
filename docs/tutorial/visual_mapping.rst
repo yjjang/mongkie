@@ -8,18 +8,18 @@ Data-to-Visual mapping
   
   .. note:: To use the ``Sony Sketch EF`` font, you should download and install it on your system. It is available at `here <http://www.fonts2u.com/sony-sketch-ef.font>`_.
   
-  * To open the **Display Options** panel, click the **up-arrow button** in the bottom-right of a network display window.
+  * To open the **Display Options** panel, click the **up-arrow button** at the bottom-right of a network display window.
   * Select the **Nodes** tab, and click the **Font name** button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
-  * To close the **Display Options** panel, click the **down-arrow button** in the top-right of the panel.
+  * To close the **Display Options** panel, click the **down-arrow button** at the top-right of the panel.
 
 .. image:: ../images/change_nodes_font.png
 
-* To map the alteration freq. of genes to the sizes of nodes,
+* To map the alteration frequencies of genes to the sizes of nodes,
 
   1. Select the **Visual Mapping** window at the top-left of the main application.
   2. Select the **Nodes** tab button.
   3. Select the |size-icon| icon.
-  4. In the drop-down list, choose ``Freq`` data attribute to map.
+  4. In the drop-down list, choose the ``Freq`` data attribute to map.
   5. Click the **Spline...** button to open the **Spline Editor**.
   6. Choose a pre-defined scale function.
   7. Adjust the transform scale to make more frequently altered genes be magnified.
@@ -35,7 +35,7 @@ Data-to-Visual mapping
 * Now you will map a different shape to the :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using discrete Data-to-Visual mapping.
 
   1. Select the **Discrete** tab at the bottom of **Visual Mapping** window.
-  2. Choose the ``Type`` data attribute of **Nodes** to map in the drop-down list.
+  2. In the drop-down list, choose the ``Type`` data attribute of **Nodes** to map.
   3. Expand the ``LINKER``, now various editors for visual styles will be shown.
   4. In the **Shape** filed, click the ``...`` button to show up the node shape chooser.
   5. Choose the ``Diamond`` shape, and click the **OK** button.
@@ -51,7 +51,7 @@ Data-to-Visual mapping
   1. Select the **Continuous** tab at the bottom of **Visual Mapping** window.
   2. Select the **Edges** tab button.
   3. Select the |size-icon| icon.
-  4. In the drop-down list, choose ``i.weight`` data attribute to map.
+  4. In the drop-down list, choose the ``i.weight`` data attribute to map.
   5. Set the **Max** value to ``10``.
   6. Click the **Spline...** button to open the **Spline Editor**.
   7. Restore the scale function to the linear function.
