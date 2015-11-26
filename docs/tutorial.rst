@@ -64,7 +64,7 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
 * Now the network looks like the following:
 .. image:: ./images/freq_to_node_size_result.png
 
-* Now, you will map different shape to linker nodes.
+* Now, you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes.
 Network clustering
 ==================
 
