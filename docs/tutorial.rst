@@ -53,7 +53,7 @@ Data-to-Visual mapping
 
   1. Select the **Visual Mapping** window at the top-left of the main application.
   2. Select the **Nodes** tab button.
-  3. Select the |size-icon| (size) icon.
+  3. Select the |size-icon| icon.
   4. Choose the ``Freq`` data attribute to map in the drop-down list.
   5. Click the **Spline...** button to open the **Spline Editor**.
   6. Choose a pre-defined scale function.
@@ -85,7 +85,7 @@ Data-to-Visual mapping
 
   1. Select the **Continuous** tab at the bottom of the **Visual Mapping** window.
   2. Select the **Edges** tab button.
-  3. Select the |size-icon| (size) icon.
+  3. Select the |size-icon| icon.
   4. Choose the ``i.weight`` data attribute to map in the drop-down list.
   5. Set the **Max** value to ``10``.
   6. Click the **Spline...** button to open the **Spline Editor**.
