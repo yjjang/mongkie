@@ -44,14 +44,12 @@ Data-to-Visual mapping
 Data-to-Visual mapping allows you to map data attributes of nodes or edges to various visual styles.
 
 * (Optionally) Before proceeding to further steps, change the default font for nodes to ``Sony Sketch EF`` that was used in figures in the :doc:`./case_study`.
-
-.. note:: To use the ``Sony Sketch EF`` font, you should download and install it on your system. It is available at `here <http://www.fonts2u.com/sony-sketch-ef.font>`_.
+  .. note:: To use the ``Sony Sketch EF`` font, you should download and install it on your system. It is available at `here <http://www.fonts2u.com/sony-sketch-ef.font>`_.
 
   * To open the **Display Options** panel, click the **up-arrow button** in the bottom-right of a network display window.
   * Select the **Nodes** tab, and click the *font name* button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
   * To close the **Display Options** panel, click the **down-arrow button** in the top-right of the panel.
-
-.. image:: ./images/change_nodes_font.png
+  .. image:: ./images/change_nodes_font.png
 
 * In the **Visual Mapping** window,
 
