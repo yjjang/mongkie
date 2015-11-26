@@ -59,6 +59,7 @@ Data-to-Visual mapping
   7. Adjust the transform scale to make more frequently altered genes be magnified.
   8. Close the **Spline Editor**.
   9. **Apply** the data-to-visual mapping.
+
 .. image:: ./images/freq_to_node_size.png
 
 * Now the network looks like the following:
@@ -71,6 +72,11 @@ Data-to-Visual mapping
   3. Expand the ``LINKER``, then various editors for visual styles will be shown.
   4. In the **Shape** filed, click the ``...`` button to show up the node shape chooser.
   5. Choose the ``Diamond`` shape, and click the **OK** button.
+
+.. image:: ./images/type_to_node_shape.png
+
+* Now the network looks like the following:
+.. image:: ./images/type_to_node_shape_result.png
 
 
 Network clustering
