@@ -3,7 +3,7 @@ Import a GBM-altered network
 ****************************
 You will import a GBM-altered network from 2 CSV files for nodes and edges,
 
-* Select :menuselection:`File --> Import --> Comma-Separated Values (CSV)`, then a wizard window will guide you to remaining steps.
+* Select :menuselection:`File --> Import --> Comma-Separated Values (CSV)`, now a wizard window will guide you to remaining steps.
 
 .. image:: ../images/import_csv_menu.png
 

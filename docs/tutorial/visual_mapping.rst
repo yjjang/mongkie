@@ -19,12 +19,12 @@ Data-to-Visual mapping
   1. Select the **Visual Mapping** window at the top-left of the main application.
   2. Select the **Nodes** tab button.
   3. Select the |size-icon| icon.
-  4. In the drop-down list, choose the ``Freq`` data attribute to map.
+  4. In the drop-down list, choose ``Freq`` data attribute to map.
   5. Click the **Spline...** button to open the **Spline Editor**.
   6. Choose a pre-defined scale function.
   7. Adjust the transform scale to make more frequently altered genes be magnified.
   8. Close the **Spline Editor**.
-  9. **Apply** the data-to-visual mapping.
+  9. Click the **Apply** button.
 
 .. image:: ../images/freq_to_node_size.png
 
@@ -32,9 +32,9 @@ Data-to-Visual mapping
 
 .. image:: ../images/freq_to_node_size_result.png
 
-* Now you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using the discrete Data-to-Visual mapping.
+* Now you will map a different shape to the :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using discrete Data-to-Visual mapping.
 
-  1. Select the **Discrete** tab at the bottom of the **Visual Mapping** window.
+  1. Select the **Discrete** tab at the bottom of **Visual Mapping** window.
   2. Choose the ``Type`` data attribute of **Nodes** to map in the drop-down list.
   3. Expand the ``LINKER``, now various editors for visual styles will be shown.
   4. In the **Shape** filed, click the ``...`` button to show up the node shape chooser.
@@ -48,14 +48,14 @@ Data-to-Visual mapping
 
 * You can map :abbr:`expression correlations (Correlations of expression levels between each pair of genes in tumor conditions)` to the thicknesses of edges.
 
-  1. Select the **Continuous** tab at the bottom of the **Visual Mapping** window.
+  1. Select the **Continuous** tab at the bottom of **Visual Mapping** window.
   2. Select the **Edges** tab button.
   3. Select the |size-icon| icon.
-  4. In the drop-down list, choose the ``i.weight`` data attribute to map.
+  4. In the drop-down list, choose ``i.weight`` data attribute to map.
   5. Set the **Max** value to ``10``.
   6. Click the **Spline...** button to open the **Spline Editor**.
   7. Restore the scale function to the linear function.
-  8. **Apply** the data-to-visual mapping.
+  8. Click the **Apply** button.
 
 .. image:: ../images/cor_to_edge_thickness.png
 
