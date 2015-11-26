@@ -39,16 +39,26 @@ Data-to-Visual mapping
 
 Data-to-Visual mapping allows you to map data attributes of nodes or edges to various visual styles.
 
-* (Optionally) Before proceeding to further steps, change the default font for nodes to ``Sony Sketch EF`` that was used in figures in the :doc:`./case_study`.
+* (Optional) Before proceeding to further steps, change the default font for nodes to ``Sony Sketch EF`` that was used in figures in the :doc:`./case_study`.
   
   .. note:: To use the ``Sony Sketch EF`` font, you should download and install it on your system. It is available at `here <http://www.fonts2u.com/sony-sketch-ef.font>`_.
   
   * To open the **Display Options** panel, click the **up-arrow button** in the bottom-right of a network display window.
-  * Select the **Nodes** tab, and click the *font name* button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
+  * Select the **Nodes** tab, and click the **Font name** button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
   * To close the **Display Options** panel, click the **down-arrow button** in the top-right of the panel.
   .. image:: ./images/change_nodes_font.png
 
-* In the **Visual Mapping** window,
+* To map the alteration freq. to the node size,
+  1. Select the **Visual Mapping** window in the top-left of the main application.
+  2. Select the **Nodes** tab button.
+  3. Select the **Node size** icon.
+  4. Choose the ``Freq`` data attribute in the drop-down list.
+  5. Click the **Spline...** button to open the **Spline Editor**.
+  6. Choose a pre-defined scale function.
+  7. Adjust the transform scale to make more frequently altered genes be magnified.
+  8. Close the **Spline Editor**.
+  9. Finally, **Apply** the data-to-visual mapping.
+.. image:: ./images/freq_to_node_size.png
 
 Network clustering
 ==================
