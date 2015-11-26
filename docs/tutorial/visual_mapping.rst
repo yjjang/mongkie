@@ -46,7 +46,7 @@ Data-to-Visual mapping
 
 .. image:: ../images/type_to_node_shape_result.png
 
-* You can map exp. correlations between each pair of genes in tumor conditions to the thicknesses of edges.
+* You can map :abbr:`expression correlations (Correlations of expression levels between each pair of genes in tumor conditions)` to the thicknesses of edges.
 
   1. Select the **Continuous** tab at the bottom of the **Visual Mapping** window.
   2. Select the **Edges** tab button.
