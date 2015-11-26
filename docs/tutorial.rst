@@ -38,26 +38,50 @@ To import a GBM-altered network from 2 CSV files for nodes and edges,
 .. image:: ./images/import_report.png
 
 
-**Work in progress**
-
 Data-to-Visual mapping
 ======================
+
+Data-to-Visual mapping allows you to map data attributes of nodes or edges to various visual styles.
+
+* (Optionally) Before proceeding to further steps, change the default font for nodes to ``Sony Sketch EF`` that was used in figures in the :doc:`./case_study`.
+
+.. note::
+  
+  To use the ``Sony Sketch EF`` font, you should download and install it on your system. It is available at `here <http://www.fonts2u.com/sony-sketch-ef.font>`_.
+  
+
+  * To open the **Display Options** panel, click the **up-arrow button** in the bottom-right of a network display window.
+  
+  * Select the **Nodes** tab, and click the *font name* button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
+  * To close the **Display Options** panel, click the **down-arrow button** in the top-right of the panel.
+
+.. image:: ./images/change_nodes_font.png
+
+* In the **Visual Mapping** window,
 
 Network clustering
 ==================
 
+
 Make a new network from a cluster
 =================================
+
 
 Import expression log2FC in normal vs. tumor 
 ============================================
 
+
 Functional annotation of a cluster
 ==================================
+
 
 Import expression profiles for 4 GBM subtypes
 =============================================
 
+
 Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
 ======================================================================
+
+
+**Work in progress**
 
