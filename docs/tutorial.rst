@@ -49,6 +49,7 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
   .. image:: ./images/change_nodes_font.png
 
 * To map the alteration freq. to the node size,
+
   1. Select the **Visual Mapping** window in the top-left of the main application.
   2. Select the **Nodes** tab button.
   3. Select the **Node size** icon.
