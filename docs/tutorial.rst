@@ -21,7 +21,7 @@ Import a GBM-altered network
 
 To import a GBM-altered network from 2 CSV files for nodes and edges,
 
-* Select **File -> Import -> Comma-Separated Values (CSV)**, then a wizard window will guide you to remaining steps.
+* Select :menuselection:`File -> Import -> Comma-Separated Values (CSV)`, then a wizard window will guide you to remaining steps.
 .. image:: ./images/import_csv_menu.png
 
 * Choose :download:`tcga_gbm_vertices.csv </assets/tcga_gbm_vertices.csv>`, and set **ID column** to ``name``, **Label column** to ``hgnc_symbol``, then click the ``Next`` button.
@@ -58,12 +58,13 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
   6. Choose a pre-defined scale function.
   7. Adjust the transform scale to make more frequently altered genes be magnified.
   8. Close the **Spline Editor**.
-  9. Finally, **Apply** the data-to-visual mapping.
+  9. **Apply** the data-to-visual mapping.
 .. image:: ./images/freq_to_node_size.png
 
-* Now the network looks like the following.
+* Now the network looks like the following:
 .. image:: ./images/freq_to_node_size_result.png
 
+* Now, you will map different shape to linker nodes.
 Network clustering
 ==================
 
