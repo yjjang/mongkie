@@ -46,6 +46,7 @@ Data-to-Visual mapping
   * To open the **Display Options** panel, click the **up-arrow button** in the bottom-right of a network display window.
   * Select the **Nodes** tab, and click the **Font name** button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
   * To close the **Display Options** panel, click the **down-arrow button** in the top-right of the panel.
+
 .. image:: ./images/change_nodes_font.png
 
 * To map the alteration freq. of genes to the sizes of corresponding nodes,
@@ -63,6 +64,7 @@ Data-to-Visual mapping
 .. image:: ./images/freq_to_node_size.png
 
 * Now the network looks like the following:
+
 .. image:: ./images/freq_to_node_size_result.png
 
 * Now, you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using the discrete Data-to-Visual mapping.
@@ -76,6 +78,7 @@ Data-to-Visual mapping
 .. image:: ./images/type_to_node_shape.png
 
 * Now the network looks like the following:
+
 .. image:: ./images/type_to_node_shape_result.png
 
 
