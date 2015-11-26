@@ -21,7 +21,7 @@ Import a GBM-altered network
 
 To import a GBM-altered network from 2 CSV files for nodes and edges,
 
-* Select :menuselection:`**File --> Import --> Comma-Separated Values (CSV)**`, then a wizard window will guide you to remaining steps.
+* Select :menuselection:`File --> Import --> Comma-Separated Values (CSV)`, then a wizard window will guide you to remaining steps.
 .. image:: ./images/import_csv_menu.png
 
 * Choose :download:`tcga_gbm_vertices.csv </assets/tcga_gbm_vertices.csv>`, and set **ID column** to ``name``, **Label column** to ``hgnc_symbol``, then click the **Next** button.
@@ -37,7 +37,7 @@ To import a GBM-altered network from 2 CSV files for nodes and edges,
 Data-to-Visual mapping
 ======================
 
-Data-to-Visual mapping allows you to map data attributes of nodes or edges to various visual styles.
+:doc:`Data-to-Visual mapping <./network_visualization/visual_editing>` allows you to map data attributes of nodes or edges to various visual styles.
 
 * (Optional) Before proceeding to further steps, change the default font for nodes to ``Sony Sketch EF`` that was used in figures in the :doc:`./case_study`.
   
@@ -50,10 +50,10 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
 
 * To map the alteration freq. of genes to the sizes of corresponding nodes,
 
-  1. Select the **Visual Mapping** window in the top-left of the main application.
+  1. Select the **Visual Mapping** window at the top-left of the main application.
   2. Select the **Nodes** tab button.
   3. Select the **Node size** icon.
-  4. Choose the ``Freq`` data attribute in the drop-down list.
+  4. Choose the ``Freq`` data attribute to map in the drop-down list.
   5. Click the **Spline...** button to open the **Spline Editor**.
   6. Choose a pre-defined scale function.
   7. Adjust the transform scale to make more frequently altered genes be magnified.
@@ -64,7 +64,15 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
 * Now the network looks like the following:
 .. image:: ./images/freq_to_node_size_result.png
 
-* Now, you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes.
+* Now, you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using the discrete Data-to-Visual mapping.
+
+  1. Select the **Discrete** tab at the bottom of the **Visual Mapping** window.
+  2. Choose the ``Type`` data attribute of **Nodes** to map in the drop-down list.
+  3. Expand the ``LINKER``, then various editors for visual styles will be shown.
+  4. In the **Shape** filed, click the ``...`` button to show up the node shape chooser.
+  5. Choose the ``Diamond`` shape, and click the **OK** button.
+
+
 Network clustering
 ==================
 
