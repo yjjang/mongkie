@@ -49,11 +49,11 @@ Data-to-Visual mapping
 
 .. image:: ./images/change_nodes_font.png
 
-* To map the alteration freq. of genes to the sizes of corresponding nodes,
+* To map the alteration freq. of genes to the sizes of nodes,
 
   1. Select the **Visual Mapping** window at the top-left of the main application.
   2. Select the **Nodes** tab button.
-  3. Select the **Node size** icon.
+  3. Select the |size-icon| (size) icon.
   4. Choose the ``Freq`` data attribute to map in the drop-down list.
   5. Click the **Spline...** button to open the **Spline Editor**.
   6. Choose a pre-defined scale function.
@@ -67,11 +67,11 @@ Data-to-Visual mapping
 
 .. image:: ./images/freq_to_node_size_result.png
 
-* Now, you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using the discrete Data-to-Visual mapping.
+* Now you will map different shape to :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using the discrete Data-to-Visual mapping.
 
   1. Select the **Discrete** tab at the bottom of the **Visual Mapping** window.
   2. Choose the ``Type`` data attribute of **Nodes** to map in the drop-down list.
-  3. Expand the ``LINKER``, then various editors for visual styles will be shown.
+  3. Expand the ``LINKER``, now various editors for visual styles will be shown.
   4. In the **Shape** filed, click the ``...`` button to show up the node shape chooser.
   5. Choose the ``Diamond`` shape, and click the **OK** button.
 
@@ -80,6 +80,23 @@ Data-to-Visual mapping
 * Now the network looks like the following:
 
 .. image:: ./images/type_to_node_shape_result.png
+
+* You can map exp. correlations between each pair of genes in tumor conditions to the thicknesses of edges.
+
+  1. Select the **Continuous** tab at the bottom of the **Visual Mapping** window.
+  2. Select the **Edges** tab button.
+  3. Select the |size-icon| (size) icon.
+  4. Choose the ``i.weight`` data attribute to map in the drop-down list.
+  5. Set the **Max** value to ``10``.
+  6. Click the **Spline...** button to open the **Spline Editor**.
+  7. Restore the scale function to the linear function.
+  8. **Apply** the data-to-visual mapping.
+
+.. image:: ./images/cor_to_edge_thickness.png
+
+* The final network is shown below:
+
+.. image:: ./images/data_to_visual_mapping_result.png
 
 
 Network clustering
@@ -107,4 +124,6 @@ Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
 
 
 **Work in progress**
+
+.. |size-icon| image:: ./images/size_icon.png
 
