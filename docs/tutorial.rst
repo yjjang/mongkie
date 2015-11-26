@@ -46,9 +46,9 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
   * To open the **Display Options** panel, click the **up-arrow button** in the bottom-right of a network display window.
   * Select the **Nodes** tab, and click the **Font name** button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
   * To close the **Display Options** panel, click the **down-arrow button** in the top-right of the panel.
-  .. image:: ./images/change_nodes_font.png
+.. image:: ./images/change_nodes_font.png
 
-* To map the alteration freq. to the node size,
+* To map the alteration freq. of genes to the sizes of corresponding nodes,
 
   1. Select the **Visual Mapping** window in the top-left of the main application.
   2. Select the **Nodes** tab button.
@@ -60,6 +60,9 @@ Data-to-Visual mapping allows you to map data attributes of nodes or edges to va
   8. Close the **Spline Editor**.
   9. Finally, **Apply** the data-to-visual mapping.
 .. image:: ./images/freq_to_node_size.png
+
+* Now the network looks like the following.
+.. image:: ./images/freq_to_node_size_result.png
 
 Network clustering
 ==================
