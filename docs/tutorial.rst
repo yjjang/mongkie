@@ -2,7 +2,7 @@
 Tutorial
 ********
 
-This section provides a step-by-step tutorial for the :doc:`./case_study`.
+This section provides a step-by-step tutorial for the :doc:`./case_study` and more.
 
 .. note::
     
@@ -15,8 +15,6 @@ This section provides a step-by-step tutorial for the :doc:`./case_study`.
     * Write vertices, edges, and expression related data files.
     
     You can download the R script and generated input files in :download:`supplementary_data.zip </assets/supplementary_data.zip>`.
-
-**Work in progress**
 
 .. toctree::
     :caption: Table of Contents

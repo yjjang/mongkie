@@ -4,7 +4,7 @@ Import expression log2FCs in normal vs. tumor
 
 You will import gene expression log2FCs between normal vs. tumor condition in all TCGA GBM patients. and map them to the colors of nodes.
 
-* Select **Network** tab of previously created network from ``Cluster 3`` in the original network.
+* Select the **Network** tab of previously created network from ``Cluster 3`` in the original network.
 
 .. image:: ../images/new_graph_tp53.png
 
@@ -34,7 +34,7 @@ You will import gene expression log2FCs between normal vs. tumor condition in al
   3. Click |pallet-icon| to show up a palette chooser.
   4. Select |ryb-icon| (Red-Yellow-Blue).
   5. Click |invert-icon| to map ``Red`` to the **maximum** and ``Blue`` to the **minimum** value.
-  6. Check |list-icon| to list names of nodes with their mapped colors ranked by values.
+  6. Check |list-icon| to show a list of node names with their mapped colors ranked by values.
   7. Click the **Apply** button.
 
 .. image:: ../images/log2fc_to_color.png
