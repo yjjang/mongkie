@@ -6,7 +6,9 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
 
 .. hint::
   In the :abbr:`edge table (Located in the Data Table window at the bottom of main application)`, you can see that the ``i.weight`` column contains expression correlations.
+  
   .. image:: ../images/edge_table_iweight.png
+  
   MONGKIE internally assigns the values of ``i.weight`` column in a edge table to the weights of edges for clustering. Therfore, to give weights to edges in your network, you should set the name of the column to ``i.weight``.
 
 * In the **Clustering** window at the top-left of main application
