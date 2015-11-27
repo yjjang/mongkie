@@ -7,7 +7,6 @@ You will import gene expression log2FCs between normal vs. tumor condition in al
 * Select **Network** tab of previously created network from ``Cluster 3`` in the original network.
 
 .. image:: ../images/new_graph_tp53.png
-   :width: 600px
 
 * Select :menuselection:`File --> Import --> Attributes from CSV File`.
 
@@ -30,9 +29,9 @@ You will import gene expression log2FCs between normal vs. tumor condition in al
 
 * In the **Visual Mapping (Nodes)** window,
 
-  1. Click |color-icon|.
+  1. Click |color-icon| icon.
   2. Choose ``log2FC`` in the drop-down list.
-  3. Click |pallet-icon| to show up a pallet chooser panel.
+  3. Click |pallet-icon| to show up a palette chooser.
   4. Select |ryb-icon| (Red-Yellow-Blue).
   5. Click |invert-icon| to map ``Red`` to the **maximum** and ``Blue`` to the **minimum** value.
   6. Check |list-icon| to list names of nodes with their mapped colors ranked by values.
@@ -43,11 +42,10 @@ You will import gene expression log2FCs between normal vs. tumor condition in al
 * The final network of ``Cluster 3`` is shown below:
 
 .. image:: ../images/tp53_network_log2fc.png
-   :width: 600px
 
-* Repeat above steps on the network of ``Cluster 5``.
+* (Optional) Repeat above steps on the network of ``Cluster 5``.
 
-.. tip:: How to add gradiation points and colors more.
+.. tip:: How to add more gradiation points and colors.
   
   **Work in progress**
 
