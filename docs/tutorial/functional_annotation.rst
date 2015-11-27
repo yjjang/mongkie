@@ -41,10 +41,10 @@ In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysi
 
 * Next you will visually annotate the group node of ``Cluster 3`` with two representative functions.
   
-  .. caution:: Be sure that the network tab named ``tcga_gbm_edges`` is selected.
+  .. caution:: Now be sure that the network tab named ``tcga_gbm_edges`` is selected.
   
   * In the **Editor** window,
-  * Click the ``...``` icon in **Name** property to edit a group name.
+  * Click the ``...`` icon in **Name** property to edit a group name.
   * Enter ``DNA damage response`` and ``Cell Cycle``.
   * Set the **Font** property to ``Droid Serif 80 Bold`` or what you want. (You can open the font chooser by clicking ``...`` button in the **Font** property)
 
