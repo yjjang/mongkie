@@ -5,7 +5,10 @@ Network clustering
 You imported the GBM-altered network into MONGKIE, now you will apply the MCL :doc:`../network_analysis/network_clustering` algorithm to identify network modules representing genes with topological proximity and correlated expression.
 
 .. important:: In the :abbr:`edge table (Located in the Data Table window at the bottom of main application)`, you can see that the ``i.weight`` column contains expression correlations.
-  MONGKIE internally will assign the values of ``i.weight`` column in a edge table to the weights of edges for clustering. If you want to give weights to edges in your network, you should set the name of column containing weight values to ``i.weight``.
+  
+  .. image:: ../images/edge_table_iweight.png
+  
+  MONGKIE internally will assign the values of ``i.weight`` column in a edge table to the weights of edges for clustering. Therfore, to give weights to edges in your network, you should set the name of the column to ``i.weight``.
 
 * In the **Clustering** window at the top-left of main application
 
@@ -36,6 +39,7 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
 .. image:: ../images/mcl_network.png
 
 .. tip:: How to change colors of clusters in the **Clustering** window.
+  
   Work in progress
 
 .. |run-button| image:: ../images/run_button.png
