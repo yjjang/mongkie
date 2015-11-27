@@ -8,7 +8,8 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   
   .. image:: ../images/edge_table_iweight.png
   
-  MONGKIE internally will assign the values of ``i.weight`` column in a edge table to the weights of edges for clustering. Therfore, to give weights to edges in your network, you should set the name of the column to ``i.weight``.
+  
+  MONGKIE internally assigns the values of ``i.weight`` column in a edge table to the weights of edges for clustering. Therfore, to give weights to edges in your network, you should set the name of the column to ``i.weight``.
 
 * In the **Clustering** window at the top-left of main application
 
@@ -40,7 +41,7 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
 
 .. tip:: How to change colors of clusters in the **Clustering** window.
   
-  Work in progress
+  **Work in progress**
 
 .. |run-button| image:: ../images/run_button.png
 .. |stop-button| image:: ../images/stop_button.png
