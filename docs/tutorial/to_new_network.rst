@@ -9,8 +9,10 @@ In this step, you will create new networks from previously identified clusters. 
 .. image:: ../images/menu_on_group.png
 
 * Click the **New Graph** menu item. You will see a new network created in a new tab.
-* Repeat above steps for cluster ``3``. Two networks derived from ``Cluster 5`` and ``Cluster 3`` are shown below:
+* Repeat above steps on the cluster ``3``. Two networks derived from ``Cluster 5`` and ``Cluster 3`` are shown below:
 
 .. image:: ../images/new_graph_egfr.png
+   :width: 300px
 .. image:: ../images/new_graph_tp53.png
+   :width: 300px
 
