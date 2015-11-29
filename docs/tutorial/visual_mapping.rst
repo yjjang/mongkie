@@ -11,8 +11,8 @@ Data-to-Visual mapping
   * To open the **Display Options** panel, click the **up-arrow button** at the bottom-right of a network display window.
   * Select the **Nodes** tab, and click the **Font name** button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
   * To close the **Display Options** panel, click the **down-arrow button** at the top-right of the panel.
-
-.. image:: ../images/change_nodes_font.png
+  
+   .. image:: ../images/change_nodes_font.png
 
 * To map the alteration frequencies of genes to the sizes of nodes,
 
@@ -25,12 +25,12 @@ Data-to-Visual mapping
   7. Adjust the transform scale to make more frequently altered genes be magnified.
   8. Close the **Spline Editor**.
   9. Click the **Apply** button.
-
-.. image:: ../images/freq_to_node_size.png
+  
+   .. image:: ../images/freq_to_node_size.png
 
 * Now the network looks like the following:
 
-.. image:: ../images/freq_to_node_size_result.png
+ .. image:: ../images/freq_to_node_size_result.png
 
 * Now you will map a different shape to the :abbr:`linker (Not altered genes but extracted guilt-by-association)` nodes using discrete Data-to-Visual mapping.
 
@@ -39,12 +39,12 @@ Data-to-Visual mapping
   3. Expand the ``LINKER``, now various editors for visual styles will be shown.
   4. In the **Shape** filed, click the ``...`` button to show up the node shape chooser.
   5. Choose the ``Diamond`` shape, and click the **OK** button.
-
-.. image:: ../images/type_to_node_shape.png
+  
+   .. image:: ../images/type_to_node_shape.png
 
 * Now the network looks like the following:
 
-.. image:: ../images/type_to_node_shape_result.png
+ .. image:: ../images/type_to_node_shape_result.png
 
 * You can map :abbr:`expression correlations (Correlations of expression levels between each pair of genes in tumor conditions)` to the thicknesses of edges.
 
@@ -56,12 +56,12 @@ Data-to-Visual mapping
   6. Click the **Spline...** button to open the **Spline Editor**.
   7. Restore the scale function to the linear function.
   8. Click the **Apply** button.
-
-.. image:: ../images/cor_to_edge_thickness.png
+  
+   .. image:: ../images/cor_to_edge_thickness.png
 
 * The final network is shown below:
 
-.. image:: ../images/data_to_visual_mapping_result.png
+ .. image:: ../images/data_to_visual_mapping_result.png
 
 .. |size-icon| image:: ../images/size_icon.png
 

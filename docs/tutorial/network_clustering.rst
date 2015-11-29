@@ -26,12 +26,12 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   
    .. image:: ../images/mcl_grouping.png
 
-* Now you see that group nodes on the network are too large or a lot of overlappping with each other. You can use the force-directed algorithm to lay out them with more optimized size and position.
+* Now you see that group nodes on the network are too large or a lot of overlapping with each other. You can use the force-directed algorithm to lay out them with more optimized size and position.
 
   1. In the **Layout** window at the bottom-left of main application, choose the ``Force Directed`` algorithm.
-  2. Click the |run-button| buttton to start the algorithm.
+  2. Click the |run-button| bottom to start the algorithm.
   3. Set ``Spring Coefficient`` to the minimu value ``4.0E-5`` by dragging the slider tick to the left-most.
-  4. When being satisfied with the result, you can stop the runnig of algorithm by clicking the |stop-button| button.
+  4. When being satisfied with the result, you can stop the running of algorithm by clicking the |stop-button| button.
   
    .. image:: ../images/mcl_layout.png
 
