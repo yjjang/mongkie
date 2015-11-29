@@ -16,15 +16,15 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   1. Choose the ``MCL`` algorithm in the drop-down list.
   2. Click the |run-button| button to start the algorithm.
   3. After a little, the identified clusters will be listed.
-
-.. image:: ../images/mcl_clustering.png
+  
+   .. image:: ../images/mcl_clustering.png
 
 * You can define these clusters as group nodes on the network.
 
   1. Select top 5 largest clusters by clicking ``Cluster 1`` and ``Cluster 5`` holding down the :kbd:`Shift` key.
   2. Right-click on the selection will show up a pop-up menu. Click the **Group** menu item.
-
-.. image:: ../images/mcl_grouping.png
+  
+   .. image:: ../images/mcl_grouping.png
 
 * Now you see that group nodes on the network are too large or a lot of overlappping with each other. You can use the force-directed algorithm to lay out them with more optimized size and position.
 
@@ -32,16 +32,16 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   2. Click the |run-button| buttton to start the algorithm.
   3. Set ``Spring Coefficient`` to the minimu value ``4.0E-5`` by dragging the slider tick to the left-most.
   4. When being satisfied with the result, you can stop the runnig of algorithm by clicking the |stop-button| button.
-
-.. image:: ../images/mcl_layout.png
+  
+   .. image:: ../images/mcl_layout.png
 
 * The final network looks like the following:
 
-.. image:: ../images/mcl_network.png
+ .. image:: ../images/mcl_network.png
 
 .. tip:: How to change colors of clusters in the **Clustering** window.
   
-  **Work in progress**
+  **Writing in progress**
 
 .. |run-button| image:: ../images/run_button.png
 .. |stop-button| image:: ../images/stop_button.png

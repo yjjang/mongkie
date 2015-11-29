@@ -15,7 +15,7 @@ In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysi
 * Before proceeding to remaining steps, you need to import :download:`symbol2uniprot_all.csv </assets/symbol2uniprot_all.csv>` into the **node table**. The reason is that our in-house GO over-representation analysis tool expects IDs of gene set to be UniProt Accessions.
 
   #. Select :menuselection:`File --> Import --> Attributes from CSV File` as described in previous section.
-  #. In the **Import Attributes** window,
+  #. In the **Import Attributes** dialog,
   
     * Choose a **CSV file to import**: :download:`symbol2uniprot_all.csv </assets/symbol2uniprot_all.csv>`
     * **Key Column in Annotation File:** ``HGNC.symbol``
