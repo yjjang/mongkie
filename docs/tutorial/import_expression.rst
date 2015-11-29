@@ -43,7 +43,7 @@ You will import gene expression log2FCs between normal vs. tumor condition in al
 
 .. image:: ../images/tp53_network_log2fc.png
 
-* (Optional) Repeat above steps on the network of ``Cluster 5``.
+* Repeat above steps on the network of ``Cluster 5``.
 
 .. tip:: How to add more gradiation points and colors.
   
