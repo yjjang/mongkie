@@ -6,10 +6,12 @@ Now overlay average gene expressions in GBM patients of 4 subtypes onto the GBM-
 
 * Select the original GBM-altered network tab named ``tcga_gbm_edges``.
 * Select :menuselection:`&Window --> Heat Map`.
-.. image:: ../images/heatmap_menu.png
+
+ .. image:: ../images/heatmap_menu.png
 
 * In the just opened **Heat Map** window, click the **Load heatmap data...** label.
-.. image:: ../images/heatmap_load.png
+
+ .. image:: ../images/heatmap_load.png
 
 * In the **Import** dialog,
 
@@ -17,10 +19,12 @@ Now overlay average gene expressions in GBM patients of 4 subtypes onto the GBM-
   2. Make sure that **Key column to map** is ``hgnc_symbol``.
   3. Be sure to check **First line in the file contains header names**.
   4. Click the **OK** button.
+  
   .. image:: ../images/heatmap_import.png
 
 * Now your screen looks like the following:
-.. image:: ../images/F1A.png
+
+ .. image:: ../images/F1A.png
 
 * In the bottom panel of application,
 
