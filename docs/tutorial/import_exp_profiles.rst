@@ -15,7 +15,7 @@ Now overlay average gene expressions in GBM patients of 4 subtypes onto the GBM-
 
 * In the **Import** dialog,
 
-  1. Choose :download:`tcga_gbm_subtypes.csv </assets/tcga_gbm_subtypes.csv>` file to import.
+  1. Choose :download:`tcga_gbm_exp_subtypes.csv </assets/tcga_gbm_exp_subtypes.csv>` file to import.
   2. Make sure that **Key column to map** is ``hgnc_symbol``.
   3. Be sure to check **First line in the file contains header names**.
   4. Click the **OK** button.
