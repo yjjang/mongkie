@@ -4,9 +4,9 @@ Functional annotation of a cluster
 
 In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysis` for genes in ``Cluster 3`` and visually annotate the cluster with representative functions via the :doc:`Visual Editor UI <../network_visualization/visual_editing>`.
 
-.. important:: Make sure you select the **Network** tab of ``Cluster 3``.
+* Make sure you select the **Network** tab of ``Cluster 3``.
 
-.. image:: ../images/tp53_network_log2fc.png
+ .. image:: ../images/tp53_network_log2fc.png
 
 * Select the :menuselection:`Window --> Enrichment Analysis`.
 
@@ -41,7 +41,7 @@ In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysi
 
 * Next you will visually annotate the group node of ``Cluster 3`` with two representative functions.
   
-  .. important:: Now be sure to select the network tab named ``tcga_gbm_edges``.
+  .. caution:: Now be sure to switch to the original network tab named ``tcga_gbm_edges``.
   
   * Click the group node of cluster ``3`` in the original GBM-altered network.
   * In the **Editor** window,
