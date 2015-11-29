@@ -2,7 +2,7 @@
 Tutorial
 ********
 
-This section provides a step-by-step tutorial for the :doc:`./case_study` and more.
+This chapter provides step-by-step tutorials for the :doc:`./case_study` and more.
 
 .. note::
     
