@@ -5,8 +5,8 @@ Functional annotation of a cluster
 In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysis` for genes in ``Cluster 3`` and visually annotate the cluster with representative functions via the :doc:`Visual Editor UI <../network_visualization/visual_editing>`.
 
 .. caution:: Be sure that the **Network** tab of ``Cluster 3`` is selected.
-  
-  .. image:: ../images/tp53_network_log2fc.png
+
+.. image:: ../images/tp53_network_log2fc.png
 
 * Select the :menuselection:`Window --> Enrichment Analysis`.
 
@@ -43,6 +43,7 @@ In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysi
   
   .. caution:: Now be sure that the network tab named ``tcga_gbm_edges`` is selected.
   
+  * Click the group node of cluster ``3`` in the original GBM-altered network.
   * In the **Editor** window,
   * Click the ``...`` icon in **Name** property to edit a group name.
   * Enter ``DNA damage response`` and ``Cell Cycle``.
