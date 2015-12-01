@@ -13,19 +13,19 @@ Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
 
 * You can export the graph to:
 
-  #. A `GraphML <http://graphml.graphdrawing.org/>`_ file that contains all graph elements in one formatted file, or
+  1. A `GraphML <http://graphml.graphdrawing.org/>`_ file that contains all graph elements in one formatted file, or
   
    .. image:: ../images/export_graphml_dialog.png
   
-  #. Two CSV files, each stores list of nodes and edges in a tabular format respectively.
+  2. Two CSV files, each stores list of nodes and edges in a tabular format respectively.
   
    .. image:: ../images/export_csv_dialog.png
   
-  #. A VLG (Visual Graph) file that stores all visualization-wide information as well as graph data.
+  3. A VLG (Visual Graph) file that stores all visualization-wide information as well as graph data.
   
    .. image:: ../images/export_vlg_dialog.png
 
-.. tip:: CSV files for nodes or edges can be exported in the **Data Table** window also.
+.. tip:: CSV files for nodes or edges can be exported also in the **Data Table** window.
   
   .. image:: ../images/export_csv_in_datatable.png
 
