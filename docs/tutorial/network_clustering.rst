@@ -39,16 +39,43 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
 
  .. image:: ../images/mcl_network.png
 
+.. tip:: How to change default shape of group nodes in the network.
+  
+  In the **Display Options** panel, you can **globally** set various visualization options for nodes, edges, and groups.
+  
+  #. To open the **Display Options** panel, click the |arrowup-icon| button at the bottom-right of a network.
+  #. Select the **Group** tab.
+  #. Choose one of supported group shapes.
+  
+   .. image:: ../images/display_options_group.png
+  
+  For editing a individual component, you can use the :doc:`Visual Editor UI <../network_visualization/visual_editing>.`
+
 .. tip:: How to change colors of clusters in the **Clustering** window.
   
-  **Writing in progress**
+  Initially the colors of clusters are assigned randomly. You can regenerate random colors for all clusters:
+  
+   .. image:: ../images/regen_cluster_clolors.png
+  
+  Or, you can manually set the color of individual cluster.
+  
+  #. **Press and holding down** the mouse left-button on the color box on the left of a cluster name.
+  #. A color chooser is shown up.
+  #. While holding the mouse left-button down, move the pointer to choose a color.
+  
+    * Press kbd:`ALT` key down to show constant colors.
+    * Press kbd:`SHIFT` key down to show desaturated colors.
+    * Press kbd:`CTRL` and kbd:`ALT` keys down to show recent colors.
+  
+  #. When you release the mouse button, a color under pointer is set to the cluster's color.
+  
+   .. image:: ../images/change_cluster_colors.png
+  
+  Of course, you can use the :doc:`Visual Editor UI <../network_visualization/visual_editing>` for changing the color of group node.
 
 .. tip:: By double-clicking the name of a cluster listed in the **Clustering** window, you can edit name of the cluster.
 
-.. tip:: How to change default shape of group nodes in the network display.
-  
-  **Writing in progress**
-
 .. |run-button| image:: ../images/run_button.png
 .. |stop-button| image:: ../images/stop_button.png
+.. |arrowup-icon| image:: ../images/arrowup_icon.png
 
