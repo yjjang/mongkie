@@ -39,25 +39,25 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
 
  .. image:: ../images/mcl_network.png
 
-.. tip:: How to change default shape of group nodes in the network.
+.. tip:: How to change default shape of group nodes on the network.
   
-  In the **Display Options** panel, you can **globally** set various visualization options for nodes, edges, and groups.
+  In the **Display Options** panel, you can **globally** set various visualization options for nodes, edges, and groups:
   
-  #. To open the **Display Options** panel, click the |arrowup-icon| button at the bottom-right of a network.
+  #. To open the **Display Options** panel, click the |arrowup-icon| button at the bottom-right of a network window.
   #. Select the **Group** tab.
-  #. Choose one of supported group shapes.
+  #. Choose one of listed shapes.
   
    .. image:: ../images/display_options_group.png
   
   For editing a individual component, you can use the :doc:`Visual Editor UI <../network_visualization/visual_editing>`.
 
-.. tip:: How to change colors of clusters in the **Clustering** window.
+.. tip:: How to change colors of cluster in the **Clustering** window.
   
-  Initially the colors of clusters are assigned randomly. You can regenerate random colors for all clusters:
+  Initially the colors of cluster are assigned randomly. You can regenerate random colors for all clusters:
   
    .. image:: ../images/regen_cluster_colors.png
   
-  Or, you can manually set the color of individual cluster.
+  Or, you can manually set the color of individual cluster:
   
   1. **Press and holding down** the mouse left-button on the color box on the left of a cluster name.
   2. While holding the mouse button down, move the pointer in the color panel.
