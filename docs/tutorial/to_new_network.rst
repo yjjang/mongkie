@@ -2,7 +2,7 @@
 Make a new network from a cluster
 *********************************
 
-In this step, you will create new networks from previously identified clusters. A new network consists of nodes and edges only in the cluster it derived from.
+In this section, you will create new networks from previously identified clusters. A new network consists of nodes and edges only in the cluster it derived from.
 
 * **Right-click** on the group node for cluster ``5`` on the network, then a pop-up menu for the group node will be shown up.
 

@@ -2,7 +2,7 @@
 Functional annotation of a cluster
 **********************************
 
-In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysis` for genes in ``Cluster 3`` and visually annotate the cluster with representative functions via the :doc:`Visual Editor UI <../network_visualization/visual_editing>`.
+In this section, you will perform a GO :doc:`../network_analysis/enrichment_analysis` for genes in ``Cluster 3`` and visually annotate the cluster with representative functions via the :doc:`Visual Editor UI <../network_visualization/visual_editing>`.
 
 * Make sure you select the **Network** tab of ``Cluster 3``.
 
@@ -12,7 +12,7 @@ In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysi
 
  .. image:: ../images/enrich_analysis_win.png
 
-* Before proceeding to remaining steps, you need to import :download:`symbol2uniprot_all.csv </assets/symbol2uniprot_all.csv>` into the **node table**. The reason is that our in-house GO over-representation analysis tool expects IDs of gene set to be UniProt Accessions.
+* Before going to remaining steps, you need to import :download:`symbol2uniprot_all.csv </assets/symbol2uniprot_all.csv>` into the **node table**. The reason is that our in-house GO over-representation analysis tool expects IDs of gene set to be UniProt Accessions.
 
   #. Select :menuselection:`File --> Import --> Attributes from CSV File` as described in previous section.
   #. In the **Import Attributes** dialog,
