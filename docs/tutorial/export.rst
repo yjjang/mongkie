@@ -4,7 +4,7 @@ Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
 
 * You can lauch export dialogs from :menuselection:`&File --> Export --> Graph Files... or Image Files...`.
 
-* You can save the final visualization as one of supported image formats.
+* You can save the final visualization as one of supported image formats:
 
   * Use SVG (Scalable Vector Graphics) or EPS (Encapsulated PostScript) for vector graphics.
   * Use PNG, JPG, GIF, or BMP formats for bitmap images.
@@ -25,7 +25,7 @@ Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
   
    .. image:: ../images/export_vlg_dialog.png
 
-.. tip:: CSV files for nodes or edges can be exported also in the **Data Table** window.
+.. tip:: CSV files for nodes or edges can be exported in the **Data Table** window.
   
   .. image:: ../images/export_csv_in_datatable.png
 

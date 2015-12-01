@@ -57,7 +57,44 @@ In this section, you will perform a GO :doc:`../network_analysis/enrichment_anal
 
 .. tip:: How to define a group node that contains nodes (genes or proteins) with a same function after GO over-representation analysis.
   
-  **Writing in progress**
+  After GO over-representation analysis of ``Cluster 3``:
+  
+  1. Select the **TreeTable view** tab in the **Enrichment** result window.
+  2. Select a GO term named **kinase binding** at ``molecular_function > binding > protein binding > enzyme binding > kinase binding``.
+  3. Click the |group-icon| button.
+  
+   .. image:: ../images/kinase_binding_tree.png
+  
+  4. After clicking the group node named ``kinase binding``, edit its visual properties in the **Editor** window.
+  
+    * Set **Font** to ``Droid Serif 80 Bold``.
+    * Set **Text Color** to ``Orange``.
+    * Set **Shape** to ``Convex hull of the lines``.
+    
+     .. image:: ../images/kinase_binding_edit.png
+  
+  5. Manually adjust the positions of nodes like below:
+  
+   .. image:: ../images/GO_kinase_binding.png
+  
+  6. Select a GO term named **cell cycle** at ``biological_process > cellular process > single-organism cellular process > cell cycle``.
+  
+  7. Click the |group-icon| button.
+  
+   .. image:: ../images/cell_cycle_tree.png
+  
+  8. After clicking the group node named ``cell cycle``, edit its visual properties in the **Editor** window.
+  
+    * Set **Font** to ``Droid Serif 100 Bold``.
+    * Set **Text Color** to ``Blue``.
+    * Set **Shape** to ``Rectangle``.
+    
+     .. image:: ../images/cell_cycle_edit.png
+  
+  9. Now you can see that ``cell cycle`` contains all genes in ``kinase binding``. The final result looks like below:
+  
+   .. image:: ../images/GO_cell_cycle.png
 
 .. |info-icon| image:: ../images/info_icon.png
+.. |group-icon| image:: ../images/group_icon.png
 
