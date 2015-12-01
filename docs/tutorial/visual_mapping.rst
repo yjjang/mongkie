@@ -8,15 +8,15 @@ Data-to-Visual mapping
   
   .. note:: To use the ``Sony Sketch EF`` font, you should download and install it on your system. It is available at `here <http://www.fonts2u.com/sony-sketch-ef.font>`_.
   
-  * To open the **Display Options** panel, click the **up-arrow button** at the bottom-right of a network display window.
+  * To open the **Display Options** panel, click the |arrowup-icon| button at the bottom-right of a network display window.
   * Select the **Nodes** tab, and click the **Font name** button, and choose a font *name*, *style*, and *size*, then click the **OK** button.
-  * To close the **Display Options** panel, click the **down-arrow button** at the top-right of the panel.
+  * To close the **Display Options** panel, click the |arrowdown-icon| button at the top-right of the panel.
   
    .. image:: ../images/change_nodes_font.png
 
 * To map the alteration frequencies of genes to the sizes of nodes,
 
-  1. Select the **Visual Mapping** window at the top-left of the main application.
+  1. Select the **Visual Mapping** window at the top-left of main application.
   2. Select the **Nodes** tab button.
   3. Select the |size-icon| icon.
   4. In the drop-down list, choose the ``Freq`` data attribute to map.
@@ -64,5 +64,6 @@ Data-to-Visual mapping
  .. image:: ../images/data_to_visual_mapping_result.png
 
 .. |size-icon| image:: ../images/size_icon.png
-
+.. |arrowup-icon| image:: ../images/arrowup_icon.png
+.. |arrowdown-icon| image:: ../images/arrowdown_icon.png
 
