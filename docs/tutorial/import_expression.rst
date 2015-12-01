@@ -45,9 +45,12 @@ You will import gene expression log2FCs between normal vs. tumor condition in al
 
 * Repeat above steps on the network of ``Cluster 5``.
 
-.. tip:: How to add more gradiation points and colors.
+.. tip:: How to add more gradation points and colors.
   
-  **Writing in progress**
+  You can add any number of gradation points by clicking desired positions on the color bar. Once you have a gradation point, you can edit its color by double-clicking the point. You can also move the points by dragging them.
+  
+  .. image:: ../images/gradation_points.png
+
 
 .. |color-icon| image:: ../images/color_icon.png
 .. |pallet-icon| image:: ../images/pallet_icon.png
