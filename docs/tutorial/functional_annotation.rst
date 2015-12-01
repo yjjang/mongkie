@@ -55,5 +55,9 @@ In this step, you will perform a GO :doc:`../network_analysis/enrichment_analysi
 
  .. image:: ../images/group_name_result.png
 
+.. tip:: How to define a group node that contains nodes (genes or proteins) with a same function after GO over-representation analysis.
+  
+  **Writing in progress**
+
 .. |info-icon| image:: ../images/info_icon.png
 
