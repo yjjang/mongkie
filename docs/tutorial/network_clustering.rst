@@ -43,9 +43,7 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   
   **Writing in progress**
 
-.. tip:: How to edit names of clusters listed in the **Clustering** window.
-  
-  **Writing in progress**
+.. tip:: By double-clicking the name of a cluster listed in the **Clustering** window, you can edit name of the cluster.
 
 .. tip:: How to change default shape of group nodes in the network display.
   
