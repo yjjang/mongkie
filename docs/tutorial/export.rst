@@ -13,7 +13,7 @@ Save as a image, CSV files, GraphML, and a VLG (Visualized Graph) file
 
 * You can export the graph to:
 
-  #. A `GraphML <>`_ file that contains all graph elements in one formatted file, or
+  #. A `GraphML <http://graphml.graphdrawing.org/>`_ file that contains all graph elements in one formatted file, or
   
    .. image:: ../images/export_graphml_dialog.png
   
