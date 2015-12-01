@@ -49,25 +49,24 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   
    .. image:: ../images/display_options_group.png
   
-  For editing a individual component, you can use the :doc:`Visual Editor UI <../network_visualization/visual_editing>.`
+  For editing a individual component, you can use the :doc:`Visual Editor UI <../network_visualization/visual_editing>`.
 
 .. tip:: How to change colors of clusters in the **Clustering** window.
   
   Initially the colors of clusters are assigned randomly. You can regenerate random colors for all clusters:
   
-   .. image:: ../images/regen_cluster_clolors.png
+   .. image:: ../images/regen_cluster_colors.png
   
   Or, you can manually set the color of individual cluster.
   
-  #. **Press and holding down** the mouse left-button on the color box on the left of a cluster name.
-  #. A color chooser is shown up.
-  #. While holding the mouse left-button down, move the pointer to choose a color.
+  1. **Press and holding down** the mouse left-button on the color box on the left of a cluster name.
+  2. While holding the mouse button down, move the pointer in the color panel.
   
-    * Press kbd:`ALT` key down to show constant colors.
-    * Press kbd:`SHIFT` key down to show desaturated colors.
-    * Press kbd:`CTRL` and kbd:`ALT` keys down to show recent colors.
+    * Press ``ALT`` key down to show constant colors.
+    * Press ``SHIFT`` key down to show desaturated colors.
+    * Press both ``CTRL`` and ``ALT`` keys down to show recent colors.
   
-  #. When you release the mouse button, a color under pointer is set to the cluster's color.
+  3. When you release the mouse button, a color under the pointer is set to the cluster's color.
   
    .. image:: ../images/change_cluster_colors.png
   
