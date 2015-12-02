@@ -59,7 +59,7 @@ You imported the GBM-altered network into MONGKIE, now you will apply the MCL :d
   
   Or, you can manually set the color of individual cluster:
   
-  1. **Press and holding down** the mouse left-button on the color box on the left of a cluster name.
+  1. **Press and keep holding down** the mouse left-button on the color box on the left of a cluster name.
   2. While holding the mouse button down, move the pointer in the color panel.
   
     * Press ``ALT`` key down to show constant colors.
