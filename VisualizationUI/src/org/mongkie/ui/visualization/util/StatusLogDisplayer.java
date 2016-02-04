@@ -17,8 +17,13 @@
  */
 package org.mongkie.ui.visualization.util;
 
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.logging.*;
 import org.openide.awt.StatusDisplayer;
+import org.openide.windows.IOProvider;
+import org.openide.windows.InputOutput;
 
 /**
  *
@@ -44,7 +49,18 @@ public final class StatusLogDisplayer extends Handler {
         if (!isLoggable(record)) {
             return;
         }
-        StatusDisplayer.getDefault().setStatusText(getFormatter().formatMessage(record));
+        String msg = getFormatter().formatMessage(record);
+        StatusDisplayer.getDefault().setStatusText(msg);
+        StringBuilder b = new StringBuilder();
+        Instant instant = Instant.ofEpochMilli(record.getMillis());
+        ZonedDateTime timestamp = ZonedDateTime.ofInstant(instant, ZoneId.systemDefault());
+        b.append(timestamp.toLocalTime().toString());
+        b.append(' ');
+        b.append(msg);
+        InputOutput io = IOProvider.getDefault().getIO("Logs", false);
+        io.getOut().println(b.toString());
+        io.getOut().close();
+//        io.select();
     }
 
     @Override
