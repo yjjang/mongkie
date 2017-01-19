@@ -42,7 +42,6 @@ package org.netbeans.validation.api.builtin.stringvalidation;
 
 import java.io.File;
 import org.netbeans.validation.api.Problems;
-import org.netbeans.validation.api.Validator;
 import org.openide.util.NbBundle;
 import org.openide.util.Utilities;
 
